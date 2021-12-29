@@ -12,8 +12,9 @@ namespace S3PerfTest
         {
             var socketsHandler = new SocketsHttpHandler
             {
-                PooledConnectionIdleTimeout = Timeout.InfiniteTimeSpan,
-                PooledConnectionLifetime = Timeout.InfiniteTimeSpan,
+                KeepAlivePingPolicy = HttpKeepAlivePingPolicy.Always,
+                KeepAlivePingDelay = TimeSpan.FromSeconds(2),
+                KeepAlivePingTimeout = TimeSpan.FromSeconds(2)
             };
             httpClient = new HttpClient(socketsHandler);
             httpClient.DefaultRequestHeaders.ConnectionClose = false;
