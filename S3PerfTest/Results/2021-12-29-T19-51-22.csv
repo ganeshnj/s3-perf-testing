@@ -1,0 +1,2339 @@
+Time,Request,Resolution,Connect,Handshake,RequestHeaders,ResponseHeaders,SdkRequest,ResponseRead
+2021-12-29 07:51:22 PM[Private.InternalDiagnostics.System.Net.Http-Info] (HttpClientHandler#49212206, .ctor, ).
+2021-12-29 07:51:22 PM[Private.InternalDiagnostics.System.Net.Http-Info] (SocketsHttpHandler#40256670, .ctor, ).
+2021-12-29 07:51:22 PM[Private.InternalDiagnostics.System.Net.Http-Info] (DiagnosticsHandler#26765710, .ctor, ).
+2021-12-29 07:51:22 PM[Private.InternalDiagnostics.System.Net.Http-Associate] (DiagnosticsHandler#26765710, InnerHandler, DiagnosticsHandler#26765710, SocketsHttpHandler#40256670).
+2021-12-29 07:51:22 PM[Private.InternalDiagnostics.System.Net.Http-Associate] (HttpClient#39564799, .ctor, HttpClient#39564799, HttpClientHandler#49212206).
+2021-12-29 07:51:22 PM[System.Net.Http-RequestStart] (https, jangirg-s3-perf-test.s3.us-west-2.amazonaws.com, 443, /test.json, 1, 1, 0).
+2021-12-29 07:51:22 PM[Private.InternalDiagnostics.System.Net.Http-HeadersInvalidValue] (Authorization, AWS4-HMAC-SHA256 Credential=AKIA2SRUSSNWLYTMAP4W/20211229/us-west-2/s3/aws4_request, SignedHeaders=host;user-agent;x-amz-content-sha256;x-amz-date, Signature=7bb29b8cc4a9361043b4df821b91556cdef6e3357edb225d0e71c9271879ea7b).
+2021-12-29 07:51:22 PM[Private.InternalDiagnostics.System.Net.Http-Info] (WinInetProxyHelper#10549531, .ctor, AutoConfigUrl=(null), AutoDetect=True, Proxy=(null), ProxyBypass=(null)).
+2021-12-29 07:51:22 PM[Private.InternalDiagnostics.System.Net.Http-Info] (WinInetProxyHelper#10549531, .ctor, _useProxy=True).
+2021-12-29 07:51:22 PM[Private.InternalDiagnostics.System.Net.Http-Info] (WinInetProxyHelper#10549531, TryCreate, AutoSettingsUsed, calling WinHttpOpen).
+2021-12-29 07:51:22 PM[Private.InternalDiagnostics.System.Net.Http-Info] (HttpConnectionHandler#27836922, .ctor, ).
+2021-12-29 07:51:22 PM[Private.InternalDiagnostics.System.Net.Http-ErrorMessage] (WinInetProxyHelper#10549531, GetProxyForUrl, error=12180).
+2021-12-29 07:51:22 PM[Private.InternalDiagnostics.System.Net.Http-Info] (WinInetProxyHelper#10549531, GetProxyForUrl, useProxy=False).
+2021-12-29 07:51:22 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 0, 0, .ctor, HttpConnectionPool https://jangirg-s3-perf-test.s3.us-west-2.amazonaws.com:443).
+2021-12-29 07:51:22 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 0, 0, IncrementConnectionCountNoLock, ).
+2021-12-29 07:51:22 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 0, 0, GetHttpConnectionAsync, Creating new connection for pool.).
+2021-12-29 07:51:23 PM[System.Net.Http-ConnectionEstablished] (1, 1).
+2021-12-29 07:51:23 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 0, TraceConnection, HttpConnection(HttpConnectionPool https://jangirg-s3-perf-test.s3.us-west-2.amazonaws.com:443). SslProtocol:Tls12, NegotiatedApplicationProtocol:, NegotiatedCipherSuite:TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256, CipherAlgorithm:Aes128, CipherStrength:128, HashAlgorithm:Sha256, HashStrength:0, KeyExchangeAlgorithm:44550, KeyExchangeStrength:256, LocalCertificate:, RemoteCertificate:[Subject]
+  CN=*.s3-us-west-2.amazonaws.com
+
+[Issuer]
+  CN=Amazon, OU=Server CA 1B, O=Amazon, C=US
+
+[Serial Number]
+  09D6980F28BA4D32F6EE8CF0FF21D46E
+
+[Not Before]
+  3/25/2021 5:00:00 PM
+
+[Not After]
+  3/5/2022 3:59:59 PM
+
+[Thumbprint]
+  E20079CE5DD4AD2109DF926E64A4622A2666FFCC
+).
+2021-12-29 07:51:23 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 48397273, SendAsyncCore, Sending request: Method: GET, RequestUri: 'https://jangirg-s3-perf-test.s3.us-west-2.amazonaws.com/test.json', Version: 1.1, Content: <null>, Headers:
+{
+  User-Agent: aws-sdk-dotnet-coreclr/3.7.7.5
+  User-Agent: aws-sdk-dotnet-core/3.7.5.8
+  User-Agent: .NET_Core/5.0.13
+  User-Agent: OS/Microsoft_Windows_10.0.19044
+  User-Agent: ClientAsync
+  amz-sdk-invocation-id: 9b1f70f4-f8fc-408a-9f3d-a4dbf3f658cd
+  amz-sdk-request: attempt=1; max=5
+  Host: jangirg-s3-perf-test.s3.us-west-2.amazonaws.com
+  X-Amz-Date: 20211229T195122Z
+  X-Amz-Content-SHA256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+  Authorization: AWS4-HMAC-SHA256 Credential=AKIA2SRUSSNWLYTMAP4W/20211229/us-west-2/s3/aws4_request, SignedHeaders=host;user-agent;x-amz-content-sha256;x-amz-date, Signature=7bb29b8cc4a9361043b4df821b91556cdef6e3357edb225d0e71c9271879ea7b
+  traceparent: 00-5580ff22e7caf24080829a763ae9cd42-5f9cb8ee19d94a4f-00
+}).
+2021-12-29 07:51:23 PM[System.Net.Http-RequestHeadersStart] ().
+2021-12-29 07:51:23 PM[System.Net.Http-RequestHeadersStop] ().
+2021-12-29 07:51:23 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 48397273, WriteToStreamAsync, Writing 738 bytes.).
+2021-12-29 07:51:23 PM[Private.InternalDiagnostics.System.Net.Http-Associate] (HttpResponseMessage#14145203, RequestMessage, HttpResponseMessage#14145203, HttpRequestMessage#48397273).
+2021-12-29 07:51:23 PM[Private.InternalDiagnostics.System.Net.Http-Info] (HttpConnectionResponseContent#18085772, .ctor, ).
+2021-12-29 07:51:23 PM[Private.InternalDiagnostics.System.Net.Http-Associate] (HttpResponseMessage#14145203, Content, HttpResponseMessage#14145203, HttpConnectionResponseContent#18085772).
+2021-12-29 07:51:23 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 48397273, FillAsync, Received 363 bytes.).
+2021-12-29 07:51:23 PM[System.Net.Http-ResponseHeadersStart] ().
+2021-12-29 07:51:23 PM[System.Net.Http-ResponseHeadersStop] ().
+2021-12-29 07:51:23 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 48397273, SendAsyncCore, Request is fully sent.).
+2021-12-29 07:51:23 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 48397273, SendAsyncCore, Received response: StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: System.Net.Http.HttpConnectionResponseContent, Headers:
+{
+  x-amz-id-2: e583zhCFEx4b7eb5dMsA4oqn+yPf28eM85Qebt6joMU/IO9fifWgBfiw90EsSL2UnuNw6yKjbgA=
+  x-amz-request-id: B8HY71T83ZDQPPQF
+  Date: Wed, 29 Dec 2021 19:51:23 GMT
+  ETag: "ab9b7b2c58d3a481e172aea95b1e87a0"
+  Accept-Ranges: bytes
+  Server: AmazonS3
+  Last-Modified: Tue, 28 Dec 2021 17:45:48 GMT
+  Content-Type: application/json
+  Content-Length: 603
+}).
+2021-12-29 07:51:23 PM[Private.InternalDiagnostics.System.Net.Http-ClientSendCompleted] (StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: System.Net.Http.HttpConnectionResponseContent, Headers:
+{
+  x-amz-id-2: e583zhCFEx4b7eb5dMsA4oqn+yPf28eM85Qebt6joMU/IO9fifWgBfiw90EsSL2UnuNw6yKjbgA=
+  x-amz-request-id: B8HY71T83ZDQPPQF
+  Date: Wed, 29 Dec 2021 19:51:23 GMT
+  ETag: "ab9b7b2c58d3a481e172aea95b1e87a0"
+  Accept-Ranges: bytes
+  Server: AmazonS3
+  Last-Modified: Tue, 28 Dec 2021 17:45:48 GMT
+  Content-Type: application/json
+  Content-Length: 603
+}, 48397273, 14145203, 39564799).
+2021-12-29 07:51:23 PM[System.Net.Http-RequestStop] ().
+2021-12-29 07:51:23 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 48397273, Read, Received 603 bytes.).
+2021-12-29 07:51:23 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 0, ReturnConnection, Stored connection in pool.).
+2021-12-29 07:51:23 PM,620.0816,89.4551,37.6598,262.3431,1.0062,1.1664,831.1494,5.7748
+2021-12-29 07:51:29 PM[System.Net.Http-RequestStart] (https, jangirg-s3-perf-test.s3.us-west-2.amazonaws.com, 443, /test.json, 1, 1, 0).
+2021-12-29 07:51:29 PM[Private.InternalDiagnostics.System.Net.Http-HeadersInvalidValue] (Authorization, AWS4-HMAC-SHA256 Credential=AKIA2SRUSSNWLYTMAP4W/20211229/us-west-2/s3/aws4_request, SignedHeaders=host;user-agent;x-amz-content-sha256;x-amz-date, Signature=04a8c6aaad62d5777f607518007b59fe5f00f97557d7080fb76cca1d3cb845ed).
+2021-12-29 07:51:29 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 0, GetOrReserveHttp11ConnectionAsync, Found usable connection in pool.).
+2021-12-29 07:51:29 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 4831898, SendAsyncCore, Sending request: Method: GET, RequestUri: 'https://jangirg-s3-perf-test.s3.us-west-2.amazonaws.com/test.json', Version: 1.1, Content: <null>, Headers:
+{
+  User-Agent: aws-sdk-dotnet-coreclr/3.7.7.5
+  User-Agent: aws-sdk-dotnet-core/3.7.5.8
+  User-Agent: .NET_Core/5.0.13
+  User-Agent: OS/Microsoft_Windows_10.0.19044
+  User-Agent: ClientAsync
+  amz-sdk-invocation-id: 8e59ad7d-8c25-4e0f-b640-bbbc207ff7c8
+  amz-sdk-request: attempt=1; max=5
+  Host: jangirg-s3-perf-test.s3.us-west-2.amazonaws.com
+  X-Amz-Date: 20211229T195129Z
+  X-Amz-Content-SHA256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+  Authorization: AWS4-HMAC-SHA256 Credential=AKIA2SRUSSNWLYTMAP4W/20211229/us-west-2/s3/aws4_request, SignedHeaders=host;user-agent;x-amz-content-sha256;x-amz-date, Signature=04a8c6aaad62d5777f607518007b59fe5f00f97557d7080fb76cca1d3cb845ed
+  traceparent: 00-1e9ffddefefd7a4f9cfed5c63d59b24c-88cc1c6696ad7540-00
+}).
+2021-12-29 07:51:29 PM[System.Net.Http-RequestHeadersStart] ().
+2021-12-29 07:51:29 PM[System.Net.Http-RequestHeadersStop] ().
+2021-12-29 07:51:29 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 4831898, WriteToStreamAsync, Writing 738 bytes.).
+2021-12-29 07:51:29 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 4831898, SendAsyncCore, Received 363 bytes.).
+2021-12-29 07:51:29 PM[Private.InternalDiagnostics.System.Net.Http-Associate] (HttpResponseMessage#19949373, RequestMessage, HttpResponseMessage#19949373, HttpRequestMessage#4831898).
+2021-12-29 07:51:29 PM[Private.InternalDiagnostics.System.Net.Http-Info] (HttpConnectionResponseContent#28972298, .ctor, ).
+2021-12-29 07:51:29 PM[Private.InternalDiagnostics.System.Net.Http-Associate] (HttpResponseMessage#19949373, Content, HttpResponseMessage#19949373, HttpConnectionResponseContent#28972298).
+2021-12-29 07:51:29 PM[System.Net.Http-ResponseHeadersStart] ().
+2021-12-29 07:51:29 PM[System.Net.Http-ResponseHeadersStop] ().
+2021-12-29 07:51:29 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 4831898, SendAsyncCore, Request is fully sent.).
+2021-12-29 07:51:29 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 4831898, SendAsyncCore, Received response: StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: System.Net.Http.HttpConnectionResponseContent, Headers:
+{
+  x-amz-id-2: czlCTQnSfJTP5dE2bZRbjux3vB8zxVnNQlRaXoZhD+NpGVP0vBCFgp+/GwBFc7n+4/PJvzgcplw=
+  x-amz-request-id: B1ED9W6QED1AVHRY
+  Date: Wed, 29 Dec 2021 19:51:29 GMT
+  ETag: "ab9b7b2c58d3a481e172aea95b1e87a0"
+  Accept-Ranges: bytes
+  Server: AmazonS3
+  Last-Modified: Tue, 28 Dec 2021 17:45:48 GMT
+  Content-Type: application/json
+  Content-Length: 603
+}).
+2021-12-29 07:51:29 PM[Private.InternalDiagnostics.System.Net.Http-ClientSendCompleted] (StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: System.Net.Http.HttpConnectionResponseContent, Headers:
+{
+  x-amz-id-2: czlCTQnSfJTP5dE2bZRbjux3vB8zxVnNQlRaXoZhD+NpGVP0vBCFgp+/GwBFc7n+4/PJvzgcplw=
+  x-amz-request-id: B1ED9W6QED1AVHRY
+  Date: Wed, 29 Dec 2021 19:51:29 GMT
+  ETag: "ab9b7b2c58d3a481e172aea95b1e87a0"
+  Accept-Ranges: bytes
+  Server: AmazonS3
+  Last-Modified: Tue, 28 Dec 2021 17:45:48 GMT
+  Content-Type: application/json
+  Content-Length: 603
+}, 4831898, 19949373, 39564799).
+2021-12-29 07:51:29 PM[System.Net.Http-RequestStop] ().
+2021-12-29 07:51:29 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 4831898, Read, Received 603 bytes.).
+2021-12-29 07:51:29 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 0, ReturnConnection, Stored connection in pool.).
+2021-12-29 07:51:29 PM,32.971,,,,0.0355,0.1697,37.5437,0.3429
+2021-12-29 07:51:34 PM[System.Net.Http-RequestStart] (https, jangirg-s3-perf-test.s3.us-west-2.amazonaws.com, 443, /test.json, 1, 1, 0).
+2021-12-29 07:51:34 PM[Private.InternalDiagnostics.System.Net.Http-HeadersInvalidValue] (Authorization, AWS4-HMAC-SHA256 Credential=AKIA2SRUSSNWLYTMAP4W/20211229/us-west-2/s3/aws4_request, SignedHeaders=host;user-agent;x-amz-content-sha256;x-amz-date, Signature=7ffe60a7bbffadbde9c0bb3a8e2a5731334e154b5e7b55cd653460505841a5c0).
+2021-12-29 07:51:34 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 0, GetOrReserveHttp11ConnectionAsync, Found usable connection in pool.).
+2021-12-29 07:51:34 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 35567111, SendAsyncCore, Sending request: Method: GET, RequestUri: 'https://jangirg-s3-perf-test.s3.us-west-2.amazonaws.com/test.json', Version: 1.1, Content: <null>, Headers:
+{
+  User-Agent: aws-sdk-dotnet-coreclr/3.7.7.5
+  User-Agent: aws-sdk-dotnet-core/3.7.5.8
+  User-Agent: .NET_Core/5.0.13
+  User-Agent: OS/Microsoft_Windows_10.0.19044
+  User-Agent: ClientAsync
+  amz-sdk-invocation-id: 07f7144c-0b82-46d7-b9c1-31992b9994cb
+  amz-sdk-request: attempt=1; max=5
+  Host: jangirg-s3-perf-test.s3.us-west-2.amazonaws.com
+  X-Amz-Date: 20211229T195134Z
+  X-Amz-Content-SHA256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+  Authorization: AWS4-HMAC-SHA256 Credential=AKIA2SRUSSNWLYTMAP4W/20211229/us-west-2/s3/aws4_request, SignedHeaders=host;user-agent;x-amz-content-sha256;x-amz-date, Signature=7ffe60a7bbffadbde9c0bb3a8e2a5731334e154b5e7b55cd653460505841a5c0
+  traceparent: 00-7bb3f120f9bb0741a4d523408c8eb667-82c630878cf15146-00
+}).
+2021-12-29 07:51:34 PM[System.Net.Http-RequestHeadersStart] ().
+2021-12-29 07:51:34 PM[System.Net.Http-RequestHeadersStop] ().
+2021-12-29 07:51:34 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 35567111, WriteToStreamAsync, Writing 738 bytes.).
+2021-12-29 07:51:35 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 35567111, SendAsyncCore, Received 363 bytes.).
+2021-12-29 07:51:35 PM[Private.InternalDiagnostics.System.Net.Http-Associate] (HttpResponseMessage#53218812, RequestMessage, HttpResponseMessage#53218812, HttpRequestMessage#35567111).
+2021-12-29 07:51:35 PM[Private.InternalDiagnostics.System.Net.Http-Info] (HttpConnectionResponseContent#55401902, .ctor, ).
+2021-12-29 07:51:35 PM[Private.InternalDiagnostics.System.Net.Http-Associate] (HttpResponseMessage#53218812, Content, HttpResponseMessage#53218812, HttpConnectionResponseContent#55401902).
+2021-12-29 07:51:35 PM[System.Net.Http-ResponseHeadersStart] ().
+2021-12-29 07:51:35 PM[System.Net.Http-ResponseHeadersStop] ().
+2021-12-29 07:51:35 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 35567111, SendAsyncCore, Request is fully sent.).
+2021-12-29 07:51:35 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 35567111, SendAsyncCore, Received response: StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: System.Net.Http.HttpConnectionResponseContent, Headers:
+{
+  x-amz-id-2: 6AAhEhzRxM3RslKHbFHb/qUakbMeveWSnFqaNyTqUjxH2L/faxGvgUiiaHyYFzd+jAIzGoei8HA=
+  x-amz-request-id: 248MM0G5WS05AQJK
+  Date: Wed, 29 Dec 2021 19:51:35 GMT
+  ETag: "ab9b7b2c58d3a481e172aea95b1e87a0"
+  Accept-Ranges: bytes
+  Server: AmazonS3
+  Last-Modified: Tue, 28 Dec 2021 17:45:48 GMT
+  Content-Type: application/json
+  Content-Length: 603
+}).
+2021-12-29 07:51:35 PM[Private.InternalDiagnostics.System.Net.Http-ClientSendCompleted] (StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: System.Net.Http.HttpConnectionResponseContent, Headers:
+{
+  x-amz-id-2: 6AAhEhzRxM3RslKHbFHb/qUakbMeveWSnFqaNyTqUjxH2L/faxGvgUiiaHyYFzd+jAIzGoei8HA=
+  x-amz-request-id: 248MM0G5WS05AQJK
+  Date: Wed, 29 Dec 2021 19:51:35 GMT
+  ETag: "ab9b7b2c58d3a481e172aea95b1e87a0"
+  Accept-Ranges: bytes
+  Server: AmazonS3
+  Last-Modified: Tue, 28 Dec 2021 17:45:48 GMT
+  Content-Type: application/json
+  Content-Length: 603
+}, 35567111, 53218812, 39564799).
+2021-12-29 07:51:35 PM[System.Net.Http-RequestStop] ().
+2021-12-29 07:51:35 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 35567111, Read, Received 603 bytes.).
+2021-12-29 07:51:35 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 0, ReturnConnection, Stored connection in pool.).
+2021-12-29 07:51:35 PM,35.6634,,,,0.0186,0.0342,38.6694,0.0626
+2021-12-29 07:51:40 PM[System.Net.Http-RequestStart] (https, jangirg-s3-perf-test.s3.us-west-2.amazonaws.com, 443, /test.json, 1, 1, 0).
+2021-12-29 07:51:40 PM[Private.InternalDiagnostics.System.Net.Http-HeadersInvalidValue] (Authorization, AWS4-HMAC-SHA256 Credential=AKIA2SRUSSNWLYTMAP4W/20211229/us-west-2/s3/aws4_request, SignedHeaders=host;user-agent;x-amz-content-sha256;x-amz-date, Signature=567239303827cb8aefc4f5f9fce1fff4536e94e24ec5c42a6a871e6729aa53b2).
+2021-12-29 07:51:40 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 0, GetOrReserveHttp11ConnectionAsync, Found usable connection in pool.).
+2021-12-29 07:51:40 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 44419000, SendAsyncCore, Sending request: Method: GET, RequestUri: 'https://jangirg-s3-perf-test.s3.us-west-2.amazonaws.com/test.json', Version: 1.1, Content: <null>, Headers:
+{
+  User-Agent: aws-sdk-dotnet-coreclr/3.7.7.5
+  User-Agent: aws-sdk-dotnet-core/3.7.5.8
+  User-Agent: .NET_Core/5.0.13
+  User-Agent: OS/Microsoft_Windows_10.0.19044
+  User-Agent: ClientAsync
+  amz-sdk-invocation-id: f878ba16-02fa-4ecb-aa2c-c9f096217cac
+  amz-sdk-request: attempt=1; max=5
+  Host: jangirg-s3-perf-test.s3.us-west-2.amazonaws.com
+  X-Amz-Date: 20211229T195140Z
+  X-Amz-Content-SHA256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+  Authorization: AWS4-HMAC-SHA256 Credential=AKIA2SRUSSNWLYTMAP4W/20211229/us-west-2/s3/aws4_request, SignedHeaders=host;user-agent;x-amz-content-sha256;x-amz-date, Signature=567239303827cb8aefc4f5f9fce1fff4536e94e24ec5c42a6a871e6729aa53b2
+  traceparent: 00-648e2a69cd05f7438b4998e4b46019b4-a3f733b490fcc545-00
+}).
+2021-12-29 07:51:40 PM[System.Net.Http-RequestHeadersStart] ().
+2021-12-29 07:51:40 PM[System.Net.Http-RequestHeadersStop] ().
+2021-12-29 07:51:40 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 44419000, WriteToStreamAsync, Writing 738 bytes.).
+2021-12-29 07:51:40 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 44419000, SendAsyncCore, Received 363 bytes.).
+2021-12-29 07:51:40 PM[Private.InternalDiagnostics.System.Net.Http-Associate] (HttpResponseMessage#17653682, RequestMessage, HttpResponseMessage#17653682, HttpRequestMessage#44419000).
+2021-12-29 07:51:40 PM[Private.InternalDiagnostics.System.Net.Http-Info] (HttpConnectionResponseContent#42194754, .ctor, ).
+2021-12-29 07:51:40 PM[Private.InternalDiagnostics.System.Net.Http-Associate] (HttpResponseMessage#17653682, Content, HttpResponseMessage#17653682, HttpConnectionResponseContent#42194754).
+2021-12-29 07:51:40 PM[System.Net.Http-ResponseHeadersStart] ().
+2021-12-29 07:51:40 PM[System.Net.Http-ResponseHeadersStop] ().
+2021-12-29 07:51:40 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 44419000, SendAsyncCore, Request is fully sent.).
+2021-12-29 07:51:40 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 44419000, SendAsyncCore, Received response: StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: System.Net.Http.HttpConnectionResponseContent, Headers:
+{
+  x-amz-id-2: pEaIm32n/vDuLRe1BgOV+n00gu+3CrXwE0Qaz4+IRksHPvPqlWivfP6iNrNsm0xFCjSQcqPiPW8=
+  x-amz-request-id: DFYFZHB5G46F2AD5
+  Date: Wed, 29 Dec 2021 19:51:41 GMT
+  ETag: "ab9b7b2c58d3a481e172aea95b1e87a0"
+  Accept-Ranges: bytes
+  Server: AmazonS3
+  Last-Modified: Tue, 28 Dec 2021 17:45:48 GMT
+  Content-Type: application/json
+  Content-Length: 603
+}).
+2021-12-29 07:51:40 PM[Private.InternalDiagnostics.System.Net.Http-ClientSendCompleted] (StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: System.Net.Http.HttpConnectionResponseContent, Headers:
+{
+  x-amz-id-2: pEaIm32n/vDuLRe1BgOV+n00gu+3CrXwE0Qaz4+IRksHPvPqlWivfP6iNrNsm0xFCjSQcqPiPW8=
+  x-amz-request-id: DFYFZHB5G46F2AD5
+  Date: Wed, 29 Dec 2021 19:51:41 GMT
+  ETag: "ab9b7b2c58d3a481e172aea95b1e87a0"
+  Accept-Ranges: bytes
+  Server: AmazonS3
+  Last-Modified: Tue, 28 Dec 2021 17:45:48 GMT
+  Content-Type: application/json
+  Content-Length: 603
+}, 44419000, 17653682, 39564799).
+2021-12-29 07:51:40 PM[System.Net.Http-RequestStop] ().
+2021-12-29 07:51:40 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 44419000, Read, Received 603 bytes.).
+2021-12-29 07:51:40 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 0, ReturnConnection, Stored connection in pool.).
+2021-12-29 07:51:40 PM,32.7055,,,,0.0231,0.3589,36.6494,0.2688
+2021-12-29 07:51:46 PM[System.Net.Http-RequestStart] (https, jangirg-s3-perf-test.s3.us-west-2.amazonaws.com, 443, /test.json, 1, 1, 0).
+2021-12-29 07:51:46 PM[Private.InternalDiagnostics.System.Net.Http-HeadersInvalidValue] (Authorization, AWS4-HMAC-SHA256 Credential=AKIA2SRUSSNWLYTMAP4W/20211229/us-west-2/s3/aws4_request, SignedHeaders=host;user-agent;x-amz-content-sha256;x-amz-date, Signature=d1b110c7e2f7590caa09b0325ab6365f94b28cdcb3c3de5392e2d9352d7dcef3).
+2021-12-29 07:51:46 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 0, GetOrReserveHttp11ConnectionAsync, Found usable connection in pool.).
+2021-12-29 07:51:46 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 64062224, SendAsyncCore, Sending request: Method: GET, RequestUri: 'https://jangirg-s3-perf-test.s3.us-west-2.amazonaws.com/test.json', Version: 1.1, Content: <null>, Headers:
+{
+  User-Agent: aws-sdk-dotnet-coreclr/3.7.7.5
+  User-Agent: aws-sdk-dotnet-core/3.7.5.8
+  User-Agent: .NET_Core/5.0.13
+  User-Agent: OS/Microsoft_Windows_10.0.19044
+  User-Agent: ClientAsync
+  amz-sdk-invocation-id: 4a17b5f7-269d-4e19-a9a7-3fe21ce2e089
+  amz-sdk-request: attempt=1; max=5
+  Host: jangirg-s3-perf-test.s3.us-west-2.amazonaws.com
+  X-Amz-Date: 20211229T195146Z
+  X-Amz-Content-SHA256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+  Authorization: AWS4-HMAC-SHA256 Credential=AKIA2SRUSSNWLYTMAP4W/20211229/us-west-2/s3/aws4_request, SignedHeaders=host;user-agent;x-amz-content-sha256;x-amz-date, Signature=d1b110c7e2f7590caa09b0325ab6365f94b28cdcb3c3de5392e2d9352d7dcef3
+  traceparent: 00-6c058d9926660a41aa8800a1f67868a0-6d3a26e89e2f0746-00
+}).
+2021-12-29 07:51:46 PM[System.Net.Http-RequestHeadersStart] ().
+2021-12-29 07:51:46 PM[System.Net.Http-RequestHeadersStop] ().
+2021-12-29 07:51:46 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 64062224, WriteToStreamAsync, Writing 738 bytes.).
+2021-12-29 07:51:46 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 64062224, SendAsyncCore, Received 363 bytes.).
+2021-12-29 07:51:46 PM[Private.InternalDiagnostics.System.Net.Http-Associate] (HttpResponseMessage#42870289, RequestMessage, HttpResponseMessage#42870289, HttpRequestMessage#64062224).
+2021-12-29 07:51:46 PM[Private.InternalDiagnostics.System.Net.Http-Info] (HttpConnectionResponseContent#65124268, .ctor, ).
+2021-12-29 07:51:46 PM[Private.InternalDiagnostics.System.Net.Http-Associate] (HttpResponseMessage#42870289, Content, HttpResponseMessage#42870289, HttpConnectionResponseContent#65124268).
+2021-12-29 07:51:46 PM[System.Net.Http-ResponseHeadersStart] ().
+2021-12-29 07:51:46 PM[System.Net.Http-ResponseHeadersStop] ().
+2021-12-29 07:51:46 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 64062224, SendAsyncCore, Request is fully sent.).
+2021-12-29 07:51:46 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 64062224, SendAsyncCore, Received response: StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: System.Net.Http.HttpConnectionResponseContent, Headers:
+{
+  x-amz-id-2: C3MTTsOm4+IyQuJ3vnNTNvRSemGMZZSBN5KqfavdjkAfh81nQevMF8SFWp0OMeZW6F9M6UiEuzw=
+  x-amz-request-id: PM839WF894DCZQYA
+  Date: Wed, 29 Dec 2021 19:51:47 GMT
+  ETag: "ab9b7b2c58d3a481e172aea95b1e87a0"
+  Accept-Ranges: bytes
+  Server: AmazonS3
+  Last-Modified: Tue, 28 Dec 2021 17:45:48 GMT
+  Content-Type: application/json
+  Content-Length: 603
+}).
+2021-12-29 07:51:46 PM[Private.InternalDiagnostics.System.Net.Http-ClientSendCompleted] (StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: System.Net.Http.HttpConnectionResponseContent, Headers:
+{
+  x-amz-id-2: C3MTTsOm4+IyQuJ3vnNTNvRSemGMZZSBN5KqfavdjkAfh81nQevMF8SFWp0OMeZW6F9M6UiEuzw=
+  x-amz-request-id: PM839WF894DCZQYA
+  Date: Wed, 29 Dec 2021 19:51:47 GMT
+  ETag: "ab9b7b2c58d3a481e172aea95b1e87a0"
+  Accept-Ranges: bytes
+  Server: AmazonS3
+  Last-Modified: Tue, 28 Dec 2021 17:45:48 GMT
+  Content-Type: application/json
+  Content-Length: 603
+}, 64062224, 42870289, 39564799).
+2021-12-29 07:51:46 PM[System.Net.Http-RequestStop] ().
+2021-12-29 07:51:46 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 64062224, Read, Received 603 bytes.).
+2021-12-29 07:51:46 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 0, ReturnConnection, Stored connection in pool.).
+2021-12-29 07:51:46 PM,32.1349,,,,0.0194,0.0499,35.3167,0.043
+2021-12-29 07:51:52 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 0, 0, CleanCacheAndDisposeIfUnused, Cleaning pool.).
+2021-12-29 07:51:52 PM[System.Net.Http-RequestStart] (https, jangirg-s3-perf-test.s3.us-west-2.amazonaws.com, 443, /test.json, 1, 1, 0).
+2021-12-29 07:51:52 PM[Private.InternalDiagnostics.System.Net.Http-HeadersInvalidValue] (Authorization, AWS4-HMAC-SHA256 Credential=AKIA2SRUSSNWLYTMAP4W/20211229/us-west-2/s3/aws4_request, SignedHeaders=host;user-agent;x-amz-content-sha256;x-amz-date, Signature=1178c410dc78414d91f8a16adeaa7df1b842f1f1b36bafe689b909678d4cfbb1).
+2021-12-29 07:51:52 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 0, GetOrReserveHttp11ConnectionAsync, Found usable connection in pool.).
+2021-12-29 07:51:52 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 11679222, SendAsyncCore, Sending request: Method: GET, RequestUri: 'https://jangirg-s3-perf-test.s3.us-west-2.amazonaws.com/test.json', Version: 1.1, Content: <null>, Headers:
+{
+  User-Agent: aws-sdk-dotnet-coreclr/3.7.7.5
+  User-Agent: aws-sdk-dotnet-core/3.7.5.8
+  User-Agent: .NET_Core/5.0.13
+  User-Agent: OS/Microsoft_Windows_10.0.19044
+  User-Agent: ClientAsync
+  amz-sdk-invocation-id: 4081e634-05f8-433f-a759-064958d78a38
+  amz-sdk-request: attempt=1; max=5
+  Host: jangirg-s3-perf-test.s3.us-west-2.amazonaws.com
+  X-Amz-Date: 20211229T195152Z
+  X-Amz-Content-SHA256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+  Authorization: AWS4-HMAC-SHA256 Credential=AKIA2SRUSSNWLYTMAP4W/20211229/us-west-2/s3/aws4_request, SignedHeaders=host;user-agent;x-amz-content-sha256;x-amz-date, Signature=1178c410dc78414d91f8a16adeaa7df1b842f1f1b36bafe689b909678d4cfbb1
+  traceparent: 00-dd6e6745174d4649be96e39c010198ea-a2f170d9b88f7a46-00
+}).
+2021-12-29 07:51:52 PM[System.Net.Http-RequestHeadersStart] ().
+2021-12-29 07:51:52 PM[System.Net.Http-RequestHeadersStop] ().
+2021-12-29 07:51:52 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 11679222, WriteToStreamAsync, Writing 738 bytes.).
+2021-12-29 07:51:52 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 11679222, SendAsyncCore, Received 363 bytes.).
+2021-12-29 07:51:52 PM[Private.InternalDiagnostics.System.Net.Http-Associate] (HttpResponseMessage#17493987, RequestMessage, HttpResponseMessage#17493987, HttpRequestMessage#11679222).
+2021-12-29 07:51:52 PM[Private.InternalDiagnostics.System.Net.Http-Info] (HttpConnectionResponseContent#34696492, .ctor, ).
+2021-12-29 07:51:52 PM[Private.InternalDiagnostics.System.Net.Http-Associate] (HttpResponseMessage#17493987, Content, HttpResponseMessage#17493987, HttpConnectionResponseContent#34696492).
+2021-12-29 07:51:52 PM[System.Net.Http-ResponseHeadersStart] ().
+2021-12-29 07:51:52 PM[System.Net.Http-ResponseHeadersStop] ().
+2021-12-29 07:51:52 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 11679222, SendAsyncCore, Request is fully sent.).
+2021-12-29 07:51:52 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 11679222, SendAsyncCore, Received response: StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: System.Net.Http.HttpConnectionResponseContent, Headers:
+{
+  x-amz-id-2: D8tCanVg9Bxny9nm61zRPKDebMgBKQmb7vRbdeGlvfcR/0F/roZZohlM5hcuXdZFOJ481HCOtK4=
+  x-amz-request-id: FH5ZKPF8C4R9RVQK
+  Date: Wed, 29 Dec 2021 19:51:53 GMT
+  ETag: "ab9b7b2c58d3a481e172aea95b1e87a0"
+  Accept-Ranges: bytes
+  Server: AmazonS3
+  Last-Modified: Tue, 28 Dec 2021 17:45:48 GMT
+  Content-Type: application/json
+  Content-Length: 603
+}).
+2021-12-29 07:51:52 PM[Private.InternalDiagnostics.System.Net.Http-ClientSendCompleted] (StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: System.Net.Http.HttpConnectionResponseContent, Headers:
+{
+  x-amz-id-2: D8tCanVg9Bxny9nm61zRPKDebMgBKQmb7vRbdeGlvfcR/0F/roZZohlM5hcuXdZFOJ481HCOtK4=
+  x-amz-request-id: FH5ZKPF8C4R9RVQK
+  Date: Wed, 29 Dec 2021 19:51:53 GMT
+  ETag: "ab9b7b2c58d3a481e172aea95b1e87a0"
+  Accept-Ranges: bytes
+  Server: AmazonS3
+  Last-Modified: Tue, 28 Dec 2021 17:45:48 GMT
+  Content-Type: application/json
+  Content-Length: 603
+}, 11679222, 17493987, 39564799).
+2021-12-29 07:51:52 PM[System.Net.Http-RequestStop] ().
+2021-12-29 07:51:52 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 11679222, Read, Received 603 bytes.).
+2021-12-29 07:51:52 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 0, ReturnConnection, Stored connection in pool.).
+2021-12-29 07:51:52 PM,36.1829,,,,0.0182,0.0272,38.6293,0.0478
+2021-12-29 07:51:58 PM[System.Net.Http-RequestStart] (https, jangirg-s3-perf-test.s3.us-west-2.amazonaws.com, 443, /test.json, 1, 1, 0).
+2021-12-29 07:51:58 PM[Private.InternalDiagnostics.System.Net.Http-HeadersInvalidValue] (Authorization, AWS4-HMAC-SHA256 Credential=AKIA2SRUSSNWLYTMAP4W/20211229/us-west-2/s3/aws4_request, SignedHeaders=host;user-agent;x-amz-content-sha256;x-amz-date, Signature=6a9090180e3ad6245915de2544e8e4357cada8a1c44aa90d854a838f40e82617).
+2021-12-29 07:51:58 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 0, GetOrReserveHttp11ConnectionAsync, Found usable connection in pool.).
+2021-12-29 07:51:58 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 65718035, SendAsyncCore, Sending request: Method: GET, RequestUri: 'https://jangirg-s3-perf-test.s3.us-west-2.amazonaws.com/test.json', Version: 1.1, Content: <null>, Headers:
+{
+  User-Agent: aws-sdk-dotnet-coreclr/3.7.7.5
+  User-Agent: aws-sdk-dotnet-core/3.7.5.8
+  User-Agent: .NET_Core/5.0.13
+  User-Agent: OS/Microsoft_Windows_10.0.19044
+  User-Agent: ClientAsync
+  amz-sdk-invocation-id: 4460f3b1-3ad4-4875-9aac-6cdbc312664b
+  amz-sdk-request: attempt=1; max=5
+  Host: jangirg-s3-perf-test.s3.us-west-2.amazonaws.com
+  X-Amz-Date: 20211229T195158Z
+  X-Amz-Content-SHA256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+  Authorization: AWS4-HMAC-SHA256 Credential=AKIA2SRUSSNWLYTMAP4W/20211229/us-west-2/s3/aws4_request, SignedHeaders=host;user-agent;x-amz-content-sha256;x-amz-date, Signature=6a9090180e3ad6245915de2544e8e4357cada8a1c44aa90d854a838f40e82617
+  traceparent: 00-227da8ba9cae70499e9e4974227f2f01-cba4dff405314b49-00
+}).
+2021-12-29 07:51:58 PM[System.Net.Http-RequestHeadersStart] ().
+2021-12-29 07:51:58 PM[System.Net.Http-RequestHeadersStop] ().
+2021-12-29 07:51:58 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 65718035, WriteToStreamAsync, Writing 738 bytes.).
+2021-12-29 07:51:58 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 65718035, SendAsyncCore, Received 363 bytes.).
+2021-12-29 07:51:58 PM[Private.InternalDiagnostics.System.Net.Http-Associate] (HttpResponseMessage#30180123, RequestMessage, HttpResponseMessage#30180123, HttpRequestMessage#65718035).
+2021-12-29 07:51:58 PM[Private.InternalDiagnostics.System.Net.Http-Info] (HttpConnectionResponseContent#2808346, .ctor, ).
+2021-12-29 07:51:58 PM[Private.InternalDiagnostics.System.Net.Http-Associate] (HttpResponseMessage#30180123, Content, HttpResponseMessage#30180123, HttpConnectionResponseContent#2808346).
+2021-12-29 07:51:58 PM[System.Net.Http-ResponseHeadersStart] ().
+2021-12-29 07:51:58 PM[System.Net.Http-ResponseHeadersStop] ().
+2021-12-29 07:51:58 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 65718035, SendAsyncCore, Request is fully sent.).
+2021-12-29 07:51:58 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 65718035, SendAsyncCore, Received response: StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: System.Net.Http.HttpConnectionResponseContent, Headers:
+{
+  x-amz-id-2: JzdXDgeLVGPuvXqgL8EkWHlFmlDnV1M5Gs9NZ2/ucpPuADEkL55zWmPIfxgYFpD7uMxnX+3n5zw=
+  x-amz-request-id: AE2PSCVYGVCWVY2G
+  Date: Wed, 29 Dec 2021 19:51:59 GMT
+  ETag: "ab9b7b2c58d3a481e172aea95b1e87a0"
+  Accept-Ranges: bytes
+  Server: AmazonS3
+  Last-Modified: Tue, 28 Dec 2021 17:45:48 GMT
+  Content-Type: application/json
+  Content-Length: 603
+}).
+2021-12-29 07:51:58 PM[Private.InternalDiagnostics.System.Net.Http-ClientSendCompleted] (StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: System.Net.Http.HttpConnectionResponseContent, Headers:
+{
+  x-amz-id-2: JzdXDgeLVGPuvXqgL8EkWHlFmlDnV1M5Gs9NZ2/ucpPuADEkL55zWmPIfxgYFpD7uMxnX+3n5zw=
+  x-amz-request-id: AE2PSCVYGVCWVY2G
+  Date: Wed, 29 Dec 2021 19:51:59 GMT
+  ETag: "ab9b7b2c58d3a481e172aea95b1e87a0"
+  Accept-Ranges: bytes
+  Server: AmazonS3
+  Last-Modified: Tue, 28 Dec 2021 17:45:48 GMT
+  Content-Type: application/json
+  Content-Length: 603
+}, 65718035, 30180123, 39564799).
+2021-12-29 07:51:58 PM[System.Net.Http-RequestStop] ().
+2021-12-29 07:51:58 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 65718035, Read, Received 603 bytes.).
+2021-12-29 07:51:58 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 0, ReturnConnection, Stored connection in pool.).
+2021-12-29 07:51:58 PM,49.5049,,,,0.0173,0.0217,52.2704,0.0617
+2021-12-29 07:52:04 PM[System.Net.Http-RequestStart] (https, jangirg-s3-perf-test.s3.us-west-2.amazonaws.com, 443, /test.json, 1, 1, 0).
+2021-12-29 07:52:04 PM[Private.InternalDiagnostics.System.Net.Http-HeadersInvalidValue] (Authorization, AWS4-HMAC-SHA256 Credential=AKIA2SRUSSNWLYTMAP4W/20211229/us-west-2/s3/aws4_request, SignedHeaders=host;user-agent;x-amz-content-sha256;x-amz-date, Signature=c6d4606ab84dd0da55e01b90aa96dcf42fff0685d1b8debaeac8b2fd63c1e1b7).
+2021-12-29 07:52:04 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 0, GetOrReserveHttp11ConnectionAsync, Found usable connection in pool.).
+2021-12-29 07:52:04 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 59109011, SendAsyncCore, Sending request: Method: GET, RequestUri: 'https://jangirg-s3-perf-test.s3.us-west-2.amazonaws.com/test.json', Version: 1.1, Content: <null>, Headers:
+{
+  User-Agent: aws-sdk-dotnet-coreclr/3.7.7.5
+  User-Agent: aws-sdk-dotnet-core/3.7.5.8
+  User-Agent: .NET_Core/5.0.13
+  User-Agent: OS/Microsoft_Windows_10.0.19044
+  User-Agent: ClientAsync
+  amz-sdk-invocation-id: 8c9baf4e-c318-41a6-b89b-1db2d8026839
+  amz-sdk-request: attempt=1; max=5
+  Host: jangirg-s3-perf-test.s3.us-west-2.amazonaws.com
+  X-Amz-Date: 20211229T195204Z
+  X-Amz-Content-SHA256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+  Authorization: AWS4-HMAC-SHA256 Credential=AKIA2SRUSSNWLYTMAP4W/20211229/us-west-2/s3/aws4_request, SignedHeaders=host;user-agent;x-amz-content-sha256;x-amz-date, Signature=c6d4606ab84dd0da55e01b90aa96dcf42fff0685d1b8debaeac8b2fd63c1e1b7
+  traceparent: 00-d508cadfd6481a489aed1bfe5e642f76-ea6d4cc9a1998d44-00
+}).
+2021-12-29 07:52:04 PM[System.Net.Http-RequestHeadersStart] ().
+2021-12-29 07:52:04 PM[System.Net.Http-RequestHeadersStop] ().
+2021-12-29 07:52:04 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 59109011, WriteToStreamAsync, Writing 738 bytes.).
+2021-12-29 07:52:04 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 59109011, SendAsyncCore, Received 363 bytes.).
+2021-12-29 07:52:04 PM[Private.InternalDiagnostics.System.Net.Http-Associate] (HttpResponseMessage#62105946, RequestMessage, HttpResponseMessage#62105946, HttpRequestMessage#59109011).
+2021-12-29 07:52:04 PM[Private.InternalDiagnostics.System.Net.Http-Info] (HttpConnectionResponseContent#9144789, .ctor, ).
+2021-12-29 07:52:04 PM[Private.InternalDiagnostics.System.Net.Http-Associate] (HttpResponseMessage#62105946, Content, HttpResponseMessage#62105946, HttpConnectionResponseContent#9144789).
+2021-12-29 07:52:04 PM[System.Net.Http-ResponseHeadersStart] ().
+2021-12-29 07:52:04 PM[System.Net.Http-ResponseHeadersStop] ().
+2021-12-29 07:52:04 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 59109011, SendAsyncCore, Request is fully sent.).
+2021-12-29 07:52:04 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 59109011, SendAsyncCore, Received response: StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: System.Net.Http.HttpConnectionResponseContent, Headers:
+{
+  x-amz-id-2: aYbOC224bXjMk4qtUP1jgxoTkRlUBRNeGzcyUmT5MJ+wGy7xO4qhEtR2jI4PRUZYb6xXN51hA3c=
+  x-amz-request-id: 3G03D2JWEWNT8PE3
+  Date: Wed, 29 Dec 2021 19:52:05 GMT
+  ETag: "ab9b7b2c58d3a481e172aea95b1e87a0"
+  Accept-Ranges: bytes
+  Server: AmazonS3
+  Last-Modified: Tue, 28 Dec 2021 17:45:48 GMT
+  Content-Type: application/json
+  Content-Length: 603
+}).
+2021-12-29 07:52:04 PM[Private.InternalDiagnostics.System.Net.Http-ClientSendCompleted] (StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: System.Net.Http.HttpConnectionResponseContent, Headers:
+{
+  x-amz-id-2: aYbOC224bXjMk4qtUP1jgxoTkRlUBRNeGzcyUmT5MJ+wGy7xO4qhEtR2jI4PRUZYb6xXN51hA3c=
+  x-amz-request-id: 3G03D2JWEWNT8PE3
+  Date: Wed, 29 Dec 2021 19:52:05 GMT
+  ETag: "ab9b7b2c58d3a481e172aea95b1e87a0"
+  Accept-Ranges: bytes
+  Server: AmazonS3
+  Last-Modified: Tue, 28 Dec 2021 17:45:48 GMT
+  Content-Type: application/json
+  Content-Length: 603
+}, 59109011, 62105946, 39564799).
+2021-12-29 07:52:04 PM[System.Net.Http-RequestStop] ().
+2021-12-29 07:52:04 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 59109011, Read, Received 603 bytes.).
+2021-12-29 07:52:04 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 0, ReturnConnection, Stored connection in pool.).
+2021-12-29 07:52:04 PM,30.4635,,,,0.0174,0.0263,33.394,0.0429
+2021-12-29 07:52:10 PM[System.Net.Http-RequestStart] (https, jangirg-s3-perf-test.s3.us-west-2.amazonaws.com, 443, /test.json, 1, 1, 0).
+2021-12-29 07:52:10 PM[Private.InternalDiagnostics.System.Net.Http-HeadersInvalidValue] (Authorization, AWS4-HMAC-SHA256 Credential=AKIA2SRUSSNWLYTMAP4W/20211229/us-west-2/s3/aws4_request, SignedHeaders=host;user-agent;x-amz-content-sha256;x-amz-date, Signature=153edd152c0d7ef48b33341654a3738f698009422d41b5a292887efe453a8742).
+2021-12-29 07:52:10 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 0, GetOrReserveHttp11ConnectionAsync, Found usable connection in pool.).
+2021-12-29 07:52:10 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 40644060, SendAsyncCore, Sending request: Method: GET, RequestUri: 'https://jangirg-s3-perf-test.s3.us-west-2.amazonaws.com/test.json', Version: 1.1, Content: <null>, Headers:
+{
+  User-Agent: aws-sdk-dotnet-coreclr/3.7.7.5
+  User-Agent: aws-sdk-dotnet-core/3.7.5.8
+  User-Agent: .NET_Core/5.0.13
+  User-Agent: OS/Microsoft_Windows_10.0.19044
+  User-Agent: ClientAsync
+  amz-sdk-invocation-id: ead40d3a-219e-48c7-959f-b65b6d1bc17f
+  amz-sdk-request: attempt=1; max=5
+  Host: jangirg-s3-perf-test.s3.us-west-2.amazonaws.com
+  X-Amz-Date: 20211229T195210Z
+  X-Amz-Content-SHA256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+  Authorization: AWS4-HMAC-SHA256 Credential=AKIA2SRUSSNWLYTMAP4W/20211229/us-west-2/s3/aws4_request, SignedHeaders=host;user-agent;x-amz-content-sha256;x-amz-date, Signature=153edd152c0d7ef48b33341654a3738f698009422d41b5a292887efe453a8742
+  traceparent: 00-dd0c8dfc3e842445a9e70674b72d13a5-d9e8efb8a1340740-00
+}).
+2021-12-29 07:52:10 PM[System.Net.Http-RequestHeadersStart] ().
+2021-12-29 07:52:10 PM[System.Net.Http-RequestHeadersStop] ().
+2021-12-29 07:52:10 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 40644060, WriteToStreamAsync, Writing 738 bytes.).
+2021-12-29 07:52:10 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 40644060, SendAsyncCore, Received 363 bytes.).
+2021-12-29 07:52:10 PM[Private.InternalDiagnostics.System.Net.Http-Associate] (HttpResponseMessage#27293151, RequestMessage, HttpResponseMessage#27293151, HttpRequestMessage#40644060).
+2021-12-29 07:52:10 PM[Private.InternalDiagnostics.System.Net.Http-Info] (HttpConnectionResponseContent#11240144, .ctor, ).
+2021-12-29 07:52:10 PM[Private.InternalDiagnostics.System.Net.Http-Associate] (HttpResponseMessage#27293151, Content, HttpResponseMessage#27293151, HttpConnectionResponseContent#11240144).
+2021-12-29 07:52:10 PM[System.Net.Http-ResponseHeadersStart] ().
+2021-12-29 07:52:10 PM[System.Net.Http-ResponseHeadersStop] ().
+2021-12-29 07:52:10 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 40644060, SendAsyncCore, Request is fully sent.).
+2021-12-29 07:52:10 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 40644060, SendAsyncCore, Received response: StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: System.Net.Http.HttpConnectionResponseContent, Headers:
+{
+  x-amz-id-2: 22YCpUGCED84TTRzWSKAdcuvmJs20UGJF/M3lb8S7+SQyNUC+o8U+Tml6/2SH8uwmv1x2gRMcBw=
+  x-amz-request-id: T6CY0CMD52JTJ30Q
+  Date: Wed, 29 Dec 2021 19:52:10 GMT
+  ETag: "ab9b7b2c58d3a481e172aea95b1e87a0"
+  Accept-Ranges: bytes
+  Server: AmazonS3
+  Last-Modified: Tue, 28 Dec 2021 17:45:48 GMT
+  Content-Type: application/json
+  Content-Length: 603
+}).
+2021-12-29 07:52:10 PM[Private.InternalDiagnostics.System.Net.Http-ClientSendCompleted] (StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: System.Net.Http.HttpConnectionResponseContent, Headers:
+{
+  x-amz-id-2: 22YCpUGCED84TTRzWSKAdcuvmJs20UGJF/M3lb8S7+SQyNUC+o8U+Tml6/2SH8uwmv1x2gRMcBw=
+  x-amz-request-id: T6CY0CMD52JTJ30Q
+  Date: Wed, 29 Dec 2021 19:52:10 GMT
+  ETag: "ab9b7b2c58d3a481e172aea95b1e87a0"
+  Accept-Ranges: bytes
+  Server: AmazonS3
+  Last-Modified: Tue, 28 Dec 2021 17:45:48 GMT
+  Content-Type: application/json
+  Content-Length: 603
+}, 40644060, 27293151, 39564799).
+2021-12-29 07:52:10 PM[System.Net.Http-RequestStop] ().
+2021-12-29 07:52:10 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 40644060, Read, Received 603 bytes.).
+2021-12-29 07:52:10 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 0, ReturnConnection, Stored connection in pool.).
+2021-12-29 07:52:10 PM,30.1718,,,,0.0208,0.0249,32.4914,0.0599
+2021-12-29 07:52:16 PM[System.Net.Http-RequestStart] (https, jangirg-s3-perf-test.s3.us-west-2.amazonaws.com, 443, /test.json, 1, 1, 0).
+2021-12-29 07:52:16 PM[Private.InternalDiagnostics.System.Net.Http-HeadersInvalidValue] (Authorization, AWS4-HMAC-SHA256 Credential=AKIA2SRUSSNWLYTMAP4W/20211229/us-west-2/s3/aws4_request, SignedHeaders=host;user-agent;x-amz-content-sha256;x-amz-date, Signature=e45b848ec50f76c73d15729570f52b5a25a4ae31d766ade83775c72f4227e82a).
+2021-12-29 07:52:16 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 0, GetOrReserveHttp11ConnectionAsync, Found usable connection in pool.).
+2021-12-29 07:52:16 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 28756230, SendAsyncCore, Sending request: Method: GET, RequestUri: 'https://jangirg-s3-perf-test.s3.us-west-2.amazonaws.com/test.json', Version: 1.1, Content: <null>, Headers:
+{
+  User-Agent: aws-sdk-dotnet-coreclr/3.7.7.5
+  User-Agent: aws-sdk-dotnet-core/3.7.5.8
+  User-Agent: .NET_Core/5.0.13
+  User-Agent: OS/Microsoft_Windows_10.0.19044
+  User-Agent: ClientAsync
+  amz-sdk-invocation-id: cd08eff1-4b6c-4b6f-b75b-0a90f2717bbc
+  amz-sdk-request: attempt=1; max=5
+  Host: jangirg-s3-perf-test.s3.us-west-2.amazonaws.com
+  X-Amz-Date: 20211229T195216Z
+  X-Amz-Content-SHA256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+  Authorization: AWS4-HMAC-SHA256 Credential=AKIA2SRUSSNWLYTMAP4W/20211229/us-west-2/s3/aws4_request, SignedHeaders=host;user-agent;x-amz-content-sha256;x-amz-date, Signature=e45b848ec50f76c73d15729570f52b5a25a4ae31d766ade83775c72f4227e82a
+  traceparent: 00-0c6a8a66032e8c47b55ce91e19e52bea-45f55d415ef63c48-00
+}).
+2021-12-29 07:52:16 PM[System.Net.Http-RequestHeadersStart] ().
+2021-12-29 07:52:16 PM[System.Net.Http-RequestHeadersStop] ().
+2021-12-29 07:52:16 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 28756230, WriteToStreamAsync, Writing 738 bytes.).
+2021-12-29 07:52:16 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 28756230, SendAsyncCore, Received 363 bytes.).
+2021-12-29 07:52:16 PM[Private.InternalDiagnostics.System.Net.Http-Associate] (HttpResponseMessage#12568153, RequestMessage, HttpResponseMessage#12568153, HttpRequestMessage#28756230).
+2021-12-29 07:52:16 PM[Private.InternalDiagnostics.System.Net.Http-Info] (HttpConnectionResponseContent#45768388, .ctor, ).
+2021-12-29 07:52:16 PM[Private.InternalDiagnostics.System.Net.Http-Associate] (HttpResponseMessage#12568153, Content, HttpResponseMessage#12568153, HttpConnectionResponseContent#45768388).
+2021-12-29 07:52:16 PM[System.Net.Http-ResponseHeadersStart] ().
+2021-12-29 07:52:16 PM[System.Net.Http-ResponseHeadersStop] ().
+2021-12-29 07:52:16 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 28756230, SendAsyncCore, Request is fully sent.).
+2021-12-29 07:52:16 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 28756230, SendAsyncCore, Received response: StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: System.Net.Http.HttpConnectionResponseContent, Headers:
+{
+  x-amz-id-2: 0CTH+is3ZU1AymKkdGQiJ6CEsT7aeFoDyPghXcDLRWweb9FkGDiUzB0BULyX7eosJzVJoEwaaFs=
+  x-amz-request-id: AYBPS2YVFEJAHZJX
+  Date: Wed, 29 Dec 2021 19:52:16 GMT
+  ETag: "ab9b7b2c58d3a481e172aea95b1e87a0"
+  Accept-Ranges: bytes
+  Server: AmazonS3
+  Last-Modified: Tue, 28 Dec 2021 17:45:48 GMT
+  Content-Type: application/json
+  Content-Length: 603
+}).
+2021-12-29 07:52:16 PM[Private.InternalDiagnostics.System.Net.Http-ClientSendCompleted] (StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: System.Net.Http.HttpConnectionResponseContent, Headers:
+{
+  x-amz-id-2: 0CTH+is3ZU1AymKkdGQiJ6CEsT7aeFoDyPghXcDLRWweb9FkGDiUzB0BULyX7eosJzVJoEwaaFs=
+  x-amz-request-id: AYBPS2YVFEJAHZJX
+  Date: Wed, 29 Dec 2021 19:52:16 GMT
+  ETag: "ab9b7b2c58d3a481e172aea95b1e87a0"
+  Accept-Ranges: bytes
+  Server: AmazonS3
+  Last-Modified: Tue, 28 Dec 2021 17:45:48 GMT
+  Content-Type: application/json
+  Content-Length: 603
+}, 28756230, 12568153, 39564799).
+2021-12-29 07:52:16 PM[System.Net.Http-RequestStop] ().
+2021-12-29 07:52:16 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 28756230, Read, Received 603 bytes.).
+2021-12-29 07:52:16 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 0, ReturnConnection, Stored connection in pool.).
+2021-12-29 07:52:16 PM,32.4954,,,,0.018,0.0201,35.1088,0.0445
+2021-12-29 07:52:22 PM[System.Net.Http-RequestStart] (https, jangirg-s3-perf-test.s3.us-west-2.amazonaws.com, 443, /test.json, 1, 1, 0).
+2021-12-29 07:52:22 PM[Private.InternalDiagnostics.System.Net.Http-HeadersInvalidValue] (Authorization, AWS4-HMAC-SHA256 Credential=AKIA2SRUSSNWLYTMAP4W/20211229/us-west-2/s3/aws4_request, SignedHeaders=host;user-agent;x-amz-content-sha256;x-amz-date, Signature=13173c78d344c9251a6282c065e58df8a114e80efde0cf7bf0185e73f77610e7).
+2021-12-29 07:52:22 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 0, GetOrReserveHttp11ConnectionAsync, Found usable connection in pool.).
+2021-12-29 07:52:22 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 47980820, SendAsyncCore, Sending request: Method: GET, RequestUri: 'https://jangirg-s3-perf-test.s3.us-west-2.amazonaws.com/test.json', Version: 1.1, Content: <null>, Headers:
+{
+  User-Agent: aws-sdk-dotnet-coreclr/3.7.7.5
+  User-Agent: aws-sdk-dotnet-core/3.7.5.8
+  User-Agent: .NET_Core/5.0.13
+  User-Agent: OS/Microsoft_Windows_10.0.19044
+  User-Agent: ClientAsync
+  amz-sdk-invocation-id: 02989861-6502-4595-a0b6-2571e29b4570
+  amz-sdk-request: attempt=1; max=5
+  Host: jangirg-s3-perf-test.s3.us-west-2.amazonaws.com
+  X-Amz-Date: 20211229T195222Z
+  X-Amz-Content-SHA256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+  Authorization: AWS4-HMAC-SHA256 Credential=AKIA2SRUSSNWLYTMAP4W/20211229/us-west-2/s3/aws4_request, SignedHeaders=host;user-agent;x-amz-content-sha256;x-amz-date, Signature=13173c78d344c9251a6282c065e58df8a114e80efde0cf7bf0185e73f77610e7
+  traceparent: 00-bd7925787aaa27409fecfcca2ae888d8-c3a4d0b210573849-00
+}).
+2021-12-29 07:52:22 PM[System.Net.Http-RequestHeadersStart] ().
+2021-12-29 07:52:22 PM[System.Net.Http-RequestHeadersStop] ().
+2021-12-29 07:52:22 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 47980820, WriteToStreamAsync, Writing 738 bytes.).
+2021-12-29 07:52:22 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 47980820, SendAsyncCore, Received 363 bytes.).
+2021-12-29 07:52:22 PM[Private.InternalDiagnostics.System.Net.Http-Associate] (HttpResponseMessage#3359025, RequestMessage, HttpResponseMessage#3359025, HttpRequestMessage#47980820).
+2021-12-29 07:52:22 PM[Private.InternalDiagnostics.System.Net.Http-Info] (HttpConnectionResponseContent#16866778, .ctor, ).
+2021-12-29 07:52:22 PM[Private.InternalDiagnostics.System.Net.Http-Associate] (HttpResponseMessage#3359025, Content, HttpResponseMessage#3359025, HttpConnectionResponseContent#16866778).
+2021-12-29 07:52:22 PM[System.Net.Http-ResponseHeadersStart] ().
+2021-12-29 07:52:22 PM[System.Net.Http-ResponseHeadersStop] ().
+2021-12-29 07:52:22 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 47980820, SendAsyncCore, Request is fully sent.).
+2021-12-29 07:52:22 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 47980820, SendAsyncCore, Received response: StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: System.Net.Http.HttpConnectionResponseContent, Headers:
+{
+  x-amz-id-2: Dtx3W7bvFPoUgVPbnXlEvAtJVevrIjjDF1ygKTLXmScemm98RVC1DARBaJosInOtKcUt56bolLQ=
+  x-amz-request-id: WEQ5W1P2WB6BW9CD
+  Date: Wed, 29 Dec 2021 19:52:22 GMT
+  ETag: "ab9b7b2c58d3a481e172aea95b1e87a0"
+  Accept-Ranges: bytes
+  Server: AmazonS3
+  Last-Modified: Tue, 28 Dec 2021 17:45:48 GMT
+  Content-Type: application/json
+  Content-Length: 603
+}).
+2021-12-29 07:52:22 PM[Private.InternalDiagnostics.System.Net.Http-ClientSendCompleted] (StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: System.Net.Http.HttpConnectionResponseContent, Headers:
+{
+  x-amz-id-2: Dtx3W7bvFPoUgVPbnXlEvAtJVevrIjjDF1ygKTLXmScemm98RVC1DARBaJosInOtKcUt56bolLQ=
+  x-amz-request-id: WEQ5W1P2WB6BW9CD
+  Date: Wed, 29 Dec 2021 19:52:22 GMT
+  ETag: "ab9b7b2c58d3a481e172aea95b1e87a0"
+  Accept-Ranges: bytes
+  Server: AmazonS3
+  Last-Modified: Tue, 28 Dec 2021 17:45:48 GMT
+  Content-Type: application/json
+  Content-Length: 603
+}, 47980820, 3359025, 39564799).
+2021-12-29 07:52:22 PM[System.Net.Http-RequestStop] ().
+2021-12-29 07:52:22 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 47980820, Read, Received 603 bytes.).
+2021-12-29 07:52:22 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 0, ReturnConnection, Stored connection in pool.).
+2021-12-29 07:52:22 PM,43.6277,,,,0.0223,0.0217,46.1428,0.0598
+2021-12-29 07:52:27 PM[System.Net.Http-RequestStart] (https, jangirg-s3-perf-test.s3.us-west-2.amazonaws.com, 443, /test.json, 1, 1, 0).
+2021-12-29 07:52:27 PM[Private.InternalDiagnostics.System.Net.Http-HeadersInvalidValue] (Authorization, AWS4-HMAC-SHA256 Credential=AKIA2SRUSSNWLYTMAP4W/20211229/us-west-2/s3/aws4_request, SignedHeaders=host;user-agent;x-amz-content-sha256;x-amz-date, Signature=982a8b8d891a650c0951ebf53293e0ec011c13bac31c0173249055b90d5b2d38).
+2021-12-29 07:52:27 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 0, GetOrReserveHttp11ConnectionAsync, Found usable connection in pool.).
+2021-12-29 07:52:27 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 57416410, SendAsyncCore, Sending request: Method: GET, RequestUri: 'https://jangirg-s3-perf-test.s3.us-west-2.amazonaws.com/test.json', Version: 1.1, Content: <null>, Headers:
+{
+  User-Agent: aws-sdk-dotnet-coreclr/3.7.7.5
+  User-Agent: aws-sdk-dotnet-core/3.7.5.8
+  User-Agent: .NET_Core/5.0.13
+  User-Agent: OS/Microsoft_Windows_10.0.19044
+  User-Agent: ClientAsync
+  amz-sdk-invocation-id: 6d05fe8a-cb87-484d-a704-c7d39bb0bb46
+  amz-sdk-request: attempt=1; max=5
+  Host: jangirg-s3-perf-test.s3.us-west-2.amazonaws.com
+  X-Amz-Date: 20211229T195227Z
+  X-Amz-Content-SHA256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+  Authorization: AWS4-HMAC-SHA256 Credential=AKIA2SRUSSNWLYTMAP4W/20211229/us-west-2/s3/aws4_request, SignedHeaders=host;user-agent;x-amz-content-sha256;x-amz-date, Signature=982a8b8d891a650c0951ebf53293e0ec011c13bac31c0173249055b90d5b2d38
+  traceparent: 00-3254ba0e59cf9844b3cba4abb7c6a43c-55f86efa962e7d40-00
+}).
+2021-12-29 07:52:27 PM[System.Net.Http-RequestHeadersStart] ().
+2021-12-29 07:52:27 PM[System.Net.Http-RequestHeadersStop] ().
+2021-12-29 07:52:27 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 57416410, WriteToStreamAsync, Writing 738 bytes.).
+2021-12-29 07:52:28 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 57416410, SendAsyncCore, Received 363 bytes.).
+2021-12-29 07:52:28 PM[Private.InternalDiagnostics.System.Net.Http-Associate] (HttpResponseMessage#19016271, RequestMessage, HttpResponseMessage#19016271, HttpRequestMessage#57416410).
+2021-12-29 07:52:28 PM[Private.InternalDiagnostics.System.Net.Http-Info] (HttpConnectionResponseContent#5644729, .ctor, ).
+2021-12-29 07:52:28 PM[Private.InternalDiagnostics.System.Net.Http-Associate] (HttpResponseMessage#19016271, Content, HttpResponseMessage#19016271, HttpConnectionResponseContent#5644729).
+2021-12-29 07:52:28 PM[System.Net.Http-ResponseHeadersStart] ().
+2021-12-29 07:52:28 PM[System.Net.Http-ResponseHeadersStop] ().
+2021-12-29 07:52:28 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 57416410, SendAsyncCore, Request is fully sent.).
+2021-12-29 07:52:28 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 57416410, SendAsyncCore, Received response: StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: System.Net.Http.HttpConnectionResponseContent, Headers:
+{
+  x-amz-id-2: GAhDIXIN/xoijZPgxhoBdtEiq/TnhFMaWEt4WU9ahQiPudT/3NJLzDmYVnPOtgqTVyluF8wJceM=
+  x-amz-request-id: DZ5KBGP8HN7YKTM6
+  Date: Wed, 29 Dec 2021 19:52:28 GMT
+  ETag: "ab9b7b2c58d3a481e172aea95b1e87a0"
+  Accept-Ranges: bytes
+  Server: AmazonS3
+  Last-Modified: Tue, 28 Dec 2021 17:45:48 GMT
+  Content-Type: application/json
+  Content-Length: 603
+}).
+2021-12-29 07:52:28 PM[Private.InternalDiagnostics.System.Net.Http-ClientSendCompleted] (StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: System.Net.Http.HttpConnectionResponseContent, Headers:
+{
+  x-amz-id-2: GAhDIXIN/xoijZPgxhoBdtEiq/TnhFMaWEt4WU9ahQiPudT/3NJLzDmYVnPOtgqTVyluF8wJceM=
+  x-amz-request-id: DZ5KBGP8HN7YKTM6
+  Date: Wed, 29 Dec 2021 19:52:28 GMT
+  ETag: "ab9b7b2c58d3a481e172aea95b1e87a0"
+  Accept-Ranges: bytes
+  Server: AmazonS3
+  Last-Modified: Tue, 28 Dec 2021 17:45:48 GMT
+  Content-Type: application/json
+  Content-Length: 603
+}, 57416410, 19016271, 39564799).
+2021-12-29 07:52:28 PM[System.Net.Http-RequestStop] ().
+2021-12-29 07:52:28 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 57416410, Read, Received 603 bytes.).
+2021-12-29 07:52:28 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 0, ReturnConnection, Stored connection in pool.).
+2021-12-29 07:52:28 PM,30.0452,,,,0.0178,0.02,32.5746,0.0417
+2021-12-29 07:52:33 PM[System.Net.Http-RequestStart] (https, jangirg-s3-perf-test.s3.us-west-2.amazonaws.com, 443, /test.json, 1, 1, 0).
+2021-12-29 07:52:33 PM[Private.InternalDiagnostics.System.Net.Http-HeadersInvalidValue] (Authorization, AWS4-HMAC-SHA256 Credential=AKIA2SRUSSNWLYTMAP4W/20211229/us-west-2/s3/aws4_request, SignedHeaders=host;user-agent;x-amz-content-sha256;x-amz-date, Signature=faac1a392742405dbe9a97745f9e74e0f78f34900ad93f0738bbfb8b2fc65fee).
+2021-12-29 07:52:33 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 0, GetOrReserveHttp11ConnectionAsync, Found usable connection in pool.).
+2021-12-29 07:52:33 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 15193904, SendAsyncCore, Sending request: Method: GET, RequestUri: 'https://jangirg-s3-perf-test.s3.us-west-2.amazonaws.com/test.json', Version: 1.1, Content: <null>, Headers:
+{
+  User-Agent: aws-sdk-dotnet-coreclr/3.7.7.5
+  User-Agent: aws-sdk-dotnet-core/3.7.5.8
+  User-Agent: .NET_Core/5.0.13
+  User-Agent: OS/Microsoft_Windows_10.0.19044
+  User-Agent: ClientAsync
+  amz-sdk-invocation-id: 20dfb519-36eb-4e8a-8cc5-c255ea2f13d2
+  amz-sdk-request: attempt=1; max=5
+  Host: jangirg-s3-perf-test.s3.us-west-2.amazonaws.com
+  X-Amz-Date: 20211229T195233Z
+  X-Amz-Content-SHA256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+  Authorization: AWS4-HMAC-SHA256 Credential=AKIA2SRUSSNWLYTMAP4W/20211229/us-west-2/s3/aws4_request, SignedHeaders=host;user-agent;x-amz-content-sha256;x-amz-date, Signature=faac1a392742405dbe9a97745f9e74e0f78f34900ad93f0738bbfb8b2fc65fee
+  traceparent: 00-3d63f171264ac64fac8439e4c9d7f7b9-290ec649a13c414b-00
+}).
+2021-12-29 07:52:33 PM[System.Net.Http-RequestHeadersStart] ().
+2021-12-29 07:52:33 PM[System.Net.Http-RequestHeadersStop] ().
+2021-12-29 07:52:33 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 15193904, WriteToStreamAsync, Writing 738 bytes.).
+2021-12-29 07:52:33 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 15193904, SendAsyncCore, Received 363 bytes.).
+2021-12-29 07:52:33 PM[Private.InternalDiagnostics.System.Net.Http-Associate] (HttpResponseMessage#6900506, RequestMessage, HttpResponseMessage#6900506, HttpRequestMessage#15193904).
+2021-12-29 07:52:33 PM[Private.InternalDiagnostics.System.Net.Http-Info] (HttpConnectionResponseContent#38294922, .ctor, ).
+2021-12-29 07:52:33 PM[Private.InternalDiagnostics.System.Net.Http-Associate] (HttpResponseMessage#6900506, Content, HttpResponseMessage#6900506, HttpConnectionResponseContent#38294922).
+2021-12-29 07:52:33 PM[System.Net.Http-ResponseHeadersStart] ().
+2021-12-29 07:52:33 PM[System.Net.Http-ResponseHeadersStop] ().
+2021-12-29 07:52:33 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 15193904, SendAsyncCore, Request is fully sent.).
+2021-12-29 07:52:33 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 15193904, SendAsyncCore, Received response: StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: System.Net.Http.HttpConnectionResponseContent, Headers:
+{
+  x-amz-id-2: VxxAwJMBrsY7zHIpVhUQQmvISmS24dQXFa/7TjcD243eO4WVWXitLM4+VqjOpqIOZKQmpEwvRU4=
+  x-amz-request-id: KKKZYKAXBSZ6PKFP
+  Date: Wed, 29 Dec 2021 19:52:34 GMT
+  ETag: "ab9b7b2c58d3a481e172aea95b1e87a0"
+  Accept-Ranges: bytes
+  Server: AmazonS3
+  Last-Modified: Tue, 28 Dec 2021 17:45:48 GMT
+  Content-Type: application/json
+  Content-Length: 603
+}).
+2021-12-29 07:52:33 PM[Private.InternalDiagnostics.System.Net.Http-ClientSendCompleted] (StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: System.Net.Http.HttpConnectionResponseContent, Headers:
+{
+  x-amz-id-2: VxxAwJMBrsY7zHIpVhUQQmvISmS24dQXFa/7TjcD243eO4WVWXitLM4+VqjOpqIOZKQmpEwvRU4=
+  x-amz-request-id: KKKZYKAXBSZ6PKFP
+  Date: Wed, 29 Dec 2021 19:52:34 GMT
+  ETag: "ab9b7b2c58d3a481e172aea95b1e87a0"
+  Accept-Ranges: bytes
+  Server: AmazonS3
+  Last-Modified: Tue, 28 Dec 2021 17:45:48 GMT
+  Content-Type: application/json
+  Content-Length: 603
+}, 15193904, 6900506, 39564799).
+2021-12-29 07:52:33 PM[System.Net.Http-RequestStop] ().
+2021-12-29 07:52:33 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 15193904, Read, Received 603 bytes.).
+2021-12-29 07:52:33 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 0, ReturnConnection, Stored connection in pool.).
+2021-12-29 07:52:33 PM,33.0754,,,,0.0186,0.035,35.6738,0.0652
+2021-12-29 07:52:39 PM[System.Net.Http-RequestStart] (https, jangirg-s3-perf-test.s3.us-west-2.amazonaws.com, 443, /test.json, 1, 1, 0).
+2021-12-29 07:52:39 PM[Private.InternalDiagnostics.System.Net.Http-HeadersInvalidValue] (Authorization, AWS4-HMAC-SHA256 Credential=AKIA2SRUSSNWLYTMAP4W/20211229/us-west-2/s3/aws4_request, SignedHeaders=host;user-agent;x-amz-content-sha256;x-amz-date, Signature=de1afbf73c8c8c858aec964f01a912feae094065f6eedb4d4ec4d6ef8f6920e5).
+2021-12-29 07:52:39 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 0, GetOrReserveHttp11ConnectionAsync, Found usable connection in pool.).
+2021-12-29 07:52:39 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 46734146, SendAsyncCore, Sending request: Method: GET, RequestUri: 'https://jangirg-s3-perf-test.s3.us-west-2.amazonaws.com/test.json', Version: 1.1, Content: <null>, Headers:
+{
+  User-Agent: aws-sdk-dotnet-coreclr/3.7.7.5
+  User-Agent: aws-sdk-dotnet-core/3.7.5.8
+  User-Agent: .NET_Core/5.0.13
+  User-Agent: OS/Microsoft_Windows_10.0.19044
+  User-Agent: ClientAsync
+  amz-sdk-invocation-id: 17e90fb8-9efd-496c-ab9b-c17fd5c38c80
+  amz-sdk-request: attempt=1; max=5
+  Host: jangirg-s3-perf-test.s3.us-west-2.amazonaws.com
+  X-Amz-Date: 20211229T195239Z
+  X-Amz-Content-SHA256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+  Authorization: AWS4-HMAC-SHA256 Credential=AKIA2SRUSSNWLYTMAP4W/20211229/us-west-2/s3/aws4_request, SignedHeaders=host;user-agent;x-amz-content-sha256;x-amz-date, Signature=de1afbf73c8c8c858aec964f01a912feae094065f6eedb4d4ec4d6ef8f6920e5
+  traceparent: 00-52f79d92e7dea84f9ccaff564dec049f-a4df840c949a4b48-00
+}).
+2021-12-29 07:52:39 PM[System.Net.Http-RequestHeadersStart] ().
+2021-12-29 07:52:39 PM[System.Net.Http-RequestHeadersStop] ().
+2021-12-29 07:52:39 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 46734146, WriteToStreamAsync, Writing 738 bytes.).
+2021-12-29 07:52:39 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 46734146, SendAsyncCore, Received 363 bytes.).
+2021-12-29 07:52:39 PM[Private.InternalDiagnostics.System.Net.Http-Associate] (HttpResponseMessage#17848954, RequestMessage, HttpResponseMessage#17848954, HttpRequestMessage#46734146).
+2021-12-29 07:52:39 PM[Private.InternalDiagnostics.System.Net.Http-Info] (HttpConnectionResponseContent#43570676, .ctor, ).
+2021-12-29 07:52:39 PM[Private.InternalDiagnostics.System.Net.Http-Associate] (HttpResponseMessage#17848954, Content, HttpResponseMessage#17848954, HttpConnectionResponseContent#43570676).
+2021-12-29 07:52:39 PM[System.Net.Http-ResponseHeadersStart] ().
+2021-12-29 07:52:39 PM[System.Net.Http-ResponseHeadersStop] ().
+2021-12-29 07:52:39 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 46734146, SendAsyncCore, Request is fully sent.).
+2021-12-29 07:52:39 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 46734146, SendAsyncCore, Received response: StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: System.Net.Http.HttpConnectionResponseContent, Headers:
+{
+  x-amz-id-2: Zdu0jh8SLJMJysxDXAErUaDlZKh01L0Fbt+E59BdMOadGZpj7HaEd3bXdx9bC9DJitdAhh4BW9o=
+  x-amz-request-id: X31JB1Y3A0NRBM55
+  Date: Wed, 29 Dec 2021 19:52:40 GMT
+  ETag: "ab9b7b2c58d3a481e172aea95b1e87a0"
+  Accept-Ranges: bytes
+  Server: AmazonS3
+  Last-Modified: Tue, 28 Dec 2021 17:45:48 GMT
+  Content-Type: application/json
+  Content-Length: 603
+}).
+2021-12-29 07:52:39 PM[Private.InternalDiagnostics.System.Net.Http-ClientSendCompleted] (StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: System.Net.Http.HttpConnectionResponseContent, Headers:
+{
+  x-amz-id-2: Zdu0jh8SLJMJysxDXAErUaDlZKh01L0Fbt+E59BdMOadGZpj7HaEd3bXdx9bC9DJitdAhh4BW9o=
+  x-amz-request-id: X31JB1Y3A0NRBM55
+  Date: Wed, 29 Dec 2021 19:52:40 GMT
+  ETag: "ab9b7b2c58d3a481e172aea95b1e87a0"
+  Accept-Ranges: bytes
+  Server: AmazonS3
+  Last-Modified: Tue, 28 Dec 2021 17:45:48 GMT
+  Content-Type: application/json
+  Content-Length: 603
+}, 46734146, 17848954, 39564799).
+2021-12-29 07:52:39 PM[System.Net.Http-RequestStop] ().
+2021-12-29 07:52:39 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 46734146, Read, Received 603 bytes.).
+2021-12-29 07:52:39 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 0, ReturnConnection, Stored connection in pool.).
+2021-12-29 07:52:39 PM,34.6337,,,,0.0215,0.0232,36.9821,0.0588
+2021-12-29 07:52:45 PM[System.Net.Http-RequestStart] (https, jangirg-s3-perf-test.s3.us-west-2.amazonaws.com, 443, /test.json, 1, 1, 0).
+2021-12-29 07:52:45 PM[Private.InternalDiagnostics.System.Net.Http-HeadersInvalidValue] (Authorization, AWS4-HMAC-SHA256 Credential=AKIA2SRUSSNWLYTMAP4W/20211229/us-west-2/s3/aws4_request, SignedHeaders=host;user-agent;x-amz-content-sha256;x-amz-date, Signature=292a1db32e597057bbdc4dcec517b601f05be65846b66471a8c15c4701be4012).
+2021-12-29 07:52:45 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 0, GetOrReserveHttp11ConnectionAsync, Found usable connection in pool.).
+2021-12-29 07:52:45 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 40452378, SendAsyncCore, Sending request: Method: GET, RequestUri: 'https://jangirg-s3-perf-test.s3.us-west-2.amazonaws.com/test.json', Version: 1.1, Content: <null>, Headers:
+{
+  User-Agent: aws-sdk-dotnet-coreclr/3.7.7.5
+  User-Agent: aws-sdk-dotnet-core/3.7.5.8
+  User-Agent: .NET_Core/5.0.13
+  User-Agent: OS/Microsoft_Windows_10.0.19044
+  User-Agent: ClientAsync
+  amz-sdk-invocation-id: 4c26eb0c-a19f-4cff-8d5b-d647f0daa586
+  amz-sdk-request: attempt=1; max=5
+  Host: jangirg-s3-perf-test.s3.us-west-2.amazonaws.com
+  X-Amz-Date: 20211229T195245Z
+  X-Amz-Content-SHA256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+  Authorization: AWS4-HMAC-SHA256 Credential=AKIA2SRUSSNWLYTMAP4W/20211229/us-west-2/s3/aws4_request, SignedHeaders=host;user-agent;x-amz-content-sha256;x-amz-date, Signature=292a1db32e597057bbdc4dcec517b601f05be65846b66471a8c15c4701be4012
+  traceparent: 00-1efa58ef3686894ebf128cc87d7a85e7-fa5a65a0ab6f7e44-00
+}).
+2021-12-29 07:52:45 PM[System.Net.Http-RequestHeadersStart] ().
+2021-12-29 07:52:45 PM[System.Net.Http-RequestHeadersStop] ().
+2021-12-29 07:52:45 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 40452378, WriteToStreamAsync, Writing 738 bytes.).
+2021-12-29 07:52:45 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 40452378, SendAsyncCore, Received 363 bytes.).
+2021-12-29 07:52:45 PM[Private.InternalDiagnostics.System.Net.Http-Associate] (HttpResponseMessage#15525080, RequestMessage, HttpResponseMessage#15525080, HttpRequestMessage#40452378).
+2021-12-29 07:52:45 PM[Private.InternalDiagnostics.System.Net.Http-Info] (HttpConnectionResponseContent#52582687, .ctor, ).
+2021-12-29 07:52:45 PM[Private.InternalDiagnostics.System.Net.Http-Associate] (HttpResponseMessage#15525080, Content, HttpResponseMessage#15525080, HttpConnectionResponseContent#52582687).
+2021-12-29 07:52:45 PM[System.Net.Http-ResponseHeadersStart] ().
+2021-12-29 07:52:45 PM[System.Net.Http-ResponseHeadersStop] ().
+2021-12-29 07:52:45 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 40452378, SendAsyncCore, Request is fully sent.).
+2021-12-29 07:52:45 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 40452378, SendAsyncCore, Received response: StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: System.Net.Http.HttpConnectionResponseContent, Headers:
+{
+  x-amz-id-2: ZN4i2Y0U8EOucW8ThZ+lmvdkYYMOuiRB9qT40LRVV4gzbdqu8ESEBHl7OawalXZSUQ3MVrvOVbQ=
+  x-amz-request-id: 2N5CQS7RBND5FQH9
+  Date: Wed, 29 Dec 2021 19:52:46 GMT
+  ETag: "ab9b7b2c58d3a481e172aea95b1e87a0"
+  Accept-Ranges: bytes
+  Server: AmazonS3
+  Last-Modified: Tue, 28 Dec 2021 17:45:48 GMT
+  Content-Type: application/json
+  Content-Length: 603
+}).
+2021-12-29 07:52:45 PM[Private.InternalDiagnostics.System.Net.Http-ClientSendCompleted] (StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: System.Net.Http.HttpConnectionResponseContent, Headers:
+{
+  x-amz-id-2: ZN4i2Y0U8EOucW8ThZ+lmvdkYYMOuiRB9qT40LRVV4gzbdqu8ESEBHl7OawalXZSUQ3MVrvOVbQ=
+  x-amz-request-id: 2N5CQS7RBND5FQH9
+  Date: Wed, 29 Dec 2021 19:52:46 GMT
+  ETag: "ab9b7b2c58d3a481e172aea95b1e87a0"
+  Accept-Ranges: bytes
+  Server: AmazonS3
+  Last-Modified: Tue, 28 Dec 2021 17:45:48 GMT
+  Content-Type: application/json
+  Content-Length: 603
+}, 40452378, 15525080, 39564799).
+2021-12-29 07:52:45 PM[System.Net.Http-RequestStop] ().
+2021-12-29 07:52:45 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 40452378, Read, Received 603 bytes.).
+2021-12-29 07:52:45 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 0, ReturnConnection, Stored connection in pool.).
+2021-12-29 07:52:45 PM,29.5559,,,,0.0173,0.021,32.7362,0.0469
+2021-12-29 07:52:51 PM[System.Net.Http-RequestStart] (https, jangirg-s3-perf-test.s3.us-west-2.amazonaws.com, 443, /test.json, 1, 1, 0).
+2021-12-29 07:52:51 PM[Private.InternalDiagnostics.System.Net.Http-HeadersInvalidValue] (Authorization, AWS4-HMAC-SHA256 Credential=AKIA2SRUSSNWLYTMAP4W/20211229/us-west-2/s3/aws4_request, SignedHeaders=host;user-agent;x-amz-content-sha256;x-amz-date, Signature=902f5efa731e0baa878227275ae104b51b057b20a07707127bd9f8d83476c25e).
+2021-12-29 07:52:51 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 0, GetOrReserveHttp11ConnectionAsync, Found usable connection in pool.).
+2021-12-29 07:52:51 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 19634871, SendAsyncCore, Sending request: Method: GET, RequestUri: 'https://jangirg-s3-perf-test.s3.us-west-2.amazonaws.com/test.json', Version: 1.1, Content: <null>, Headers:
+{
+  User-Agent: aws-sdk-dotnet-coreclr/3.7.7.5
+  User-Agent: aws-sdk-dotnet-core/3.7.5.8
+  User-Agent: .NET_Core/5.0.13
+  User-Agent: OS/Microsoft_Windows_10.0.19044
+  User-Agent: ClientAsync
+  amz-sdk-invocation-id: 2ca6a071-9676-44e9-b05f-4bddb164602f
+  amz-sdk-request: attempt=1; max=5
+  Host: jangirg-s3-perf-test.s3.us-west-2.amazonaws.com
+  X-Amz-Date: 20211229T195251Z
+  X-Amz-Content-SHA256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+  Authorization: AWS4-HMAC-SHA256 Credential=AKIA2SRUSSNWLYTMAP4W/20211229/us-west-2/s3/aws4_request, SignedHeaders=host;user-agent;x-amz-content-sha256;x-amz-date, Signature=902f5efa731e0baa878227275ae104b51b057b20a07707127bd9f8d83476c25e
+  traceparent: 00-e39971a99c22f348bc34bf0932764002-51ca7d0452d0e84a-00
+}).
+2021-12-29 07:52:51 PM[System.Net.Http-RequestHeadersStart] ().
+2021-12-29 07:52:51 PM[System.Net.Http-RequestHeadersStop] ().
+2021-12-29 07:52:51 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 19634871, WriteToStreamAsync, Writing 738 bytes.).
+2021-12-29 07:52:51 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 19634871, SendAsyncCore, Received 363 bytes.).
+2021-12-29 07:52:51 PM[Private.InternalDiagnostics.System.Net.Http-Associate] (HttpResponseMessage#39498779, RequestMessage, HttpResponseMessage#39498779, HttpRequestMessage#19634871).
+2021-12-29 07:52:51 PM[Private.InternalDiagnostics.System.Net.Http-Info] (HttpConnectionResponseContent#47945396, .ctor, ).
+2021-12-29 07:52:51 PM[Private.InternalDiagnostics.System.Net.Http-Associate] (HttpResponseMessage#39498779, Content, HttpResponseMessage#39498779, HttpConnectionResponseContent#47945396).
+2021-12-29 07:52:51 PM[System.Net.Http-ResponseHeadersStart] ().
+2021-12-29 07:52:51 PM[System.Net.Http-ResponseHeadersStop] ().
+2021-12-29 07:52:51 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 19634871, SendAsyncCore, Request is fully sent.).
+2021-12-29 07:52:51 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 19634871, SendAsyncCore, Received response: StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: System.Net.Http.HttpConnectionResponseContent, Headers:
+{
+  x-amz-id-2: 5DzoZbYrU0SHA8pjV8Nylz3zzNFgxNc+74nxGTimIj0j+SwpJd1ev5aDXRGYwfkg0sqWzCKowHg=
+  x-amz-request-id: CN6HPQ2NP05TCQKK
+  Date: Wed, 29 Dec 2021 19:52:52 GMT
+  ETag: "ab9b7b2c58d3a481e172aea95b1e87a0"
+  Accept-Ranges: bytes
+  Server: AmazonS3
+  Last-Modified: Tue, 28 Dec 2021 17:45:48 GMT
+  Content-Type: application/json
+  Content-Length: 603
+}).
+2021-12-29 07:52:51 PM[Private.InternalDiagnostics.System.Net.Http-ClientSendCompleted] (StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: System.Net.Http.HttpConnectionResponseContent, Headers:
+{
+  x-amz-id-2: 5DzoZbYrU0SHA8pjV8Nylz3zzNFgxNc+74nxGTimIj0j+SwpJd1ev5aDXRGYwfkg0sqWzCKowHg=
+  x-amz-request-id: CN6HPQ2NP05TCQKK
+  Date: Wed, 29 Dec 2021 19:52:52 GMT
+  ETag: "ab9b7b2c58d3a481e172aea95b1e87a0"
+  Accept-Ranges: bytes
+  Server: AmazonS3
+  Last-Modified: Tue, 28 Dec 2021 17:45:48 GMT
+  Content-Type: application/json
+  Content-Length: 603
+}, 19634871, 39498779, 39564799).
+2021-12-29 07:52:51 PM[System.Net.Http-RequestStop] ().
+2021-12-29 07:52:51 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 19634871, Read, Received 603 bytes.).
+2021-12-29 07:52:51 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 0, ReturnConnection, Stored connection in pool.).
+2021-12-29 07:52:51 PM,29.5839,,,,0.018,0.0185,32.2287,0.056
+2021-12-29 07:52:57 PM[System.Net.Http-RequestStart] (https, jangirg-s3-perf-test.s3.us-west-2.amazonaws.com, 443, /test.json, 1, 1, 0).
+2021-12-29 07:52:57 PM[Private.InternalDiagnostics.System.Net.Http-HeadersInvalidValue] (Authorization, AWS4-HMAC-SHA256 Credential=AKIA2SRUSSNWLYTMAP4W/20211229/us-west-2/s3/aws4_request, SignedHeaders=host;user-agent;x-amz-content-sha256;x-amz-date, Signature=14bae10aedf1771505b9273aef67405903316b4c247ac3933c6e852fc7118c8f).
+2021-12-29 07:52:57 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 0, GetOrReserveHttp11ConnectionAsync, Found usable connection in pool.).
+2021-12-29 07:52:57 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 47199179, SendAsyncCore, Sending request: Method: GET, RequestUri: 'https://jangirg-s3-perf-test.s3.us-west-2.amazonaws.com/test.json', Version: 1.1, Content: <null>, Headers:
+{
+  User-Agent: aws-sdk-dotnet-coreclr/3.7.7.5
+  User-Agent: aws-sdk-dotnet-core/3.7.5.8
+  User-Agent: .NET_Core/5.0.13
+  User-Agent: OS/Microsoft_Windows_10.0.19044
+  User-Agent: ClientAsync
+  amz-sdk-invocation-id: 51a0474e-b433-4c35-80ea-1dc402209cd1
+  amz-sdk-request: attempt=1; max=5
+  Host: jangirg-s3-perf-test.s3.us-west-2.amazonaws.com
+  X-Amz-Date: 20211229T195257Z
+  X-Amz-Content-SHA256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+  Authorization: AWS4-HMAC-SHA256 Credential=AKIA2SRUSSNWLYTMAP4W/20211229/us-west-2/s3/aws4_request, SignedHeaders=host;user-agent;x-amz-content-sha256;x-amz-date, Signature=14bae10aedf1771505b9273aef67405903316b4c247ac3933c6e852fc7118c8f
+  traceparent: 00-ba357b217e6d97459a7d0bf45c3adb18-0e61cdf9407f6746-00
+}).
+2021-12-29 07:52:57 PM[System.Net.Http-RequestHeadersStart] ().
+2021-12-29 07:52:57 PM[System.Net.Http-RequestHeadersStop] ().
+2021-12-29 07:52:57 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 47199179, WriteToStreamAsync, Writing 738 bytes.).
+2021-12-29 07:52:57 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 47199179, SendAsyncCore, Received 363 bytes.).
+2021-12-29 07:52:57 PM[Private.InternalDiagnostics.System.Net.Http-Associate] (HttpResponseMessage#57784236, RequestMessage, HttpResponseMessage#57784236, HttpRequestMessage#47199179).
+2021-12-29 07:52:57 PM[Private.InternalDiagnostics.System.Net.Http-Info] (HttpConnectionResponseContent#35319771, .ctor, ).
+2021-12-29 07:52:57 PM[Private.InternalDiagnostics.System.Net.Http-Associate] (HttpResponseMessage#57784236, Content, HttpResponseMessage#57784236, HttpConnectionResponseContent#35319771).
+2021-12-29 07:52:57 PM[System.Net.Http-ResponseHeadersStart] ().
+2021-12-29 07:52:57 PM[System.Net.Http-ResponseHeadersStop] ().
+2021-12-29 07:52:57 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 47199179, SendAsyncCore, Request is fully sent.).
+2021-12-29 07:52:57 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 47199179, SendAsyncCore, Received response: StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: System.Net.Http.HttpConnectionResponseContent, Headers:
+{
+  x-amz-id-2: EYzYBBq/Kd9Wzgna2FT/xzVEkvKtIBy38S/3CKfQZj6HC19nAxrzOXFxIFqTMS8yXgKyWD1/RVQ=
+  x-amz-request-id: PC6V0N6TNQ40GQ6D
+  Date: Wed, 29 Dec 2021 19:52:58 GMT
+  ETag: "ab9b7b2c58d3a481e172aea95b1e87a0"
+  Accept-Ranges: bytes
+  Server: AmazonS3
+  Last-Modified: Tue, 28 Dec 2021 17:45:48 GMT
+  Content-Type: application/json
+  Content-Length: 603
+}).
+2021-12-29 07:52:57 PM[Private.InternalDiagnostics.System.Net.Http-ClientSendCompleted] (StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: System.Net.Http.HttpConnectionResponseContent, Headers:
+{
+  x-amz-id-2: EYzYBBq/Kd9Wzgna2FT/xzVEkvKtIBy38S/3CKfQZj6HC19nAxrzOXFxIFqTMS8yXgKyWD1/RVQ=
+  x-amz-request-id: PC6V0N6TNQ40GQ6D
+  Date: Wed, 29 Dec 2021 19:52:58 GMT
+  ETag: "ab9b7b2c58d3a481e172aea95b1e87a0"
+  Accept-Ranges: bytes
+  Server: AmazonS3
+  Last-Modified: Tue, 28 Dec 2021 17:45:48 GMT
+  Content-Type: application/json
+  Content-Length: 603
+}, 47199179, 57784236, 39564799).
+2021-12-29 07:52:57 PM[System.Net.Http-RequestStop] ().
+2021-12-29 07:52:57 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 47199179, Read, Received 603 bytes.).
+2021-12-29 07:52:57 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 0, ReturnConnection, Stored connection in pool.).
+2021-12-29 07:52:57 PM,34.8695,,,,0.0175,0.0664,37.4609,0.0777
+2021-12-29 07:53:03 PM[System.Net.Http-RequestStart] (https, jangirg-s3-perf-test.s3.us-west-2.amazonaws.com, 443, /test.json, 1, 1, 0).
+2021-12-29 07:53:03 PM[Private.InternalDiagnostics.System.Net.Http-HeadersInvalidValue] (Authorization, AWS4-HMAC-SHA256 Credential=AKIA2SRUSSNWLYTMAP4W/20211229/us-west-2/s3/aws4_request, SignedHeaders=host;user-agent;x-amz-content-sha256;x-amz-date, Signature=2d4375a74f8c67b787e5ffa6b726fa8ba53c13d48ce6a30aff20c4e693bfad42).
+2021-12-29 07:53:03 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 0, GetOrReserveHttp11ConnectionAsync, Found usable connection in pool.).
+2021-12-29 07:53:03 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 32903719, SendAsyncCore, Sending request: Method: GET, RequestUri: 'https://jangirg-s3-perf-test.s3.us-west-2.amazonaws.com/test.json', Version: 1.1, Content: <null>, Headers:
+{
+  User-Agent: aws-sdk-dotnet-coreclr/3.7.7.5
+  User-Agent: aws-sdk-dotnet-core/3.7.5.8
+  User-Agent: .NET_Core/5.0.13
+  User-Agent: OS/Microsoft_Windows_10.0.19044
+  User-Agent: ClientAsync
+  amz-sdk-invocation-id: a0515fbe-82f4-40b9-8885-1b5346e6c2d2
+  amz-sdk-request: attempt=1; max=5
+  Host: jangirg-s3-perf-test.s3.us-west-2.amazonaws.com
+  X-Amz-Date: 20211229T195303Z
+  X-Amz-Content-SHA256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+  Authorization: AWS4-HMAC-SHA256 Credential=AKIA2SRUSSNWLYTMAP4W/20211229/us-west-2/s3/aws4_request, SignedHeaders=host;user-agent;x-amz-content-sha256;x-amz-date, Signature=2d4375a74f8c67b787e5ffa6b726fa8ba53c13d48ce6a30aff20c4e693bfad42
+  traceparent: 00-dc3f7703d4dabb4dbea054aefbe51d50-ff33137681e6e649-00
+}).
+2021-12-29 07:53:03 PM[System.Net.Http-RequestHeadersStart] ().
+2021-12-29 07:53:03 PM[System.Net.Http-RequestHeadersStop] ().
+2021-12-29 07:53:03 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 32903719, WriteToStreamAsync, Writing 738 bytes.).
+2021-12-29 07:53:03 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 32903719, SendAsyncCore, Received 363 bytes.).
+2021-12-29 07:53:03 PM[Private.InternalDiagnostics.System.Net.Http-Associate] (HttpResponseMessage#10579059, RequestMessage, HttpResponseMessage#10579059, HttpRequestMessage#32903719).
+2021-12-29 07:53:03 PM[Private.InternalDiagnostics.System.Net.Http-Info] (HttpConnectionResponseContent#63149883, .ctor, ).
+2021-12-29 07:53:03 PM[Private.InternalDiagnostics.System.Net.Http-Associate] (HttpResponseMessage#10579059, Content, HttpResponseMessage#10579059, HttpConnectionResponseContent#63149883).
+2021-12-29 07:53:03 PM[System.Net.Http-ResponseHeadersStart] ().
+2021-12-29 07:53:03 PM[System.Net.Http-ResponseHeadersStop] ().
+2021-12-29 07:53:03 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 32903719, SendAsyncCore, Request is fully sent.).
+2021-12-29 07:53:03 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 32903719, SendAsyncCore, Received response: StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: System.Net.Http.HttpConnectionResponseContent, Headers:
+{
+  x-amz-id-2: SR71J47Zvo2uk6ruZDW3gJjUSvjXNZ4+9/J0WEplfIXLO3NK9ZYgD7hnPKTkf4ktOUAd2c5K0aE=
+  x-amz-request-id: SZY4101NMPB82MD7
+  Date: Wed, 29 Dec 2021 19:53:03 GMT
+  ETag: "ab9b7b2c58d3a481e172aea95b1e87a0"
+  Accept-Ranges: bytes
+  Server: AmazonS3
+  Last-Modified: Tue, 28 Dec 2021 17:45:48 GMT
+  Content-Type: application/json
+  Content-Length: 603
+}).
+2021-12-29 07:53:03 PM[Private.InternalDiagnostics.System.Net.Http-ClientSendCompleted] (StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: System.Net.Http.HttpConnectionResponseContent, Headers:
+{
+  x-amz-id-2: SR71J47Zvo2uk6ruZDW3gJjUSvjXNZ4+9/J0WEplfIXLO3NK9ZYgD7hnPKTkf4ktOUAd2c5K0aE=
+  x-amz-request-id: SZY4101NMPB82MD7
+  Date: Wed, 29 Dec 2021 19:53:03 GMT
+  ETag: "ab9b7b2c58d3a481e172aea95b1e87a0"
+  Accept-Ranges: bytes
+  Server: AmazonS3
+  Last-Modified: Tue, 28 Dec 2021 17:45:48 GMT
+  Content-Type: application/json
+  Content-Length: 603
+}, 32903719, 10579059, 39564799).
+2021-12-29 07:53:03 PM[System.Net.Http-RequestStop] ().
+2021-12-29 07:53:03 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 32903719, Read, Received 603 bytes.).
+2021-12-29 07:53:03 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 0, ReturnConnection, Stored connection in pool.).
+2021-12-29 07:53:03 PM,30.7872,,,,0.0156,0.0201,33.1387,0.0479
+2021-12-29 07:53:09 PM[System.Net.Http-RequestStart] (https, jangirg-s3-perf-test.s3.us-west-2.amazonaws.com, 443, /test.json, 1, 1, 0).
+2021-12-29 07:53:09 PM[Private.InternalDiagnostics.System.Net.Http-HeadersInvalidValue] (Authorization, AWS4-HMAC-SHA256 Credential=AKIA2SRUSSNWLYTMAP4W/20211229/us-west-2/s3/aws4_request, SignedHeaders=host;user-agent;x-amz-content-sha256;x-amz-date, Signature=936af0fc665d9fe540dc2ec02aa14ff770418422009d6efd2bb97d783d60b7b5).
+2021-12-29 07:53:09 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 0, GetOrReserveHttp11ConnectionAsync, Found usable connection in pool.).
+2021-12-29 07:53:09 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 54636159, SendAsyncCore, Sending request: Method: GET, RequestUri: 'https://jangirg-s3-perf-test.s3.us-west-2.amazonaws.com/test.json', Version: 1.1, Content: <null>, Headers:
+{
+  User-Agent: aws-sdk-dotnet-coreclr/3.7.7.5
+  User-Agent: aws-sdk-dotnet-core/3.7.5.8
+  User-Agent: .NET_Core/5.0.13
+  User-Agent: OS/Microsoft_Windows_10.0.19044
+  User-Agent: ClientAsync
+  amz-sdk-invocation-id: a73e5e16-b0e3-427c-b2ee-08373e9d1e33
+  amz-sdk-request: attempt=1; max=5
+  Host: jangirg-s3-perf-test.s3.us-west-2.amazonaws.com
+  X-Amz-Date: 20211229T195309Z
+  X-Amz-Content-SHA256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+  Authorization: AWS4-HMAC-SHA256 Credential=AKIA2SRUSSNWLYTMAP4W/20211229/us-west-2/s3/aws4_request, SignedHeaders=host;user-agent;x-amz-content-sha256;x-amz-date, Signature=936af0fc665d9fe540dc2ec02aa14ff770418422009d6efd2bb97d783d60b7b5
+  traceparent: 00-c2d5fb81b8656c40997ba325c4b05e5b-d59aaf4b59793242-00
+}).
+2021-12-29 07:53:09 PM[System.Net.Http-RequestHeadersStart] ().
+2021-12-29 07:53:09 PM[System.Net.Http-RequestHeadersStop] ().
+2021-12-29 07:53:09 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 54636159, WriteToStreamAsync, Writing 738 bytes.).
+2021-12-29 07:53:09 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 54636159, SendAsyncCore, Received 363 bytes.).
+2021-12-29 07:53:09 PM[Private.InternalDiagnostics.System.Net.Http-Associate] (HttpResponseMessage#35243222, RequestMessage, HttpResponseMessage#35243222, HttpRequestMessage#54636159).
+2021-12-29 07:53:09 PM[Private.InternalDiagnostics.System.Net.Http-Info] (HttpConnectionResponseContent#8665341, .ctor, ).
+2021-12-29 07:53:09 PM[Private.InternalDiagnostics.System.Net.Http-Associate] (HttpResponseMessage#35243222, Content, HttpResponseMessage#35243222, HttpConnectionResponseContent#8665341).
+2021-12-29 07:53:09 PM[System.Net.Http-ResponseHeadersStart] ().
+2021-12-29 07:53:09 PM[System.Net.Http-ResponseHeadersStop] ().
+2021-12-29 07:53:09 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 54636159, SendAsyncCore, Request is fully sent.).
+2021-12-29 07:53:09 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 54636159, SendAsyncCore, Received response: StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: System.Net.Http.HttpConnectionResponseContent, Headers:
+{
+  x-amz-id-2: 6HTmQmMbbnEEADgNlUCH1YumTIKAfpH6tNSkeYnnOOwBQVT6cMoz8pj6YIIXdGC0unqLaNeWh+s=
+  x-amz-request-id: 3X4M7X85R6JK196D
+  Date: Wed, 29 Dec 2021 19:53:09 GMT
+  ETag: "ab9b7b2c58d3a481e172aea95b1e87a0"
+  Accept-Ranges: bytes
+  Server: AmazonS3
+  Last-Modified: Tue, 28 Dec 2021 17:45:48 GMT
+  Content-Type: application/json
+  Content-Length: 603
+}).
+2021-12-29 07:53:09 PM[Private.InternalDiagnostics.System.Net.Http-ClientSendCompleted] (StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: System.Net.Http.HttpConnectionResponseContent, Headers:
+{
+  x-amz-id-2: 6HTmQmMbbnEEADgNlUCH1YumTIKAfpH6tNSkeYnnOOwBQVT6cMoz8pj6YIIXdGC0unqLaNeWh+s=
+  x-amz-request-id: 3X4M7X85R6JK196D
+  Date: Wed, 29 Dec 2021 19:53:09 GMT
+  ETag: "ab9b7b2c58d3a481e172aea95b1e87a0"
+  Accept-Ranges: bytes
+  Server: AmazonS3
+  Last-Modified: Tue, 28 Dec 2021 17:45:48 GMT
+  Content-Type: application/json
+  Content-Length: 603
+}, 54636159, 35243222, 39564799).
+2021-12-29 07:53:09 PM[System.Net.Http-RequestStop] ().
+2021-12-29 07:53:09 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 54636159, Read, Received 603 bytes.).
+2021-12-29 07:53:09 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 0, ReturnConnection, Stored connection in pool.).
+2021-12-29 07:53:09 PM,31.2643,,,,0.0202,0.0185,33.9007,0.0421
+2021-12-29 07:53:15 PM[System.Net.Http-RequestStart] (https, jangirg-s3-perf-test.s3.us-west-2.amazonaws.com, 443, /test.json, 1, 1, 0).
+2021-12-29 07:53:15 PM[Private.InternalDiagnostics.System.Net.Http-HeadersInvalidValue] (Authorization, AWS4-HMAC-SHA256 Credential=AKIA2SRUSSNWLYTMAP4W/20211229/us-west-2/s3/aws4_request, SignedHeaders=host;user-agent;x-amz-content-sha256;x-amz-date, Signature=b852673dcc60c5a359dd5135f0b899f689a655caec3a3e08c743a143e3bfcd71).
+2021-12-29 07:53:15 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 0, GetOrReserveHttp11ConnectionAsync, Found usable connection in pool.).
+2021-12-29 07:53:15 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 56949867, SendAsyncCore, Sending request: Method: GET, RequestUri: 'https://jangirg-s3-perf-test.s3.us-west-2.amazonaws.com/test.json', Version: 1.1, Content: <null>, Headers:
+{
+  User-Agent: aws-sdk-dotnet-coreclr/3.7.7.5
+  User-Agent: aws-sdk-dotnet-core/3.7.5.8
+  User-Agent: .NET_Core/5.0.13
+  User-Agent: OS/Microsoft_Windows_10.0.19044
+  User-Agent: ClientAsync
+  amz-sdk-invocation-id: 1ae3f826-9f16-4fc7-b681-85c1f0d0996c
+  amz-sdk-request: attempt=1; max=5
+  Host: jangirg-s3-perf-test.s3.us-west-2.amazonaws.com
+  X-Amz-Date: 20211229T195315Z
+  X-Amz-Content-SHA256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+  Authorization: AWS4-HMAC-SHA256 Credential=AKIA2SRUSSNWLYTMAP4W/20211229/us-west-2/s3/aws4_request, SignedHeaders=host;user-agent;x-amz-content-sha256;x-amz-date, Signature=b852673dcc60c5a359dd5135f0b899f689a655caec3a3e08c743a143e3bfcd71
+  traceparent: 00-b76d066b100322428661068be60fd0a3-721b47a890313247-00
+}).
+2021-12-29 07:53:15 PM[System.Net.Http-RequestHeadersStart] ().
+2021-12-29 07:53:15 PM[System.Net.Http-RequestHeadersStop] ().
+2021-12-29 07:53:15 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 56949867, WriteToStreamAsync, Writing 738 bytes.).
+2021-12-29 07:53:15 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 56949867, SendAsyncCore, Received 363 bytes.).
+2021-12-29 07:53:15 PM[Private.InternalDiagnostics.System.Net.Http-Associate] (HttpResponseMessage#15306944, RequestMessage, HttpResponseMessage#15306944, HttpRequestMessage#56949867).
+2021-12-29 07:53:15 PM[Private.InternalDiagnostics.System.Net.Http-Info] (HttpConnectionResponseContent#47129288, .ctor, ).
+2021-12-29 07:53:15 PM[Private.InternalDiagnostics.System.Net.Http-Associate] (HttpResponseMessage#15306944, Content, HttpResponseMessage#15306944, HttpConnectionResponseContent#47129288).
+2021-12-29 07:53:15 PM[System.Net.Http-ResponseHeadersStart] ().
+2021-12-29 07:53:15 PM[System.Net.Http-ResponseHeadersStop] ().
+2021-12-29 07:53:15 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 56949867, SendAsyncCore, Request is fully sent.).
+2021-12-29 07:53:15 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 56949867, SendAsyncCore, Received response: StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: System.Net.Http.HttpConnectionResponseContent, Headers:
+{
+  x-amz-id-2: OIqY7nzwGWvWQ7VHhzxiuWGTqfAcNhZj2+b9xonClbY00pKmbGxH7gG5ttoiSkC17t5OlnfXYIQ=
+  x-amz-request-id: QB8QN54ZS1RX07CW
+  Date: Wed, 29 Dec 2021 19:53:15 GMT
+  ETag: "ab9b7b2c58d3a481e172aea95b1e87a0"
+  Accept-Ranges: bytes
+  Server: AmazonS3
+  Last-Modified: Tue, 28 Dec 2021 17:45:48 GMT
+  Content-Type: application/json
+  Content-Length: 603
+}).
+2021-12-29 07:53:15 PM[Private.InternalDiagnostics.System.Net.Http-ClientSendCompleted] (StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: System.Net.Http.HttpConnectionResponseContent, Headers:
+{
+  x-amz-id-2: OIqY7nzwGWvWQ7VHhzxiuWGTqfAcNhZj2+b9xonClbY00pKmbGxH7gG5ttoiSkC17t5OlnfXYIQ=
+  x-amz-request-id: QB8QN54ZS1RX07CW
+  Date: Wed, 29 Dec 2021 19:53:15 GMT
+  ETag: "ab9b7b2c58d3a481e172aea95b1e87a0"
+  Accept-Ranges: bytes
+  Server: AmazonS3
+  Last-Modified: Tue, 28 Dec 2021 17:45:48 GMT
+  Content-Type: application/json
+  Content-Length: 603
+}, 56949867, 15306944, 39564799).
+2021-12-29 07:53:15 PM[System.Net.Http-RequestStop] ().
+2021-12-29 07:53:15 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 56949867, Read, Received 603 bytes.).
+2021-12-29 07:53:15 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 0, ReturnConnection, Stored connection in pool.).
+2021-12-29 07:53:15 PM,33.1005,,,,0.0157,0.0324,34.3372,0.0589
+2021-12-29 07:53:20 PM[System.Net.Http-RequestStart] (https, jangirg-s3-perf-test.s3.us-west-2.amazonaws.com, 443, /test.json, 1, 1, 0).
+2021-12-29 07:53:20 PM[Private.InternalDiagnostics.System.Net.Http-HeadersInvalidValue] (Authorization, AWS4-HMAC-SHA256 Credential=AKIA2SRUSSNWLYTMAP4W/20211229/us-west-2/s3/aws4_request, SignedHeaders=host;user-agent;x-amz-content-sha256;x-amz-date, Signature=877d706933296434fd2d072a46ee07f0c7da4ab0d456074d788d0eda7c030537).
+2021-12-29 07:53:20 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 0, GetOrReserveHttp11ConnectionAsync, Found usable connection in pool.).
+2021-12-29 07:53:20 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 50977589, SendAsyncCore, Sending request: Method: GET, RequestUri: 'https://jangirg-s3-perf-test.s3.us-west-2.amazonaws.com/test.json', Version: 1.1, Content: <null>, Headers:
+{
+  User-Agent: aws-sdk-dotnet-coreclr/3.7.7.5
+  User-Agent: aws-sdk-dotnet-core/3.7.5.8
+  User-Agent: .NET_Core/5.0.13
+  User-Agent: OS/Microsoft_Windows_10.0.19044
+  User-Agent: ClientAsync
+  amz-sdk-invocation-id: 6d2428a2-804c-4c2d-a2e5-5b4c558136c6
+  amz-sdk-request: attempt=1; max=5
+  Host: jangirg-s3-perf-test.s3.us-west-2.amazonaws.com
+  X-Amz-Date: 20211229T195320Z
+  X-Amz-Content-SHA256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+  Authorization: AWS4-HMAC-SHA256 Credential=AKIA2SRUSSNWLYTMAP4W/20211229/us-west-2/s3/aws4_request, SignedHeaders=host;user-agent;x-amz-content-sha256;x-amz-date, Signature=877d706933296434fd2d072a46ee07f0c7da4ab0d456074d788d0eda7c030537
+  traceparent: 00-b9b2d214de54bb4bb661543c58eff829-f512cfc3c3a2f643-00
+}).
+2021-12-29 07:53:20 PM[System.Net.Http-RequestHeadersStart] ().
+2021-12-29 07:53:20 PM[System.Net.Http-RequestHeadersStop] ().
+2021-12-29 07:53:20 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 50977589, WriteToStreamAsync, Writing 738 bytes.).
+2021-12-29 07:53:20 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 50977589, SendAsyncCore, Received 363 bytes.).
+2021-12-29 07:53:20 PM[Private.InternalDiagnostics.System.Net.Http-Associate] (HttpResponseMessage#37381527, RequestMessage, HttpResponseMessage#37381527, HttpRequestMessage#50977589).
+2021-12-29 07:53:20 PM[Private.InternalDiagnostics.System.Net.Http-Info] (HttpConnectionResponseContent#62122949, .ctor, ).
+2021-12-29 07:53:20 PM[Private.InternalDiagnostics.System.Net.Http-Associate] (HttpResponseMessage#37381527, Content, HttpResponseMessage#37381527, HttpConnectionResponseContent#62122949).
+2021-12-29 07:53:20 PM[System.Net.Http-ResponseHeadersStart] ().
+2021-12-29 07:53:20 PM[System.Net.Http-ResponseHeadersStop] ().
+2021-12-29 07:53:20 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 50977589, SendAsyncCore, Request is fully sent.).
+2021-12-29 07:53:20 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 50977589, SendAsyncCore, Received response: StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: System.Net.Http.HttpConnectionResponseContent, Headers:
+{
+  x-amz-id-2: lYn+EX1gBLClE9KLSYt4XMP9kZwaJRRO1XcTRBjdFgV2mRRQt1zC3x2gbG5NTCTXMNA/CNJYlLY=
+  x-amz-request-id: PR23FSKNPBXQX0QB
+  Date: Wed, 29 Dec 2021 19:53:21 GMT
+  ETag: "ab9b7b2c58d3a481e172aea95b1e87a0"
+  Accept-Ranges: bytes
+  Server: AmazonS3
+  Last-Modified: Tue, 28 Dec 2021 17:45:48 GMT
+  Content-Type: application/json
+  Content-Length: 603
+}).
+2021-12-29 07:53:20 PM[Private.InternalDiagnostics.System.Net.Http-ClientSendCompleted] (StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: System.Net.Http.HttpConnectionResponseContent, Headers:
+{
+  x-amz-id-2: lYn+EX1gBLClE9KLSYt4XMP9kZwaJRRO1XcTRBjdFgV2mRRQt1zC3x2gbG5NTCTXMNA/CNJYlLY=
+  x-amz-request-id: PR23FSKNPBXQX0QB
+  Date: Wed, 29 Dec 2021 19:53:21 GMT
+  ETag: "ab9b7b2c58d3a481e172aea95b1e87a0"
+  Accept-Ranges: bytes
+  Server: AmazonS3
+  Last-Modified: Tue, 28 Dec 2021 17:45:48 GMT
+  Content-Type: application/json
+  Content-Length: 603
+}, 50977589, 37381527, 39564799).
+2021-12-29 07:53:20 PM[System.Net.Http-RequestStop] ().
+2021-12-29 07:53:20 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 50977589, Read, Received 603 bytes.).
+2021-12-29 07:53:20 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 0, ReturnConnection, Stored connection in pool.).
+2021-12-29 07:53:20 PM,35.0456,,,,0.0181,0.0358,38.1578,0.0526
+2021-12-29 07:53:26 PM[System.Net.Http-RequestStart] (https, jangirg-s3-perf-test.s3.us-west-2.amazonaws.com, 443, /test.json, 1, 1, 0).
+2021-12-29 07:53:26 PM[Private.InternalDiagnostics.System.Net.Http-HeadersInvalidValue] (Authorization, AWS4-HMAC-SHA256 Credential=AKIA2SRUSSNWLYTMAP4W/20211229/us-west-2/s3/aws4_request, SignedHeaders=host;user-agent;x-amz-content-sha256;x-amz-date, Signature=ea07e748b226155e673e20a362aa7dec41ed3fc37238bc33383f06db74d2376a).
+2021-12-29 07:53:26 PM[Private.InternalDiagnostics.System.Net.Http-ErrorMessage] (WinInetProxyHelper#10549531, GetProxyForUrl, error=12180).
+2021-12-29 07:53:26 PM[Private.InternalDiagnostics.System.Net.Http-Info] (WinInetProxyHelper#10549531, GetProxyForUrl, useProxy=False).
+2021-12-29 07:53:26 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 0, GetOrReserveHttp11ConnectionAsync, Found usable connection in pool.).
+2021-12-29 07:53:26 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 57733168, SendAsyncCore, Sending request: Method: GET, RequestUri: 'https://jangirg-s3-perf-test.s3.us-west-2.amazonaws.com/test.json', Version: 1.1, Content: <null>, Headers:
+{
+  User-Agent: aws-sdk-dotnet-coreclr/3.7.7.5
+  User-Agent: aws-sdk-dotnet-core/3.7.5.8
+  User-Agent: .NET_Core/5.0.13
+  User-Agent: OS/Microsoft_Windows_10.0.19044
+  User-Agent: ClientAsync
+  amz-sdk-invocation-id: 1a6c2182-a569-4319-8893-2675bd6f451e
+  amz-sdk-request: attempt=1; max=5
+  Host: jangirg-s3-perf-test.s3.us-west-2.amazonaws.com
+  X-Amz-Date: 20211229T195326Z
+  X-Amz-Content-SHA256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+  Authorization: AWS4-HMAC-SHA256 Credential=AKIA2SRUSSNWLYTMAP4W/20211229/us-west-2/s3/aws4_request, SignedHeaders=host;user-agent;x-amz-content-sha256;x-amz-date, Signature=ea07e748b226155e673e20a362aa7dec41ed3fc37238bc33383f06db74d2376a
+  traceparent: 00-ef0289f2dbb8724098c0295d6b85a2c8-963cceb6ccb5f742-00
+}).
+2021-12-29 07:53:26 PM[System.Net.Http-RequestHeadersStart] ().
+2021-12-29 07:53:26 PM[System.Net.Http-RequestHeadersStop] ().
+2021-12-29 07:53:26 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 57733168, WriteToStreamAsync, Writing 738 bytes.).
+2021-12-29 07:53:26 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 57733168, SendAsyncCore, Received 363 bytes.).
+2021-12-29 07:53:26 PM[Private.InternalDiagnostics.System.Net.Http-Associate] (HttpResponseMessage#9569859, RequestMessage, HttpResponseMessage#9569859, HttpRequestMessage#57733168).
+2021-12-29 07:53:26 PM[Private.InternalDiagnostics.System.Net.Http-Info] (HttpConnectionResponseContent#37919899, .ctor, ).
+2021-12-29 07:53:26 PM[Private.InternalDiagnostics.System.Net.Http-Associate] (HttpResponseMessage#9569859, Content, HttpResponseMessage#9569859, HttpConnectionResponseContent#37919899).
+2021-12-29 07:53:26 PM[System.Net.Http-ResponseHeadersStart] ().
+2021-12-29 07:53:26 PM[System.Net.Http-ResponseHeadersStop] ().
+2021-12-29 07:53:26 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 57733168, SendAsyncCore, Request is fully sent.).
+2021-12-29 07:53:26 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 57733168, SendAsyncCore, Received response: StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: System.Net.Http.HttpConnectionResponseContent, Headers:
+{
+  x-amz-id-2: oXgAe1Ly0tXwzOWPxDg0y4BkVlqpZWOlInuR6IsDnY2a6gdaXv2pSSr1LGNN6bRokpy7zUReF04=
+  x-amz-request-id: PXE83ZHGSVX1726F
+  Date: Wed, 29 Dec 2021 19:53:27 GMT
+  ETag: "ab9b7b2c58d3a481e172aea95b1e87a0"
+  Accept-Ranges: bytes
+  Server: AmazonS3
+  Last-Modified: Tue, 28 Dec 2021 17:45:48 GMT
+  Content-Type: application/json
+  Content-Length: 603
+}).
+2021-12-29 07:53:26 PM[Private.InternalDiagnostics.System.Net.Http-ClientSendCompleted] (StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: System.Net.Http.HttpConnectionResponseContent, Headers:
+{
+  x-amz-id-2: oXgAe1Ly0tXwzOWPxDg0y4BkVlqpZWOlInuR6IsDnY2a6gdaXv2pSSr1LGNN6bRokpy7zUReF04=
+  x-amz-request-id: PXE83ZHGSVX1726F
+  Date: Wed, 29 Dec 2021 19:53:27 GMT
+  ETag: "ab9b7b2c58d3a481e172aea95b1e87a0"
+  Accept-Ranges: bytes
+  Server: AmazonS3
+  Last-Modified: Tue, 28 Dec 2021 17:45:48 GMT
+  Content-Type: application/json
+  Content-Length: 603
+}, 57733168, 9569859, 39564799).
+2021-12-29 07:53:26 PM[System.Net.Http-RequestStop] ().
+2021-12-29 07:53:26 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 57733168, Read, Received 603 bytes.).
+2021-12-29 07:53:26 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 0, ReturnConnection, Stored connection in pool.).
+2021-12-29 07:53:26 PM,35.0258,,,,0.0161,0.0227,37.5355,0.0446
+2021-12-29 07:53:32 PM[System.Net.Http-RequestStart] (https, jangirg-s3-perf-test.s3.us-west-2.amazonaws.com, 443, /test.json, 1, 1, 0).
+2021-12-29 07:53:32 PM[Private.InternalDiagnostics.System.Net.Http-HeadersInvalidValue] (Authorization, AWS4-HMAC-SHA256 Credential=AKIA2SRUSSNWLYTMAP4W/20211229/us-west-2/s3/aws4_request, SignedHeaders=host;user-agent;x-amz-content-sha256;x-amz-date, Signature=96da297003955f9842de20181cf4c3fdde20f3ae28aa4ed5b604256d60a55a37).
+2021-12-29 07:53:32 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 0, GetOrReserveHttp11ConnectionAsync, Found usable connection in pool.).
+2021-12-29 07:53:32 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 14696841, SendAsyncCore, Sending request: Method: GET, RequestUri: 'https://jangirg-s3-perf-test.s3.us-west-2.amazonaws.com/test.json', Version: 1.1, Content: <null>, Headers:
+{
+  User-Agent: aws-sdk-dotnet-coreclr/3.7.7.5
+  User-Agent: aws-sdk-dotnet-core/3.7.5.8
+  User-Agent: .NET_Core/5.0.13
+  User-Agent: OS/Microsoft_Windows_10.0.19044
+  User-Agent: ClientAsync
+  amz-sdk-invocation-id: d2a01b9d-7a4b-4586-8ad3-8def5338b058
+  amz-sdk-request: attempt=1; max=5
+  Host: jangirg-s3-perf-test.s3.us-west-2.amazonaws.com
+  X-Amz-Date: 20211229T195332Z
+  X-Amz-Content-SHA256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+  Authorization: AWS4-HMAC-SHA256 Credential=AKIA2SRUSSNWLYTMAP4W/20211229/us-west-2/s3/aws4_request, SignedHeaders=host;user-agent;x-amz-content-sha256;x-amz-date, Signature=96da297003955f9842de20181cf4c3fdde20f3ae28aa4ed5b604256d60a55a37
+  traceparent: 00-747456df22846d46824373947db929a2-9c773d1df641d640-00
+}).
+2021-12-29 07:53:32 PM[System.Net.Http-RequestHeadersStart] ().
+2021-12-29 07:53:32 PM[System.Net.Http-RequestHeadersStop] ().
+2021-12-29 07:53:32 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 14696841, WriteToStreamAsync, Writing 738 bytes.).
+2021-12-29 07:53:32 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 14696841, SendAsyncCore, Received 363 bytes.).
+2021-12-29 07:53:32 PM[Private.InternalDiagnostics.System.Net.Http-Associate] (HttpResponseMessage#8473389, RequestMessage, HttpResponseMessage#8473389, HttpRequestMessage#14696841).
+2021-12-29 07:53:32 PM[Private.InternalDiagnostics.System.Net.Http-Info] (HttpConnectionResponseContent#10508147, .ctor, ).
+2021-12-29 07:53:32 PM[Private.InternalDiagnostics.System.Net.Http-Associate] (HttpResponseMessage#8473389, Content, HttpResponseMessage#8473389, HttpConnectionResponseContent#10508147).
+2021-12-29 07:53:32 PM[System.Net.Http-ResponseHeadersStart] ().
+2021-12-29 07:53:32 PM[System.Net.Http-ResponseHeadersStop] ().
+2021-12-29 07:53:32 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 14696841, SendAsyncCore, Request is fully sent.).
+2021-12-29 07:53:32 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 14696841, SendAsyncCore, Received response: StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: System.Net.Http.HttpConnectionResponseContent, Headers:
+{
+  x-amz-id-2: 4RArY6J0pJEtaVdcljxBNfgyEh58PQKjRy3VVX3rRcsbPllfiBhU48J34evZgCBo3RR7n6xatMQ=
+  x-amz-request-id: 2MJQGT9TTKRQYW3E
+  Date: Wed, 29 Dec 2021 19:53:33 GMT
+  ETag: "ab9b7b2c58d3a481e172aea95b1e87a0"
+  Accept-Ranges: bytes
+  Server: AmazonS3
+  Last-Modified: Tue, 28 Dec 2021 17:45:48 GMT
+  Content-Type: application/json
+  Content-Length: 603
+}).
+2021-12-29 07:53:32 PM[Private.InternalDiagnostics.System.Net.Http-ClientSendCompleted] (StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: System.Net.Http.HttpConnectionResponseContent, Headers:
+{
+  x-amz-id-2: 4RArY6J0pJEtaVdcljxBNfgyEh58PQKjRy3VVX3rRcsbPllfiBhU48J34evZgCBo3RR7n6xatMQ=
+  x-amz-request-id: 2MJQGT9TTKRQYW3E
+  Date: Wed, 29 Dec 2021 19:53:33 GMT
+  ETag: "ab9b7b2c58d3a481e172aea95b1e87a0"
+  Accept-Ranges: bytes
+  Server: AmazonS3
+  Last-Modified: Tue, 28 Dec 2021 17:45:48 GMT
+  Content-Type: application/json
+  Content-Length: 603
+}, 14696841, 8473389, 39564799).
+2021-12-29 07:53:32 PM[System.Net.Http-RequestStop] ().
+2021-12-29 07:53:32 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 14696841, Read, Received 603 bytes.).
+2021-12-29 07:53:32 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 0, ReturnConnection, Stored connection in pool.).
+2021-12-29 07:53:32 PM,32.6244,,,,0.0158,0.0184,35.4104,0.0375
+2021-12-29 07:53:38 PM[System.Net.Http-RequestStart] (https, jangirg-s3-perf-test.s3.us-west-2.amazonaws.com, 443, /test.json, 1, 1, 0).
+2021-12-29 07:53:38 PM[Private.InternalDiagnostics.System.Net.Http-HeadersInvalidValue] (Authorization, AWS4-HMAC-SHA256 Credential=AKIA2SRUSSNWLYTMAP4W/20211229/us-west-2/s3/aws4_request, SignedHeaders=host;user-agent;x-amz-content-sha256;x-amz-date, Signature=d277b4134c37b27703b6a15cf566202eff792a1097cbf9cf6b11740428a2248e).
+2021-12-29 07:53:38 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 0, GetOrReserveHttp11ConnectionAsync, Found usable connection in pool.).
+2021-12-29 07:53:38 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 26067845, SendAsyncCore, Sending request: Method: GET, RequestUri: 'https://jangirg-s3-perf-test.s3.us-west-2.amazonaws.com/test.json', Version: 1.1, Content: <null>, Headers:
+{
+  User-Agent: aws-sdk-dotnet-coreclr/3.7.7.5
+  User-Agent: aws-sdk-dotnet-core/3.7.5.8
+  User-Agent: .NET_Core/5.0.13
+  User-Agent: OS/Microsoft_Windows_10.0.19044
+  User-Agent: ClientAsync
+  amz-sdk-invocation-id: f79b163f-ab17-4188-afbc-858cfdb15f1b
+  amz-sdk-request: attempt=1; max=5
+  Host: jangirg-s3-perf-test.s3.us-west-2.amazonaws.com
+  X-Amz-Date: 20211229T195338Z
+  X-Amz-Content-SHA256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+  Authorization: AWS4-HMAC-SHA256 Credential=AKIA2SRUSSNWLYTMAP4W/20211229/us-west-2/s3/aws4_request, SignedHeaders=host;user-agent;x-amz-content-sha256;x-amz-date, Signature=d277b4134c37b27703b6a15cf566202eff792a1097cbf9cf6b11740428a2248e
+  traceparent: 00-19d799ca8de07944a17edf0a7d3ac348-56a19629c7271540-00
+}).
+2021-12-29 07:53:38 PM[System.Net.Http-RequestHeadersStart] ().
+2021-12-29 07:53:38 PM[System.Net.Http-RequestHeadersStop] ().
+2021-12-29 07:53:38 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 26067845, WriteToStreamAsync, Writing 738 bytes.).
+2021-12-29 07:53:38 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 26067845, SendAsyncCore, Received 363 bytes.).
+2021-12-29 07:53:38 PM[Private.InternalDiagnostics.System.Net.Http-Associate] (HttpResponseMessage#61377084, RequestMessage, HttpResponseMessage#61377084, HttpRequestMessage#26067845).
+2021-12-29 07:53:38 PM[Private.InternalDiagnostics.System.Net.Http-Info] (HttpConnectionResponseContent#58032116, .ctor, ).
+2021-12-29 07:53:38 PM[Private.InternalDiagnostics.System.Net.Http-Associate] (HttpResponseMessage#61377084, Content, HttpResponseMessage#61377084, HttpConnectionResponseContent#58032116).
+2021-12-29 07:53:38 PM[System.Net.Http-ResponseHeadersStart] ().
+2021-12-29 07:53:38 PM[System.Net.Http-ResponseHeadersStop] ().
+2021-12-29 07:53:38 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 26067845, SendAsyncCore, Request is fully sent.).
+2021-12-29 07:53:38 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 26067845, SendAsyncCore, Received response: StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: System.Net.Http.HttpConnectionResponseContent, Headers:
+{
+  x-amz-id-2: Tip2FyoCP4R/P0d7MUqfba9/SEM+l2kWXCUh0DgDVxSVI4p8us7hxHSU1bN0jeaRzeGLpRGM3ck=
+  x-amz-request-id: 7FHRPK42KR3EH1RD
+  Date: Wed, 29 Dec 2021 19:53:39 GMT
+  ETag: "ab9b7b2c58d3a481e172aea95b1e87a0"
+  Accept-Ranges: bytes
+  Server: AmazonS3
+  Last-Modified: Tue, 28 Dec 2021 17:45:48 GMT
+  Content-Type: application/json
+  Content-Length: 603
+}).
+2021-12-29 07:53:38 PM[Private.InternalDiagnostics.System.Net.Http-ClientSendCompleted] (StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: System.Net.Http.HttpConnectionResponseContent, Headers:
+{
+  x-amz-id-2: Tip2FyoCP4R/P0d7MUqfba9/SEM+l2kWXCUh0DgDVxSVI4p8us7hxHSU1bN0jeaRzeGLpRGM3ck=
+  x-amz-request-id: 7FHRPK42KR3EH1RD
+  Date: Wed, 29 Dec 2021 19:53:39 GMT
+  ETag: "ab9b7b2c58d3a481e172aea95b1e87a0"
+  Accept-Ranges: bytes
+  Server: AmazonS3
+  Last-Modified: Tue, 28 Dec 2021 17:45:48 GMT
+  Content-Type: application/json
+  Content-Length: 603
+}, 26067845, 61377084, 39564799).
+2021-12-29 07:53:38 PM[System.Net.Http-RequestStop] ().
+2021-12-29 07:53:38 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 26067845, Read, Received 603 bytes.).
+2021-12-29 07:53:38 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 0, ReturnConnection, Stored connection in pool.).
+2021-12-29 07:53:38 PM,32.996,,,,0.0168,0.0768,36.4314,0.1532
+2021-12-29 07:53:44 PM[System.Net.Http-RequestStart] (https, jangirg-s3-perf-test.s3.us-west-2.amazonaws.com, 443, /test.json, 1, 1, 0).
+2021-12-29 07:53:44 PM[Private.InternalDiagnostics.System.Net.Http-HeadersInvalidValue] (Authorization, AWS4-HMAC-SHA256 Credential=AKIA2SRUSSNWLYTMAP4W/20211229/us-west-2/s3/aws4_request, SignedHeaders=host;user-agent;x-amz-content-sha256;x-amz-date, Signature=bd6b4467838dfdf4d354cd2c94c9f0644d558438b64ce3c0ca3f93c576afb465).
+2021-12-29 07:53:44 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 0, GetOrReserveHttp11ConnectionAsync, Found usable connection in pool.).
+2021-12-29 07:53:44 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 20304321, SendAsyncCore, Sending request: Method: GET, RequestUri: 'https://jangirg-s3-perf-test.s3.us-west-2.amazonaws.com/test.json', Version: 1.1, Content: <null>, Headers:
+{
+  User-Agent: aws-sdk-dotnet-coreclr/3.7.7.5
+  User-Agent: aws-sdk-dotnet-core/3.7.5.8
+  User-Agent: .NET_Core/5.0.13
+  User-Agent: OS/Microsoft_Windows_10.0.19044
+  User-Agent: ClientAsync
+  amz-sdk-invocation-id: 66bedd8d-6396-486c-b0e3-6de7224e372a
+  amz-sdk-request: attempt=1; max=5
+  Host: jangirg-s3-perf-test.s3.us-west-2.amazonaws.com
+  X-Amz-Date: 20211229T195344Z
+  X-Amz-Content-SHA256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+  Authorization: AWS4-HMAC-SHA256 Credential=AKIA2SRUSSNWLYTMAP4W/20211229/us-west-2/s3/aws4_request, SignedHeaders=host;user-agent;x-amz-content-sha256;x-amz-date, Signature=bd6b4467838dfdf4d354cd2c94c9f0644d558438b64ce3c0ca3f93c576afb465
+  traceparent: 00-b7bbfb228b99fb49929e7a36d3be20b4-c9d1ddd93fbe0140-00
+}).
+2021-12-29 07:53:44 PM[System.Net.Http-RequestHeadersStart] ().
+2021-12-29 07:53:44 PM[System.Net.Http-RequestHeadersStop] ().
+2021-12-29 07:53:44 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 20304321, WriteToStreamAsync, Writing 738 bytes.).
+2021-12-29 07:53:44 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 20304321, SendAsyncCore, Received 363 bytes.).
+2021-12-29 07:53:44 PM[Private.InternalDiagnostics.System.Net.Http-Associate] (HttpResponseMessage#41516761, RequestMessage, HttpResponseMessage#41516761, HttpRequestMessage#20304321).
+2021-12-29 07:53:44 PM[Private.InternalDiagnostics.System.Net.Http-Info] (HttpConnectionResponseContent#31286086, .ctor, ).
+2021-12-29 07:53:44 PM[Private.InternalDiagnostics.System.Net.Http-Associate] (HttpResponseMessage#41516761, Content, HttpResponseMessage#41516761, HttpConnectionResponseContent#31286086).
+2021-12-29 07:53:44 PM[System.Net.Http-ResponseHeadersStart] ().
+2021-12-29 07:53:44 PM[System.Net.Http-ResponseHeadersStop] ().
+2021-12-29 07:53:44 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 20304321, SendAsyncCore, Request is fully sent.).
+2021-12-29 07:53:44 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 20304321, SendAsyncCore, Received response: StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: System.Net.Http.HttpConnectionResponseContent, Headers:
+{
+  x-amz-id-2: GBXoCU4pZGgTPIkVdan5P7KHCQtdkNmAhbTEg3jsu9rfLz6KmZRihhwwVMxq6Nrz+jyDsWMX9Q4=
+  x-amz-request-id: 5HKZASKC7B4MT88Q
+  Date: Wed, 29 Dec 2021 19:53:45 GMT
+  ETag: "ab9b7b2c58d3a481e172aea95b1e87a0"
+  Accept-Ranges: bytes
+  Server: AmazonS3
+  Last-Modified: Tue, 28 Dec 2021 17:45:48 GMT
+  Content-Type: application/json
+  Content-Length: 603
+}).
+2021-12-29 07:53:44 PM[Private.InternalDiagnostics.System.Net.Http-ClientSendCompleted] (StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: System.Net.Http.HttpConnectionResponseContent, Headers:
+{
+  x-amz-id-2: GBXoCU4pZGgTPIkVdan5P7KHCQtdkNmAhbTEg3jsu9rfLz6KmZRihhwwVMxq6Nrz+jyDsWMX9Q4=
+  x-amz-request-id: 5HKZASKC7B4MT88Q
+  Date: Wed, 29 Dec 2021 19:53:45 GMT
+  ETag: "ab9b7b2c58d3a481e172aea95b1e87a0"
+  Accept-Ranges: bytes
+  Server: AmazonS3
+  Last-Modified: Tue, 28 Dec 2021 17:45:48 GMT
+  Content-Type: application/json
+  Content-Length: 603
+}, 20304321, 41516761, 39564799).
+2021-12-29 07:53:44 PM[System.Net.Http-RequestStop] ().
+2021-12-29 07:53:44 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 20304321, Read, Received 603 bytes.).
+2021-12-29 07:53:44 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 0, ReturnConnection, Stored connection in pool.).
+2021-12-29 07:53:44 PM,38.6643,,,,0.0161,0.0225,41.5325,0.0544
+2021-12-29 07:53:50 PM[System.Net.Http-RequestStart] (https, jangirg-s3-perf-test.s3.us-west-2.amazonaws.com, 443, /test.json, 1, 1, 0).
+2021-12-29 07:53:50 PM[Private.InternalDiagnostics.System.Net.Http-HeadersInvalidValue] (Authorization, AWS4-HMAC-SHA256 Credential=AKIA2SRUSSNWLYTMAP4W/20211229/us-west-2/s3/aws4_request, SignedHeaders=host;user-agent;x-amz-content-sha256;x-amz-date, Signature=740fdb7dc2cc3f194e173bf24a8acbb466f1cf963169354c241b4fa0b094a536).
+2021-12-29 07:53:50 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 0, GetOrReserveHttp11ConnectionAsync, Found usable connection in pool.).
+2021-12-29 07:53:50 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 28726945, SendAsyncCore, Sending request: Method: GET, RequestUri: 'https://jangirg-s3-perf-test.s3.us-west-2.amazonaws.com/test.json', Version: 1.1, Content: <null>, Headers:
+{
+  User-Agent: aws-sdk-dotnet-coreclr/3.7.7.5
+  User-Agent: aws-sdk-dotnet-core/3.7.5.8
+  User-Agent: .NET_Core/5.0.13
+  User-Agent: OS/Microsoft_Windows_10.0.19044
+  User-Agent: ClientAsync
+  amz-sdk-invocation-id: 1e484905-2869-4f09-a3f0-bd271e204453
+  amz-sdk-request: attempt=1; max=5
+  Host: jangirg-s3-perf-test.s3.us-west-2.amazonaws.com
+  X-Amz-Date: 20211229T195350Z
+  X-Amz-Content-SHA256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+  Authorization: AWS4-HMAC-SHA256 Credential=AKIA2SRUSSNWLYTMAP4W/20211229/us-west-2/s3/aws4_request, SignedHeaders=host;user-agent;x-amz-content-sha256;x-amz-date, Signature=740fdb7dc2cc3f194e173bf24a8acbb466f1cf963169354c241b4fa0b094a536
+  traceparent: 00-07bd40e3618fc540a1a0829abcf2af49-e3cfd61e20787147-00
+}).
+2021-12-29 07:53:50 PM[System.Net.Http-RequestHeadersStart] ().
+2021-12-29 07:53:50 PM[System.Net.Http-RequestHeadersStop] ().
+2021-12-29 07:53:50 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 28726945, WriteToStreamAsync, Writing 738 bytes.).
+2021-12-29 07:53:50 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 28726945, SendAsyncCore, Received 363 bytes.).
+2021-12-29 07:53:50 PM[Private.InternalDiagnostics.System.Net.Http-Associate] (HttpResponseMessage#43954668, RequestMessage, HttpResponseMessage#43954668, HttpRequestMessage#28726945).
+2021-12-29 07:53:50 PM[Private.InternalDiagnostics.System.Net.Http-Info] (HttpConnectionResponseContent#25124883, .ctor, ).
+2021-12-29 07:53:50 PM[Private.InternalDiagnostics.System.Net.Http-Associate] (HttpResponseMessage#43954668, Content, HttpResponseMessage#43954668, HttpConnectionResponseContent#25124883).
+2021-12-29 07:53:50 PM[System.Net.Http-ResponseHeadersStart] ().
+2021-12-29 07:53:50 PM[System.Net.Http-ResponseHeadersStop] ().
+2021-12-29 07:53:50 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 28726945, SendAsyncCore, Request is fully sent.).
+2021-12-29 07:53:50 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 28726945, SendAsyncCore, Received response: StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: System.Net.Http.HttpConnectionResponseContent, Headers:
+{
+  x-amz-id-2: pZh8GcTxHUCR/QLUCpIEtgkZN7ErOeEp39hC1dQLoZv7fCZxmnJWQsRD/L5VX122SOf5pnJlwS8=
+  x-amz-request-id: TJAT9HVMGB10A94Y
+  Date: Wed, 29 Dec 2021 19:53:51 GMT
+  ETag: "ab9b7b2c58d3a481e172aea95b1e87a0"
+  Accept-Ranges: bytes
+  Server: AmazonS3
+  Last-Modified: Tue, 28 Dec 2021 17:45:48 GMT
+  Content-Type: application/json
+  Content-Length: 603
+}).
+2021-12-29 07:53:50 PM[Private.InternalDiagnostics.System.Net.Http-ClientSendCompleted] (StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: System.Net.Http.HttpConnectionResponseContent, Headers:
+{
+  x-amz-id-2: pZh8GcTxHUCR/QLUCpIEtgkZN7ErOeEp39hC1dQLoZv7fCZxmnJWQsRD/L5VX122SOf5pnJlwS8=
+  x-amz-request-id: TJAT9HVMGB10A94Y
+  Date: Wed, 29 Dec 2021 19:53:51 GMT
+  ETag: "ab9b7b2c58d3a481e172aea95b1e87a0"
+  Accept-Ranges: bytes
+  Server: AmazonS3
+  Last-Modified: Tue, 28 Dec 2021 17:45:48 GMT
+  Content-Type: application/json
+  Content-Length: 603
+}, 28726945, 43954668, 39564799).
+2021-12-29 07:53:50 PM[System.Net.Http-RequestStop] ().
+2021-12-29 07:53:50 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 28726945, Read, Received 603 bytes.).
+2021-12-29 07:53:50 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 0, ReturnConnection, Stored connection in pool.).
+2021-12-29 07:53:50 PM,37.5261,,,,0.0158,0.0782,40.4422,0.1582
+2021-12-29 07:53:56 PM[System.Net.Http-RequestStart] (https, jangirg-s3-perf-test.s3.us-west-2.amazonaws.com, 443, /test.json, 1, 1, 0).
+2021-12-29 07:53:56 PM[Private.InternalDiagnostics.System.Net.Http-HeadersInvalidValue] (Authorization, AWS4-HMAC-SHA256 Credential=AKIA2SRUSSNWLYTMAP4W/20211229/us-west-2/s3/aws4_request, SignedHeaders=host;user-agent;x-amz-content-sha256;x-amz-date, Signature=b08e0d181954c7be8e98a70fdec25f636c7eddae60db72da43a96a399d439b29).
+2021-12-29 07:53:56 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 0, GetOrReserveHttp11ConnectionAsync, Found usable connection in pool.).
+2021-12-29 07:53:56 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 54963967, SendAsyncCore, Sending request: Method: GET, RequestUri: 'https://jangirg-s3-perf-test.s3.us-west-2.amazonaws.com/test.json', Version: 1.1, Content: <null>, Headers:
+{
+  User-Agent: aws-sdk-dotnet-coreclr/3.7.7.5
+  User-Agent: aws-sdk-dotnet-core/3.7.5.8
+  User-Agent: .NET_Core/5.0.13
+  User-Agent: OS/Microsoft_Windows_10.0.19044
+  User-Agent: ClientAsync
+  amz-sdk-invocation-id: 7464ec8f-ef77-4531-b4cd-9e7a0bbdf6a5
+  amz-sdk-request: attempt=1; max=5
+  Host: jangirg-s3-perf-test.s3.us-west-2.amazonaws.com
+  X-Amz-Date: 20211229T195356Z
+  X-Amz-Content-SHA256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+  Authorization: AWS4-HMAC-SHA256 Credential=AKIA2SRUSSNWLYTMAP4W/20211229/us-west-2/s3/aws4_request, SignedHeaders=host;user-agent;x-amz-content-sha256;x-amz-date, Signature=b08e0d181954c7be8e98a70fdec25f636c7eddae60db72da43a96a399d439b29
+  traceparent: 00-1847993cf0d7d34b9ad680574de50ac1-a683b948b46e124f-00
+}).
+2021-12-29 07:53:56 PM[System.Net.Http-RequestHeadersStart] ().
+2021-12-29 07:53:56 PM[System.Net.Http-RequestHeadersStop] ().
+2021-12-29 07:53:56 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 54963967, WriteToStreamAsync, Writing 738 bytes.).
+2021-12-29 07:53:56 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 54963967, SendAsyncCore, Received 363 bytes.).
+2021-12-29 07:53:56 PM[Private.InternalDiagnostics.System.Net.Http-Associate] (HttpResponseMessage#24142300, RequestMessage, HttpResponseMessage#24142300, HttpRequestMessage#54963967).
+2021-12-29 07:53:56 PM[Private.InternalDiagnostics.System.Net.Http-Info] (HttpConnectionResponseContent#66686592, .ctor, ).
+2021-12-29 07:53:56 PM[Private.InternalDiagnostics.System.Net.Http-Associate] (HttpResponseMessage#24142300, Content, HttpResponseMessage#24142300, HttpConnectionResponseContent#66686592).
+2021-12-29 07:53:56 PM[System.Net.Http-ResponseHeadersStart] ().
+2021-12-29 07:53:56 PM[System.Net.Http-ResponseHeadersStop] ().
+2021-12-29 07:53:56 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 54963967, SendAsyncCore, Request is fully sent.).
+2021-12-29 07:53:56 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 54963967, SendAsyncCore, Received response: StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: System.Net.Http.HttpConnectionResponseContent, Headers:
+{
+  x-amz-id-2: Hc9T5De/FdIZUkf2/JLeyvDytDBGU+0/R07RHIZ3t/tdGyQcFlxCBEdBKzhQvpzWqYR7Yno8Mf8=
+  x-amz-request-id: JP735KGWYJGP6HVV
+  Date: Wed, 29 Dec 2021 19:53:56 GMT
+  ETag: "ab9b7b2c58d3a481e172aea95b1e87a0"
+  Accept-Ranges: bytes
+  Server: AmazonS3
+  Last-Modified: Tue, 28 Dec 2021 17:45:48 GMT
+  Content-Type: application/json
+  Content-Length: 603
+}).
+2021-12-29 07:53:56 PM[Private.InternalDiagnostics.System.Net.Http-ClientSendCompleted] (StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: System.Net.Http.HttpConnectionResponseContent, Headers:
+{
+  x-amz-id-2: Hc9T5De/FdIZUkf2/JLeyvDytDBGU+0/R07RHIZ3t/tdGyQcFlxCBEdBKzhQvpzWqYR7Yno8Mf8=
+  x-amz-request-id: JP735KGWYJGP6HVV
+  Date: Wed, 29 Dec 2021 19:53:56 GMT
+  ETag: "ab9b7b2c58d3a481e172aea95b1e87a0"
+  Accept-Ranges: bytes
+  Server: AmazonS3
+  Last-Modified: Tue, 28 Dec 2021 17:45:48 GMT
+  Content-Type: application/json
+  Content-Length: 603
+}, 54963967, 24142300, 39564799).
+2021-12-29 07:53:56 PM[System.Net.Http-RequestStop] ().
+2021-12-29 07:53:56 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 54963967, Read, Received 603 bytes.).
+2021-12-29 07:53:56 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 0, ReturnConnection, Stored connection in pool.).
+2021-12-29 07:53:56 PM,34.2782,,,,0.016,0.0746,37.3987,0.2017
+2021-12-29 07:54:02 PM[System.Net.Http-RequestStart] (https, jangirg-s3-perf-test.s3.us-west-2.amazonaws.com, 443, /test.json, 1, 1, 0).
+2021-12-29 07:54:02 PM[Private.InternalDiagnostics.System.Net.Http-HeadersInvalidValue] (Authorization, AWS4-HMAC-SHA256 Credential=AKIA2SRUSSNWLYTMAP4W/20211229/us-west-2/s3/aws4_request, SignedHeaders=host;user-agent;x-amz-content-sha256;x-amz-date, Signature=9a2291a46bcb6d38336cb04831b124a7cdc198c800ac331dc8971d1f883ed45c).
+2021-12-29 07:54:02 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 0, GetOrReserveHttp11ConnectionAsync, Found usable connection in pool.).
+2021-12-29 07:54:02 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 42815147, SendAsyncCore, Sending request: Method: GET, RequestUri: 'https://jangirg-s3-perf-test.s3.us-west-2.amazonaws.com/test.json', Version: 1.1, Content: <null>, Headers:
+{
+  User-Agent: aws-sdk-dotnet-coreclr/3.7.7.5
+  User-Agent: aws-sdk-dotnet-core/3.7.5.8
+  User-Agent: .NET_Core/5.0.13
+  User-Agent: OS/Microsoft_Windows_10.0.19044
+  User-Agent: ClientAsync
+  amz-sdk-invocation-id: 5e8f5705-1614-45b0-899b-13fb47b53584
+  amz-sdk-request: attempt=1; max=5
+  Host: jangirg-s3-perf-test.s3.us-west-2.amazonaws.com
+  X-Amz-Date: 20211229T195402Z
+  X-Amz-Content-SHA256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+  Authorization: AWS4-HMAC-SHA256 Credential=AKIA2SRUSSNWLYTMAP4W/20211229/us-west-2/s3/aws4_request, SignedHeaders=host;user-agent;x-amz-content-sha256;x-amz-date, Signature=9a2291a46bcb6d38336cb04831b124a7cdc198c800ac331dc8971d1f883ed45c
+  traceparent: 00-c21177328edcc844bfbccda6c6025f47-519787e80a307241-00
+}).
+2021-12-29 07:54:02 PM[System.Net.Http-RequestHeadersStart] ().
+2021-12-29 07:54:02 PM[System.Net.Http-RequestHeadersStop] ().
+2021-12-29 07:54:02 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 42815147, WriteToStreamAsync, Writing 738 bytes.).
+2021-12-29 07:54:02 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 42815147, SendAsyncCore, Received 363 bytes.).
+2021-12-29 07:54:02 PM[Private.InternalDiagnostics.System.Net.Http-Associate] (HttpResponseMessage#56552081, RequestMessage, HttpResponseMessage#56552081, HttpRequestMessage#42815147).
+2021-12-29 07:54:02 PM[Private.InternalDiagnostics.System.Net.Http-Info] (HttpConnectionResponseContent#4515895, .ctor, ).
+2021-12-29 07:54:02 PM[Private.InternalDiagnostics.System.Net.Http-Associate] (HttpResponseMessage#56552081, Content, HttpResponseMessage#56552081, HttpConnectionResponseContent#4515895).
+2021-12-29 07:54:02 PM[System.Net.Http-ResponseHeadersStart] ().
+2021-12-29 07:54:02 PM[System.Net.Http-ResponseHeadersStop] ().
+2021-12-29 07:54:02 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 42815147, SendAsyncCore, Request is fully sent.).
+2021-12-29 07:54:02 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 42815147, SendAsyncCore, Received response: StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: System.Net.Http.HttpConnectionResponseContent, Headers:
+{
+  x-amz-id-2: muk9MwznjpxB2QMZN+fHbQ68RJ7WKMBna17t/YGWAkkVCcbCUDTdiZSEsqkGTC7jXLH/nPQ/Dt4=
+  x-amz-request-id: 1R7SAVV7314RK62K
+  Date: Wed, 29 Dec 2021 19:54:02 GMT
+  ETag: "ab9b7b2c58d3a481e172aea95b1e87a0"
+  Accept-Ranges: bytes
+  Server: AmazonS3
+  Last-Modified: Tue, 28 Dec 2021 17:45:48 GMT
+  Content-Type: application/json
+  Content-Length: 603
+}).
+2021-12-29 07:54:02 PM[Private.InternalDiagnostics.System.Net.Http-ClientSendCompleted] (StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: System.Net.Http.HttpConnectionResponseContent, Headers:
+{
+  x-amz-id-2: muk9MwznjpxB2QMZN+fHbQ68RJ7WKMBna17t/YGWAkkVCcbCUDTdiZSEsqkGTC7jXLH/nPQ/Dt4=
+  x-amz-request-id: 1R7SAVV7314RK62K
+  Date: Wed, 29 Dec 2021 19:54:02 GMT
+  ETag: "ab9b7b2c58d3a481e172aea95b1e87a0"
+  Accept-Ranges: bytes
+  Server: AmazonS3
+  Last-Modified: Tue, 28 Dec 2021 17:45:48 GMT
+  Content-Type: application/json
+  Content-Length: 603
+}, 42815147, 56552081, 39564799).
+2021-12-29 07:54:02 PM[System.Net.Http-RequestStop] ().
+2021-12-29 07:54:02 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 42815147, Read, Received 603 bytes.).
+2021-12-29 07:54:02 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 0, ReturnConnection, Stored connection in pool.).
+2021-12-29 07:54:02 PM,35.6005,,,,0.0177,0.0192,36.8545,0.0426
+2021-12-29 07:54:08 PM[System.Net.Http-RequestStart] (https, jangirg-s3-perf-test.s3.us-west-2.amazonaws.com, 443, /test.json, 1, 1, 0).
+2021-12-29 07:54:08 PM[Private.InternalDiagnostics.System.Net.Http-HeadersInvalidValue] (Authorization, AWS4-HMAC-SHA256 Credential=AKIA2SRUSSNWLYTMAP4W/20211229/us-west-2/s3/aws4_request, SignedHeaders=host;user-agent;x-amz-content-sha256;x-amz-date, Signature=d71e3a2088087de8f9a279eb3e5fb64f964951451a0243d75adb4488492066bd).
+2021-12-29 07:54:08 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 0, GetOrReserveHttp11ConnectionAsync, Found usable connection in pool.).
+2021-12-29 07:54:08 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 62210544, SendAsyncCore, Sending request: Method: GET, RequestUri: 'https://jangirg-s3-perf-test.s3.us-west-2.amazonaws.com/test.json', Version: 1.1, Content: <null>, Headers:
+{
+  User-Agent: aws-sdk-dotnet-coreclr/3.7.7.5
+  User-Agent: aws-sdk-dotnet-core/3.7.5.8
+  User-Agent: .NET_Core/5.0.13
+  User-Agent: OS/Microsoft_Windows_10.0.19044
+  User-Agent: ClientAsync
+  amz-sdk-invocation-id: f51bfa8e-8858-4f0c-81f6-111299f7b89d
+  amz-sdk-request: attempt=1; max=5
+  Host: jangirg-s3-perf-test.s3.us-west-2.amazonaws.com
+  X-Amz-Date: 20211229T195408Z
+  X-Amz-Content-SHA256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+  Authorization: AWS4-HMAC-SHA256 Credential=AKIA2SRUSSNWLYTMAP4W/20211229/us-west-2/s3/aws4_request, SignedHeaders=host;user-agent;x-amz-content-sha256;x-amz-date, Signature=d71e3a2088087de8f9a279eb3e5fb64f964951451a0243d75adb4488492066bd
+  traceparent: 00-bb45c1eac596bc4ebea322722d1a0ef6-e99211d5e1cff141-00
+}).
+2021-12-29 07:54:08 PM[System.Net.Http-RequestHeadersStart] ().
+2021-12-29 07:54:08 PM[System.Net.Http-RequestHeadersStop] ().
+2021-12-29 07:54:08 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 62210544, WriteToStreamAsync, Writing 738 bytes.).
+2021-12-29 07:54:08 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 62210544, SendAsyncCore, Received 363 bytes.).
+2021-12-29 07:54:08 PM[Private.InternalDiagnostics.System.Net.Http-Associate] (HttpResponseMessage#45788532, RequestMessage, HttpResponseMessage#45788532, HttpRequestMessage#62210544).
+2021-12-29 07:54:08 PM[Private.InternalDiagnostics.System.Net.Http-Info] (HttpConnectionResponseContent#3862624, .ctor, ).
+2021-12-29 07:54:08 PM[Private.InternalDiagnostics.System.Net.Http-Associate] (HttpResponseMessage#45788532, Content, HttpResponseMessage#45788532, HttpConnectionResponseContent#3862624).
+2021-12-29 07:54:08 PM[System.Net.Http-ResponseHeadersStart] ().
+2021-12-29 07:54:08 PM[System.Net.Http-ResponseHeadersStop] ().
+2021-12-29 07:54:08 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 62210544, SendAsyncCore, Request is fully sent.).
+2021-12-29 07:54:08 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 62210544, SendAsyncCore, Received response: StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: System.Net.Http.HttpConnectionResponseContent, Headers:
+{
+  x-amz-id-2: /5AyawNq5Of/76bWgwzyLEA0SNsg6/54NMfHGtyykzhFtsIltT1d3K5BO24/9q09Ek7yWjq0YZM=
+  x-amz-request-id: 9W6GTCBH9F0922HF
+  Date: Wed, 29 Dec 2021 19:54:08 GMT
+  ETag: "ab9b7b2c58d3a481e172aea95b1e87a0"
+  Accept-Ranges: bytes
+  Server: AmazonS3
+  Last-Modified: Tue, 28 Dec 2021 17:45:48 GMT
+  Content-Type: application/json
+  Content-Length: 603
+}).
+2021-12-29 07:54:08 PM[Private.InternalDiagnostics.System.Net.Http-ClientSendCompleted] (StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: System.Net.Http.HttpConnectionResponseContent, Headers:
+{
+  x-amz-id-2: /5AyawNq5Of/76bWgwzyLEA0SNsg6/54NMfHGtyykzhFtsIltT1d3K5BO24/9q09Ek7yWjq0YZM=
+  x-amz-request-id: 9W6GTCBH9F0922HF
+  Date: Wed, 29 Dec 2021 19:54:08 GMT
+  ETag: "ab9b7b2c58d3a481e172aea95b1e87a0"
+  Accept-Ranges: bytes
+  Server: AmazonS3
+  Last-Modified: Tue, 28 Dec 2021 17:45:48 GMT
+  Content-Type: application/json
+  Content-Length: 603
+}, 62210544, 45788532, 39564799).
+2021-12-29 07:54:08 PM[System.Net.Http-RequestStop] ().
+2021-12-29 07:54:08 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 62210544, Read, Received 603 bytes.).
+2021-12-29 07:54:08 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 0, ReturnConnection, Stored connection in pool.).
+2021-12-29 07:54:08 PM,31.3573,,,,0.0161,0.0193,33.7045,0.0422
+2021-12-29 07:54:13 PM[System.Net.Http-RequestStart] (https, jangirg-s3-perf-test.s3.us-west-2.amazonaws.com, 443, /test.json, 1, 1, 0).
+2021-12-29 07:54:13 PM[Private.InternalDiagnostics.System.Net.Http-HeadersInvalidValue] (Authorization, AWS4-HMAC-SHA256 Credential=AKIA2SRUSSNWLYTMAP4W/20211229/us-west-2/s3/aws4_request, SignedHeaders=host;user-agent;x-amz-content-sha256;x-amz-date, Signature=fb137550c67a91f432864e717d447c6e98fd639f2844ec8596596c73176cafc8).
+2021-12-29 07:54:13 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 0, GetOrReserveHttp11ConnectionAsync, Found usable connection in pool.).
+2021-12-29 07:54:13 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 32459944, SendAsyncCore, Sending request: Method: GET, RequestUri: 'https://jangirg-s3-perf-test.s3.us-west-2.amazonaws.com/test.json', Version: 1.1, Content: <null>, Headers:
+{
+  User-Agent: aws-sdk-dotnet-coreclr/3.7.7.5
+  User-Agent: aws-sdk-dotnet-core/3.7.5.8
+  User-Agent: .NET_Core/5.0.13
+  User-Agent: OS/Microsoft_Windows_10.0.19044
+  User-Agent: ClientAsync
+  amz-sdk-invocation-id: f4a094b0-d689-4ba4-ac8e-0cf4b29112d2
+  amz-sdk-request: attempt=1; max=5
+  Host: jangirg-s3-perf-test.s3.us-west-2.amazonaws.com
+  X-Amz-Date: 20211229T195413Z
+  X-Amz-Content-SHA256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+  Authorization: AWS4-HMAC-SHA256 Credential=AKIA2SRUSSNWLYTMAP4W/20211229/us-west-2/s3/aws4_request, SignedHeaders=host;user-agent;x-amz-content-sha256;x-amz-date, Signature=fb137550c67a91f432864e717d447c6e98fd639f2844ec8596596c73176cafc8
+  traceparent: 00-b53201fd55bd06419adfbafa35a7f559-a8087d815153f543-00
+}).
+2021-12-29 07:54:13 PM[System.Net.Http-RequestHeadersStart] ().
+2021-12-29 07:54:13 PM[System.Net.Http-RequestHeadersStop] ().
+2021-12-29 07:54:13 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 32459944, WriteToStreamAsync, Writing 738 bytes.).
+2021-12-29 07:54:13 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 32459944, SendAsyncCore, Received 363 bytes.).
+2021-12-29 07:54:13 PM[Private.InternalDiagnostics.System.Net.Http-Associate] (HttpResponseMessage#29456748, RequestMessage, HttpResponseMessage#29456748, HttpRequestMessage#32459944).
+2021-12-29 07:54:13 PM[Private.InternalDiagnostics.System.Net.Http-Info] (HttpConnectionResponseContent#65330082, .ctor, ).
+2021-12-29 07:54:13 PM[Private.InternalDiagnostics.System.Net.Http-Associate] (HttpResponseMessage#29456748, Content, HttpResponseMessage#29456748, HttpConnectionResponseContent#65330082).
+2021-12-29 07:54:13 PM[System.Net.Http-ResponseHeadersStart] ().
+2021-12-29 07:54:13 PM[System.Net.Http-ResponseHeadersStop] ().
+2021-12-29 07:54:13 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 32459944, SendAsyncCore, Request is fully sent.).
+2021-12-29 07:54:13 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 32459944, SendAsyncCore, Received response: StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: System.Net.Http.HttpConnectionResponseContent, Headers:
+{
+  x-amz-id-2: 0avjZXdra9bp0CmRqecMF+xxw9wHEigejGjcT8iXB/bBJFOeTNO2ubvOClnxKY2aXeR8v+uiFPg=
+  x-amz-request-id: KAAMNETEKNHXY0SC
+  Date: Wed, 29 Dec 2021 19:54:14 GMT
+  ETag: "ab9b7b2c58d3a481e172aea95b1e87a0"
+  Accept-Ranges: bytes
+  Server: AmazonS3
+  Last-Modified: Tue, 28 Dec 2021 17:45:48 GMT
+  Content-Type: application/json
+  Content-Length: 603
+}).
+2021-12-29 07:54:13 PM[Private.InternalDiagnostics.System.Net.Http-ClientSendCompleted] (StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: System.Net.Http.HttpConnectionResponseContent, Headers:
+{
+  x-amz-id-2: 0avjZXdra9bp0CmRqecMF+xxw9wHEigejGjcT8iXB/bBJFOeTNO2ubvOClnxKY2aXeR8v+uiFPg=
+  x-amz-request-id: KAAMNETEKNHXY0SC
+  Date: Wed, 29 Dec 2021 19:54:14 GMT
+  ETag: "ab9b7b2c58d3a481e172aea95b1e87a0"
+  Accept-Ranges: bytes
+  Server: AmazonS3
+  Last-Modified: Tue, 28 Dec 2021 17:45:48 GMT
+  Content-Type: application/json
+  Content-Length: 603
+}, 32459944, 29456748, 39564799).
+2021-12-29 07:54:13 PM[System.Net.Http-RequestStop] ().
+2021-12-29 07:54:13 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 32459944, Read, Received 603 bytes.).
+2021-12-29 07:54:13 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 0, ReturnConnection, Stored connection in pool.).
+2021-12-29 07:54:13 PM,33.751,,,,0.0164,0.0867,36.2943,0.0423
+2021-12-29 07:54:19 PM[System.Net.Http-RequestStart] (https, jangirg-s3-perf-test.s3.us-west-2.amazonaws.com, 443, /test.json, 1, 1, 0).
+2021-12-29 07:54:19 PM[Private.InternalDiagnostics.System.Net.Http-HeadersInvalidValue] (Authorization, AWS4-HMAC-SHA256 Credential=AKIA2SRUSSNWLYTMAP4W/20211229/us-west-2/s3/aws4_request, SignedHeaders=host;user-agent;x-amz-content-sha256;x-amz-date, Signature=c0d5f4544e5b5bb194d2c583caa9154cf67e7c37aa10383e90fc0c322e93dc57).
+2021-12-29 07:54:19 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 0, GetOrReserveHttp11ConnectionAsync, Found usable connection in pool.).
+2021-12-29 07:54:19 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 52116595, SendAsyncCore, Sending request: Method: GET, RequestUri: 'https://jangirg-s3-perf-test.s3.us-west-2.amazonaws.com/test.json', Version: 1.1, Content: <null>, Headers:
+{
+  User-Agent: aws-sdk-dotnet-coreclr/3.7.7.5
+  User-Agent: aws-sdk-dotnet-core/3.7.5.8
+  User-Agent: .NET_Core/5.0.13
+  User-Agent: OS/Microsoft_Windows_10.0.19044
+  User-Agent: ClientAsync
+  amz-sdk-invocation-id: 3f644614-f24d-46d1-a5ff-d08dc29bd5c1
+  amz-sdk-request: attempt=1; max=5
+  Host: jangirg-s3-perf-test.s3.us-west-2.amazonaws.com
+  X-Amz-Date: 20211229T195419Z
+  X-Amz-Content-SHA256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+  Authorization: AWS4-HMAC-SHA256 Credential=AKIA2SRUSSNWLYTMAP4W/20211229/us-west-2/s3/aws4_request, SignedHeaders=host;user-agent;x-amz-content-sha256;x-amz-date, Signature=c0d5f4544e5b5bb194d2c583caa9154cf67e7c37aa10383e90fc0c322e93dc57
+  traceparent: 00-bad989d04eeb774a9d3bd81ef8b2c786-792e4f2087571246-00
+}).
+2021-12-29 07:54:19 PM[System.Net.Http-RequestHeadersStart] ().
+2021-12-29 07:54:19 PM[System.Net.Http-RequestHeadersStop] ().
+2021-12-29 07:54:19 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 52116595, WriteToStreamAsync, Writing 738 bytes.).
+2021-12-29 07:54:19 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 52116595, SendAsyncCore, Received 363 bytes.).
+2021-12-29 07:54:19 PM[Private.InternalDiagnostics.System.Net.Http-Associate] (HttpResponseMessage#22639330, RequestMessage, HttpResponseMessage#22639330, HttpRequestMessage#52116595).
+2021-12-29 07:54:19 PM[Private.InternalDiagnostics.System.Net.Http-Info] (HttpConnectionResponseContent#29112358, .ctor, ).
+2021-12-29 07:54:19 PM[Private.InternalDiagnostics.System.Net.Http-Associate] (HttpResponseMessage#22639330, Content, HttpResponseMessage#22639330, HttpConnectionResponseContent#29112358).
+2021-12-29 07:54:19 PM[System.Net.Http-ResponseHeadersStart] ().
+2021-12-29 07:54:19 PM[System.Net.Http-ResponseHeadersStop] ().
+2021-12-29 07:54:19 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 52116595, SendAsyncCore, Request is fully sent.).
+2021-12-29 07:54:19 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 52116595, SendAsyncCore, Received response: StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: System.Net.Http.HttpConnectionResponseContent, Headers:
+{
+  x-amz-id-2: I5rjVH2dE7zA3Tgabk3dUWG9eBbmw0Lp0NnIwRrkTSXMYSqG5hGCbz97IUjfB/pTFpDkkfZrq4M=
+  x-amz-request-id: 32Y76NE32W32QQV1
+  Date: Wed, 29 Dec 2021 19:54:20 GMT
+  ETag: "ab9b7b2c58d3a481e172aea95b1e87a0"
+  Accept-Ranges: bytes
+  Server: AmazonS3
+  Last-Modified: Tue, 28 Dec 2021 17:45:48 GMT
+  Content-Type: application/json
+  Content-Length: 603
+}).
+2021-12-29 07:54:19 PM[Private.InternalDiagnostics.System.Net.Http-ClientSendCompleted] (StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: System.Net.Http.HttpConnectionResponseContent, Headers:
+{
+  x-amz-id-2: I5rjVH2dE7zA3Tgabk3dUWG9eBbmw0Lp0NnIwRrkTSXMYSqG5hGCbz97IUjfB/pTFpDkkfZrq4M=
+  x-amz-request-id: 32Y76NE32W32QQV1
+  Date: Wed, 29 Dec 2021 19:54:20 GMT
+  ETag: "ab9b7b2c58d3a481e172aea95b1e87a0"
+  Accept-Ranges: bytes
+  Server: AmazonS3
+  Last-Modified: Tue, 28 Dec 2021 17:45:48 GMT
+  Content-Type: application/json
+  Content-Length: 603
+}, 52116595, 22639330, 39564799).
+2021-12-29 07:54:19 PM[System.Net.Http-RequestStop] ().
+2021-12-29 07:54:19 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 52116595, Read, Received 603 bytes.).
+2021-12-29 07:54:19 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 0, ReturnConnection, Stored connection in pool.).
+2021-12-29 07:54:19 PM,32.2486,,,,0.0212,0.0189,35.094,0.0577
+2021-12-29 07:54:25 PM[System.Net.Http-RequestStart] (https, jangirg-s3-perf-test.s3.us-west-2.amazonaws.com, 443, /test.json, 1, 1, 0).
+2021-12-29 07:54:25 PM[Private.InternalDiagnostics.System.Net.Http-HeadersInvalidValue] (Authorization, AWS4-HMAC-SHA256 Credential=AKIA2SRUSSNWLYTMAP4W/20211229/us-west-2/s3/aws4_request, SignedHeaders=host;user-agent;x-amz-content-sha256;x-amz-date, Signature=17b7bed8d06c129e462e8fbdfc6e84a7fc0d30333bf5b8fe29ab8175cfa8d804).
+2021-12-29 07:54:25 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 0, GetOrReserveHttp11ConnectionAsync, Found usable connection in pool.).
+2021-12-29 07:54:25 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 5086320, SendAsyncCore, Sending request: Method: GET, RequestUri: 'https://jangirg-s3-perf-test.s3.us-west-2.amazonaws.com/test.json', Version: 1.1, Content: <null>, Headers:
+{
+  User-Agent: aws-sdk-dotnet-coreclr/3.7.7.5
+  User-Agent: aws-sdk-dotnet-core/3.7.5.8
+  User-Agent: .NET_Core/5.0.13
+  User-Agent: OS/Microsoft_Windows_10.0.19044
+  User-Agent: ClientAsync
+  amz-sdk-invocation-id: 9374b0a5-3528-46d4-b672-c5e30ab10bcf
+  amz-sdk-request: attempt=1; max=5
+  Host: jangirg-s3-perf-test.s3.us-west-2.amazonaws.com
+  X-Amz-Date: 20211229T195425Z
+  X-Amz-Content-SHA256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+  Authorization: AWS4-HMAC-SHA256 Credential=AKIA2SRUSSNWLYTMAP4W/20211229/us-west-2/s3/aws4_request, SignedHeaders=host;user-agent;x-amz-content-sha256;x-amz-date, Signature=17b7bed8d06c129e462e8fbdfc6e84a7fc0d30333bf5b8fe29ab8175cfa8d804
+  traceparent: 00-d53d6f01d3bbd3469b488afc7e4d491d-3951c9424da0cb4a-00
+}).
+2021-12-29 07:54:25 PM[System.Net.Http-RequestHeadersStart] ().
+2021-12-29 07:54:25 PM[System.Net.Http-RequestHeadersStop] ().
+2021-12-29 07:54:25 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 5086320, WriteToStreamAsync, Writing 738 bytes.).
+2021-12-29 07:54:25 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 5086320, SendAsyncCore, Received 363 bytes.).
+2021-12-29 07:54:25 PM[Private.InternalDiagnostics.System.Net.Http-Associate] (HttpResponseMessage#56720318, RequestMessage, HttpResponseMessage#56720318, HttpRequestMessage#5086320).
+2021-12-29 07:54:25 PM[Private.InternalDiagnostics.System.Net.Http-Info] (HttpConnectionResponseContent#8721811, .ctor, ).
+2021-12-29 07:54:25 PM[Private.InternalDiagnostics.System.Net.Http-Associate] (HttpResponseMessage#56720318, Content, HttpResponseMessage#56720318, HttpConnectionResponseContent#8721811).
+2021-12-29 07:54:25 PM[System.Net.Http-ResponseHeadersStart] ().
+2021-12-29 07:54:25 PM[System.Net.Http-ResponseHeadersStop] ().
+2021-12-29 07:54:25 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 5086320, SendAsyncCore, Request is fully sent.).
+2021-12-29 07:54:25 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 5086320, SendAsyncCore, Received response: StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: System.Net.Http.HttpConnectionResponseContent, Headers:
+{
+  x-amz-id-2: cC4Qen6CtuHT2VYFzLWiLig6FDm4ORcavdkCWq3NtjILTI//PbFTnrR6KO5VgAW4GxX3phUCKkg=
+  x-amz-request-id: S9VMENF2HY98B1DV
+  Date: Wed, 29 Dec 2021 19:54:26 GMT
+  ETag: "ab9b7b2c58d3a481e172aea95b1e87a0"
+  Accept-Ranges: bytes
+  Server: AmazonS3
+  Last-Modified: Tue, 28 Dec 2021 17:45:48 GMT
+  Content-Type: application/json
+  Content-Length: 603
+}).
+2021-12-29 07:54:25 PM[Private.InternalDiagnostics.System.Net.Http-ClientSendCompleted] (StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: System.Net.Http.HttpConnectionResponseContent, Headers:
+{
+  x-amz-id-2: cC4Qen6CtuHT2VYFzLWiLig6FDm4ORcavdkCWq3NtjILTI//PbFTnrR6KO5VgAW4GxX3phUCKkg=
+  x-amz-request-id: S9VMENF2HY98B1DV
+  Date: Wed, 29 Dec 2021 19:54:26 GMT
+  ETag: "ab9b7b2c58d3a481e172aea95b1e87a0"
+  Accept-Ranges: bytes
+  Server: AmazonS3
+  Last-Modified: Tue, 28 Dec 2021 17:45:48 GMT
+  Content-Type: application/json
+  Content-Length: 603
+}, 5086320, 56720318, 39564799).
+2021-12-29 07:54:25 PM[System.Net.Http-RequestStop] ().
+2021-12-29 07:54:25 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 5086320, Read, Received 603 bytes.).
+2021-12-29 07:54:25 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 0, ReturnConnection, Stored connection in pool.).
+2021-12-29 07:54:25 PM,34.6442,,,,0.0139,0.0181,37.32,0.0415
+2021-12-29 07:54:31 PM[System.Net.Http-RequestStart] (https, jangirg-s3-perf-test.s3.us-west-2.amazonaws.com, 443, /test.json, 1, 1, 0).
+2021-12-29 07:54:31 PM[Private.InternalDiagnostics.System.Net.Http-HeadersInvalidValue] (Authorization, AWS4-HMAC-SHA256 Credential=AKIA2SRUSSNWLYTMAP4W/20211229/us-west-2/s3/aws4_request, SignedHeaders=host;user-agent;x-amz-content-sha256;x-amz-date, Signature=acbdd44b054590129f8f780ab25d966c185d56914d498a4a91bdc584ecc1fb09).
+2021-12-29 07:54:31 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 0, GetOrReserveHttp11ConnectionAsync, Found usable connection in pool.).
+2021-12-29 07:54:31 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 32187286, SendAsyncCore, Sending request: Method: GET, RequestUri: 'https://jangirg-s3-perf-test.s3.us-west-2.amazonaws.com/test.json', Version: 1.1, Content: <null>, Headers:
+{
+  User-Agent: aws-sdk-dotnet-coreclr/3.7.7.5
+  User-Agent: aws-sdk-dotnet-core/3.7.5.8
+  User-Agent: .NET_Core/5.0.13
+  User-Agent: OS/Microsoft_Windows_10.0.19044
+  User-Agent: ClientAsync
+  amz-sdk-invocation-id: 0b8cd9c0-cb2b-420c-8659-29f0e4f274d4
+  amz-sdk-request: attempt=1; max=5
+  Host: jangirg-s3-perf-test.s3.us-west-2.amazonaws.com
+  X-Amz-Date: 20211229T195431Z
+  X-Amz-Content-SHA256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+  Authorization: AWS4-HMAC-SHA256 Credential=AKIA2SRUSSNWLYTMAP4W/20211229/us-west-2/s3/aws4_request, SignedHeaders=host;user-agent;x-amz-content-sha256;x-amz-date, Signature=acbdd44b054590129f8f780ab25d966c185d56914d498a4a91bdc584ecc1fb09
+  traceparent: 00-96c6ced83b2c744fbdc8b7e7194c86e4-b15b49bd00753042-00
+}).
+2021-12-29 07:54:31 PM[System.Net.Http-RequestHeadersStart] ().
+2021-12-29 07:54:31 PM[System.Net.Http-RequestHeadersStop] ().
+2021-12-29 07:54:31 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 32187286, WriteToStreamAsync, Writing 738 bytes.).
+2021-12-29 07:54:31 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 32187286, SendAsyncCore, Received 363 bytes.).
+2021-12-29 07:54:31 PM[Private.InternalDiagnostics.System.Net.Http-Associate] (HttpResponseMessage#16718695, RequestMessage, HttpResponseMessage#16718695, HttpRequestMessage#32187286).
+2021-12-29 07:54:31 PM[Private.InternalDiagnostics.System.Net.Http-Info] (HttpConnectionResponseContent#15314194, .ctor, ).
+2021-12-29 07:54:31 PM[Private.InternalDiagnostics.System.Net.Http-Associate] (HttpResponseMessage#16718695, Content, HttpResponseMessage#16718695, HttpConnectionResponseContent#15314194).
+2021-12-29 07:54:31 PM[System.Net.Http-ResponseHeadersStart] ().
+2021-12-29 07:54:31 PM[System.Net.Http-ResponseHeadersStop] ().
+2021-12-29 07:54:31 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 32187286, SendAsyncCore, Request is fully sent.).
+2021-12-29 07:54:31 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 32187286, SendAsyncCore, Received response: StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: System.Net.Http.HttpConnectionResponseContent, Headers:
+{
+  x-amz-id-2: IPGOFE0RhY/htT5NGMbvp+Yw1uOvS9+rGujKL3MqDRkInPvQRYZTHP84uOXjm/jAeHSrePieS4Y=
+  x-amz-request-id: 64XEWCFS9W0X5RXA
+  Date: Wed, 29 Dec 2021 19:54:32 GMT
+  ETag: "ab9b7b2c58d3a481e172aea95b1e87a0"
+  Accept-Ranges: bytes
+  Server: AmazonS3
+  Last-Modified: Tue, 28 Dec 2021 17:45:48 GMT
+  Content-Type: application/json
+  Content-Length: 603
+}).
+2021-12-29 07:54:31 PM[Private.InternalDiagnostics.System.Net.Http-ClientSendCompleted] (StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: System.Net.Http.HttpConnectionResponseContent, Headers:
+{
+  x-amz-id-2: IPGOFE0RhY/htT5NGMbvp+Yw1uOvS9+rGujKL3MqDRkInPvQRYZTHP84uOXjm/jAeHSrePieS4Y=
+  x-amz-request-id: 64XEWCFS9W0X5RXA
+  Date: Wed, 29 Dec 2021 19:54:32 GMT
+  ETag: "ab9b7b2c58d3a481e172aea95b1e87a0"
+  Accept-Ranges: bytes
+  Server: AmazonS3
+  Last-Modified: Tue, 28 Dec 2021 17:45:48 GMT
+  Content-Type: application/json
+  Content-Length: 603
+}, 32187286, 16718695, 39564799).
+2021-12-29 07:54:31 PM[System.Net.Http-RequestStop] ().
+2021-12-29 07:54:31 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 32187286, Read, Received 603 bytes.).
+2021-12-29 07:54:31 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 0, ReturnConnection, Stored connection in pool.).
+2021-12-29 07:54:31 PM,32.6831,,,,0.0135,0.0179,35.898,0.0309
+2021-12-29 07:54:37 PM[System.Net.Http-RequestStart] (https, jangirg-s3-perf-test.s3.us-west-2.amazonaws.com, 443, /test.json, 1, 1, 0).
+2021-12-29 07:54:37 PM[Private.InternalDiagnostics.System.Net.Http-HeadersInvalidValue] (Authorization, AWS4-HMAC-SHA256 Credential=AKIA2SRUSSNWLYTMAP4W/20211229/us-west-2/s3/aws4_request, SignedHeaders=host;user-agent;x-amz-content-sha256;x-amz-date, Signature=7e30fc1fa78f407b73cb49ce0496b5c2b1af5e79a673265950ddbef1cca0bda3).
+2021-12-29 07:54:37 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 0, GetOrReserveHttp11ConnectionAsync, Found usable connection in pool.).
+2021-12-29 07:54:37 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 34622967, SendAsyncCore, Sending request: Method: GET, RequestUri: 'https://jangirg-s3-perf-test.s3.us-west-2.amazonaws.com/test.json', Version: 1.1, Content: <null>, Headers:
+{
+  User-Agent: aws-sdk-dotnet-coreclr/3.7.7.5
+  User-Agent: aws-sdk-dotnet-core/3.7.5.8
+  User-Agent: .NET_Core/5.0.13
+  User-Agent: OS/Microsoft_Windows_10.0.19044
+  User-Agent: ClientAsync
+  amz-sdk-invocation-id: 7b099263-9f05-4f0c-81d4-7876fa71080a
+  amz-sdk-request: attempt=1; max=5
+  Host: jangirg-s3-perf-test.s3.us-west-2.amazonaws.com
+  X-Amz-Date: 20211229T195437Z
+  X-Amz-Content-SHA256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+  Authorization: AWS4-HMAC-SHA256 Credential=AKIA2SRUSSNWLYTMAP4W/20211229/us-west-2/s3/aws4_request, SignedHeaders=host;user-agent;x-amz-content-sha256;x-amz-date, Signature=7e30fc1fa78f407b73cb49ce0496b5c2b1af5e79a673265950ddbef1cca0bda3
+  traceparent: 00-f5fcbdb7ece480498bd5059a6472412f-6c4e9e4a3516ed42-00
+}).
+2021-12-29 07:54:37 PM[System.Net.Http-RequestHeadersStart] ().
+2021-12-29 07:54:37 PM[System.Net.Http-RequestHeadersStop] ().
+2021-12-29 07:54:37 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 34622967, WriteToStreamAsync, Writing 738 bytes.).
+2021-12-29 07:54:37 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 34622967, SendAsyncCore, Received 363 bytes.).
+2021-12-29 07:54:37 PM[Private.InternalDiagnostics.System.Net.Http-Associate] (HttpResponseMessage#47310533, RequestMessage, HttpResponseMessage#47310533, HttpRequestMessage#34622967).
+2021-12-29 07:54:37 PM[Private.InternalDiagnostics.System.Net.Http-Info] (HttpConnectionResponseContent#41912650, .ctor, ).
+2021-12-29 07:54:37 PM[Private.InternalDiagnostics.System.Net.Http-Associate] (HttpResponseMessage#47310533, Content, HttpResponseMessage#47310533, HttpConnectionResponseContent#41912650).
+2021-12-29 07:54:37 PM[System.Net.Http-ResponseHeadersStart] ().
+2021-12-29 07:54:37 PM[System.Net.Http-ResponseHeadersStop] ().
+2021-12-29 07:54:37 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 34622967, SendAsyncCore, Request is fully sent.).
+2021-12-29 07:54:37 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 34622967, SendAsyncCore, Received response: StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: System.Net.Http.HttpConnectionResponseContent, Headers:
+{
+  x-amz-id-2: feOTsTXw64IxKu9GJRMbv/YKfv9SztEnYsu0XoFZwMaEf0h8ch0HZdN2VdCAfvgcENVzEMcHIHM=
+  x-amz-request-id: 31TMH98DCWZBAH1G
+  Date: Wed, 29 Dec 2021 19:54:38 GMT
+  ETag: "ab9b7b2c58d3a481e172aea95b1e87a0"
+  Accept-Ranges: bytes
+  Server: AmazonS3
+  Last-Modified: Tue, 28 Dec 2021 17:45:48 GMT
+  Content-Type: application/json
+  Content-Length: 603
+}).
+2021-12-29 07:54:37 PM[Private.InternalDiagnostics.System.Net.Http-ClientSendCompleted] (StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: System.Net.Http.HttpConnectionResponseContent, Headers:
+{
+  x-amz-id-2: feOTsTXw64IxKu9GJRMbv/YKfv9SztEnYsu0XoFZwMaEf0h8ch0HZdN2VdCAfvgcENVzEMcHIHM=
+  x-amz-request-id: 31TMH98DCWZBAH1G
+  Date: Wed, 29 Dec 2021 19:54:38 GMT
+  ETag: "ab9b7b2c58d3a481e172aea95b1e87a0"
+  Accept-Ranges: bytes
+  Server: AmazonS3
+  Last-Modified: Tue, 28 Dec 2021 17:45:48 GMT
+  Content-Type: application/json
+  Content-Length: 603
+}, 34622967, 47310533, 39564799).
+2021-12-29 07:54:37 PM[System.Net.Http-RequestStop] ().
+2021-12-29 07:54:37 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 34622967, Read, Received 603 bytes.).
+2021-12-29 07:54:37 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 0, ReturnConnection, Stored connection in pool.).
+2021-12-29 07:54:37 PM,36.6681,,,,0.0136,0.0214,39.3709,0.0374
+2021-12-29 07:54:43 PM[System.Net.Http-RequestStart] (https, jangirg-s3-perf-test.s3.us-west-2.amazonaws.com, 443, /test.json, 1, 1, 0).
+2021-12-29 07:54:43 PM[Private.InternalDiagnostics.System.Net.Http-HeadersInvalidValue] (Authorization, AWS4-HMAC-SHA256 Credential=AKIA2SRUSSNWLYTMAP4W/20211229/us-west-2/s3/aws4_request, SignedHeaders=host;user-agent;x-amz-content-sha256;x-amz-date, Signature=9aabd1da9570b0a009ed4dc6c373bb221e798954326cd18257b0e8b4abfda07c).
+2021-12-29 07:54:43 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 0, GetOrReserveHttp11ConnectionAsync, Found usable connection in pool.).
+2021-12-29 07:54:43 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 35016340, SendAsyncCore, Sending request: Method: GET, RequestUri: 'https://jangirg-s3-perf-test.s3.us-west-2.amazonaws.com/test.json', Version: 1.1, Content: <null>, Headers:
+{
+  User-Agent: aws-sdk-dotnet-coreclr/3.7.7.5
+  User-Agent: aws-sdk-dotnet-core/3.7.5.8
+  User-Agent: .NET_Core/5.0.13
+  User-Agent: OS/Microsoft_Windows_10.0.19044
+  User-Agent: ClientAsync
+  amz-sdk-invocation-id: a32c4b1e-fd2c-402f-8d13-fb0e137061c9
+  amz-sdk-request: attempt=1; max=5
+  Host: jangirg-s3-perf-test.s3.us-west-2.amazonaws.com
+  X-Amz-Date: 20211229T195443Z
+  X-Amz-Content-SHA256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+  Authorization: AWS4-HMAC-SHA256 Credential=AKIA2SRUSSNWLYTMAP4W/20211229/us-west-2/s3/aws4_request, SignedHeaders=host;user-agent;x-amz-content-sha256;x-amz-date, Signature=9aabd1da9570b0a009ed4dc6c373bb221e798954326cd18257b0e8b4abfda07c
+  traceparent: 00-339d8ed502cde84689f0e2a3ea3ea1df-3d7958a084ca8b44-00
+}).
+2021-12-29 07:54:43 PM[System.Net.Http-RequestHeadersStart] ().
+2021-12-29 07:54:43 PM[System.Net.Http-RequestHeadersStop] ().
+2021-12-29 07:54:43 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 35016340, WriteToStreamAsync, Writing 738 bytes.).
+2021-12-29 07:54:43 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 35016340, SendAsyncCore, Received 363 bytes.).
+2021-12-29 07:54:43 PM[Private.InternalDiagnostics.System.Net.Http-Associate] (HttpResponseMessage#41183297, RequestMessage, HttpResponseMessage#41183297, HttpRequestMessage#35016340).
+2021-12-29 07:54:43 PM[Private.InternalDiagnostics.System.Net.Http-Info] (HttpConnectionResponseContent#22949475, .ctor, ).
+2021-12-29 07:54:43 PM[Private.InternalDiagnostics.System.Net.Http-Associate] (HttpResponseMessage#41183297, Content, HttpResponseMessage#41183297, HttpConnectionResponseContent#22949475).
+2021-12-29 07:54:43 PM[System.Net.Http-ResponseHeadersStart] ().
+2021-12-29 07:54:43 PM[System.Net.Http-ResponseHeadersStop] ().
+2021-12-29 07:54:43 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 35016340, SendAsyncCore, Request is fully sent.).
+2021-12-29 07:54:43 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 35016340, SendAsyncCore, Received response: StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: System.Net.Http.HttpConnectionResponseContent, Headers:
+{
+  x-amz-id-2: qxjuLdwe3/5rX1Kd1w5D5OMF4vUAiHZgWVDae3dhm70jCChKWdFhO2XFmXMFcQSaUnzMwgLitQM=
+  x-amz-request-id: A1MT5QT2J02E8VDW
+  Date: Wed, 29 Dec 2021 19:54:43 GMT
+  ETag: "ab9b7b2c58d3a481e172aea95b1e87a0"
+  Accept-Ranges: bytes
+  Server: AmazonS3
+  Last-Modified: Tue, 28 Dec 2021 17:45:48 GMT
+  Content-Type: application/json
+  Content-Length: 603
+}).
+2021-12-29 07:54:43 PM[Private.InternalDiagnostics.System.Net.Http-ClientSendCompleted] (StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: System.Net.Http.HttpConnectionResponseContent, Headers:
+{
+  x-amz-id-2: qxjuLdwe3/5rX1Kd1w5D5OMF4vUAiHZgWVDae3dhm70jCChKWdFhO2XFmXMFcQSaUnzMwgLitQM=
+  x-amz-request-id: A1MT5QT2J02E8VDW
+  Date: Wed, 29 Dec 2021 19:54:43 GMT
+  ETag: "ab9b7b2c58d3a481e172aea95b1e87a0"
+  Accept-Ranges: bytes
+  Server: AmazonS3
+  Last-Modified: Tue, 28 Dec 2021 17:45:48 GMT
+  Content-Type: application/json
+  Content-Length: 603
+}, 35016340, 41183297, 39564799).
+2021-12-29 07:54:43 PM[System.Net.Http-RequestStop] ().
+2021-12-29 07:54:43 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 35016340, Read, Received 603 bytes.).
+2021-12-29 07:54:43 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 0, ReturnConnection, Stored connection in pool.).
+2021-12-29 07:54:43 PM,39.9249,,,,0.0139,0.02,42.1602,0.0693
+2021-12-29 07:54:49 PM[System.Net.Http-RequestStart] (https, jangirg-s3-perf-test.s3.us-west-2.amazonaws.com, 443, /test.json, 1, 1, 0).
+2021-12-29 07:54:49 PM[Private.InternalDiagnostics.System.Net.Http-HeadersInvalidValue] (Authorization, AWS4-HMAC-SHA256 Credential=AKIA2SRUSSNWLYTMAP4W/20211229/us-west-2/s3/aws4_request, SignedHeaders=host;user-agent;x-amz-content-sha256;x-amz-date, Signature=30564187ea19222760d92172062a68b42b4270b4afeaea26b7bd97420a29c453).
+2021-12-29 07:54:49 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 0, GetOrReserveHttp11ConnectionAsync, Found usable connection in pool.).
+2021-12-29 07:54:49 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 7167227, SendAsyncCore, Sending request: Method: GET, RequestUri: 'https://jangirg-s3-perf-test.s3.us-west-2.amazonaws.com/test.json', Version: 1.1, Content: <null>, Headers:
+{
+  User-Agent: aws-sdk-dotnet-coreclr/3.7.7.5
+  User-Agent: aws-sdk-dotnet-core/3.7.5.8
+  User-Agent: .NET_Core/5.0.13
+  User-Agent: OS/Microsoft_Windows_10.0.19044
+  User-Agent: ClientAsync
+  amz-sdk-invocation-id: 6f6e0a7b-e73b-4b38-b937-d363af917135
+  amz-sdk-request: attempt=1; max=5
+  Host: jangirg-s3-perf-test.s3.us-west-2.amazonaws.com
+  X-Amz-Date: 20211229T195449Z
+  X-Amz-Content-SHA256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+  Authorization: AWS4-HMAC-SHA256 Credential=AKIA2SRUSSNWLYTMAP4W/20211229/us-west-2/s3/aws4_request, SignedHeaders=host;user-agent;x-amz-content-sha256;x-amz-date, Signature=30564187ea19222760d92172062a68b42b4270b4afeaea26b7bd97420a29c453
+  traceparent: 00-f4aa372b5a8c6449ac4741a8feb9b6cd-8eb0e73b1baf6a4b-00
+}).
+2021-12-29 07:54:49 PM[System.Net.Http-RequestHeadersStart] ().
+2021-12-29 07:54:49 PM[System.Net.Http-RequestHeadersStop] ().
+2021-12-29 07:54:49 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 7167227, WriteToStreamAsync, Writing 738 bytes.).
+2021-12-29 07:54:49 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 7167227, SendAsyncCore, Received 363 bytes.).
+2021-12-29 07:54:49 PM[Private.InternalDiagnostics.System.Net.Http-Associate] (HttpResponseMessage#36865986, RequestMessage, HttpResponseMessage#36865986, HttpRequestMessage#7167227).
+2021-12-29 07:54:49 PM[Private.InternalDiagnostics.System.Net.Http-Info] (HttpConnectionResponseContent#49234439, .ctor, ).
+2021-12-29 07:54:49 PM[Private.InternalDiagnostics.System.Net.Http-Associate] (HttpResponseMessage#36865986, Content, HttpResponseMessage#36865986, HttpConnectionResponseContent#49234439).
+2021-12-29 07:54:49 PM[System.Net.Http-ResponseHeadersStart] ().
+2021-12-29 07:54:49 PM[System.Net.Http-ResponseHeadersStop] ().
+2021-12-29 07:54:49 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 7167227, SendAsyncCore, Request is fully sent.).
+2021-12-29 07:54:49 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 7167227, SendAsyncCore, Received response: StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: System.Net.Http.HttpConnectionResponseContent, Headers:
+{
+  x-amz-id-2: 2rxWn6YE2tltcw+/5oLwBl5ggYjE4M7Yc/Ri3tpeN3zRL50i8ddcGM1D1HqxvO8QID1ej4pr0z0=
+  x-amz-request-id: 4AX1RBTKGWN8W248
+  Date: Wed, 29 Dec 2021 19:54:49 GMT
+  ETag: "ab9b7b2c58d3a481e172aea95b1e87a0"
+  Accept-Ranges: bytes
+  Server: AmazonS3
+  Last-Modified: Tue, 28 Dec 2021 17:45:48 GMT
+  Content-Type: application/json
+  Content-Length: 603
+}).
+2021-12-29 07:54:49 PM[Private.InternalDiagnostics.System.Net.Http-ClientSendCompleted] (StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: System.Net.Http.HttpConnectionResponseContent, Headers:
+{
+  x-amz-id-2: 2rxWn6YE2tltcw+/5oLwBl5ggYjE4M7Yc/Ri3tpeN3zRL50i8ddcGM1D1HqxvO8QID1ej4pr0z0=
+  x-amz-request-id: 4AX1RBTKGWN8W248
+  Date: Wed, 29 Dec 2021 19:54:49 GMT
+  ETag: "ab9b7b2c58d3a481e172aea95b1e87a0"
+  Accept-Ranges: bytes
+  Server: AmazonS3
+  Last-Modified: Tue, 28 Dec 2021 17:45:48 GMT
+  Content-Type: application/json
+  Content-Length: 603
+}, 7167227, 36865986, 39564799).
+2021-12-29 07:54:49 PM[System.Net.Http-RequestStop] ().
+2021-12-29 07:54:49 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 7167227, Read, Received 603 bytes.).
+2021-12-29 07:54:49 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 0, ReturnConnection, Stored connection in pool.).
+2021-12-29 07:54:49 PM,33.5477,,,,0.0137,0.0196,36.305,0.0363
+2021-12-29 07:54:55 PM[System.Net.Http-RequestStart] (https, jangirg-s3-perf-test.s3.us-west-2.amazonaws.com, 443, /test.json, 1, 1, 0).
+2021-12-29 07:54:55 PM[Private.InternalDiagnostics.System.Net.Http-HeadersInvalidValue] (Authorization, AWS4-HMAC-SHA256 Credential=AKIA2SRUSSNWLYTMAP4W/20211229/us-west-2/s3/aws4_request, SignedHeaders=host;user-agent;x-amz-content-sha256;x-amz-date, Signature=2463243684606e4e762c9139ea3231d83b42588eb32b8386d9281c5ae1c4e3af).
+2021-12-29 07:54:55 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 0, GetOrReserveHttp11ConnectionAsync, Found usable connection in pool.).
+2021-12-29 07:54:55 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 63130991, SendAsyncCore, Sending request: Method: GET, RequestUri: 'https://jangirg-s3-perf-test.s3.us-west-2.amazonaws.com/test.json', Version: 1.1, Content: <null>, Headers:
+{
+  User-Agent: aws-sdk-dotnet-coreclr/3.7.7.5
+  User-Agent: aws-sdk-dotnet-core/3.7.5.8
+  User-Agent: .NET_Core/5.0.13
+  User-Agent: OS/Microsoft_Windows_10.0.19044
+  User-Agent: ClientAsync
+  amz-sdk-invocation-id: f49e86a7-a63e-46b0-9d4f-ec9c8ff338ec
+  amz-sdk-request: attempt=1; max=5
+  Host: jangirg-s3-perf-test.s3.us-west-2.amazonaws.com
+  X-Amz-Date: 20211229T195455Z
+  X-Amz-Content-SHA256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+  Authorization: AWS4-HMAC-SHA256 Credential=AKIA2SRUSSNWLYTMAP4W/20211229/us-west-2/s3/aws4_request, SignedHeaders=host;user-agent;x-amz-content-sha256;x-amz-date, Signature=2463243684606e4e762c9139ea3231d83b42588eb32b8386d9281c5ae1c4e3af
+  traceparent: 00-286b8c2957d0d04db838914f7a0564fb-e273d520e74d3343-00
+}).
+2021-12-29 07:54:55 PM[System.Net.Http-RequestHeadersStart] ().
+2021-12-29 07:54:55 PM[System.Net.Http-RequestHeadersStop] ().
+2021-12-29 07:54:55 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 63130991, WriteToStreamAsync, Writing 738 bytes.).
+2021-12-29 07:54:55 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 63130991, SendAsyncCore, Received 363 bytes.).
+2021-12-29 07:54:55 PM[Private.InternalDiagnostics.System.Net.Http-Associate] (HttpResponseMessage#22901425, RequestMessage, HttpResponseMessage#22901425, HttpRequestMessage#63130991).
+2021-12-29 07:54:55 PM[Private.InternalDiagnostics.System.Net.Http-Info] (HttpConnectionResponseContent#35664731, .ctor, ).
+2021-12-29 07:54:55 PM[Private.InternalDiagnostics.System.Net.Http-Associate] (HttpResponseMessage#22901425, Content, HttpResponseMessage#22901425, HttpConnectionResponseContent#35664731).
+2021-12-29 07:54:55 PM[System.Net.Http-ResponseHeadersStart] ().
+2021-12-29 07:54:55 PM[System.Net.Http-ResponseHeadersStop] ().
+2021-12-29 07:54:55 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 63130991, SendAsyncCore, Request is fully sent.).
+2021-12-29 07:54:55 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 63130991, SendAsyncCore, Received response: StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: System.Net.Http.HttpConnectionResponseContent, Headers:
+{
+  x-amz-id-2: ICs21FFsqpMTTSZQCxOV/oZ+ix/kpBGN4meC/naVCxwRlmuv2T7j7L9Nwg1iteqfKoNmiPq6xjg=
+  x-amz-request-id: TGMX81FBAKP3J17D
+  Date: Wed, 29 Dec 2021 19:54:55 GMT
+  ETag: "ab9b7b2c58d3a481e172aea95b1e87a0"
+  Accept-Ranges: bytes
+  Server: AmazonS3
+  Last-Modified: Tue, 28 Dec 2021 17:45:48 GMT
+  Content-Type: application/json
+  Content-Length: 603
+}).
+2021-12-29 07:54:55 PM[Private.InternalDiagnostics.System.Net.Http-ClientSendCompleted] (StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: System.Net.Http.HttpConnectionResponseContent, Headers:
+{
+  x-amz-id-2: ICs21FFsqpMTTSZQCxOV/oZ+ix/kpBGN4meC/naVCxwRlmuv2T7j7L9Nwg1iteqfKoNmiPq6xjg=
+  x-amz-request-id: TGMX81FBAKP3J17D
+  Date: Wed, 29 Dec 2021 19:54:55 GMT
+  ETag: "ab9b7b2c58d3a481e172aea95b1e87a0"
+  Accept-Ranges: bytes
+  Server: AmazonS3
+  Last-Modified: Tue, 28 Dec 2021 17:45:48 GMT
+  Content-Type: application/json
+  Content-Length: 603
+}, 63130991, 22901425, 39564799).
+2021-12-29 07:54:55 PM[System.Net.Http-RequestStop] ().
+2021-12-29 07:54:55 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 63130991, Read, Received 603 bytes.).
+2021-12-29 07:54:55 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 0, ReturnConnection, Stored connection in pool.).
+2021-12-29 07:54:55 PM,37.2608,,,,0.0141,0.018,38.3371,0.0302
+2021-12-29 07:55:00 PM[System.Net.Http-RequestStart] (https, jangirg-s3-perf-test.s3.us-west-2.amazonaws.com, 443, /test.json, 1, 1, 0).
+2021-12-29 07:55:00 PM[Private.InternalDiagnostics.System.Net.Http-HeadersInvalidValue] (Authorization, AWS4-HMAC-SHA256 Credential=AKIA2SRUSSNWLYTMAP4W/20211229/us-west-2/s3/aws4_request, SignedHeaders=host;user-agent;x-amz-content-sha256;x-amz-date, Signature=4fc5a598d386b45abe15a918e0ec22b0df5e2eb5e1ae4c6e237ecc5200751f83).
+2021-12-29 07:55:00 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 0, GetOrReserveHttp11ConnectionAsync, Found usable connection in pool.).
+2021-12-29 07:55:00 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 6630602, SendAsyncCore, Sending request: Method: GET, RequestUri: 'https://jangirg-s3-perf-test.s3.us-west-2.amazonaws.com/test.json', Version: 1.1, Content: <null>, Headers:
+{
+  User-Agent: aws-sdk-dotnet-coreclr/3.7.7.5
+  User-Agent: aws-sdk-dotnet-core/3.7.5.8
+  User-Agent: .NET_Core/5.0.13
+  User-Agent: OS/Microsoft_Windows_10.0.19044
+  User-Agent: ClientAsync
+  amz-sdk-invocation-id: 2ee3cbd1-b4b1-4162-8953-572e44735f61
+  amz-sdk-request: attempt=1; max=5
+  Host: jangirg-s3-perf-test.s3.us-west-2.amazonaws.com
+  X-Amz-Date: 20211229T195500Z
+  X-Amz-Content-SHA256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+  Authorization: AWS4-HMAC-SHA256 Credential=AKIA2SRUSSNWLYTMAP4W/20211229/us-west-2/s3/aws4_request, SignedHeaders=host;user-agent;x-amz-content-sha256;x-amz-date, Signature=4fc5a598d386b45abe15a918e0ec22b0df5e2eb5e1ae4c6e237ecc5200751f83
+  traceparent: 00-e295fc29b5501748b83f9cb2ed920457-2caeb8f66e6ec34d-00
+}).
+2021-12-29 07:55:00 PM[System.Net.Http-RequestHeadersStart] ().
+2021-12-29 07:55:00 PM[System.Net.Http-RequestHeadersStop] ().
+2021-12-29 07:55:00 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 6630602, WriteToStreamAsync, Writing 738 bytes.).
+2021-12-29 07:55:01 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 6630602, SendAsyncCore, Received 363 bytes.).
+2021-12-29 07:55:01 PM[Private.InternalDiagnostics.System.Net.Http-Associate] (HttpResponseMessage#19203062, RequestMessage, HttpResponseMessage#19203062, HttpRequestMessage#6630602).
+2021-12-29 07:55:01 PM[Private.InternalDiagnostics.System.Net.Http-Info] (HttpConnectionResponseContent#10314505, .ctor, ).
+2021-12-29 07:55:01 PM[Private.InternalDiagnostics.System.Net.Http-Associate] (HttpResponseMessage#19203062, Content, HttpResponseMessage#19203062, HttpConnectionResponseContent#10314505).
+2021-12-29 07:55:01 PM[System.Net.Http-ResponseHeadersStart] ().
+2021-12-29 07:55:01 PM[System.Net.Http-ResponseHeadersStop] ().
+2021-12-29 07:55:01 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 6630602, SendAsyncCore, Request is fully sent.).
+2021-12-29 07:55:01 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 6630602, SendAsyncCore, Received response: StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: System.Net.Http.HttpConnectionResponseContent, Headers:
+{
+  x-amz-id-2: 0sEStvj0A6UnMilOeAWSmLIEdLsnfPxN0wOAVYzPwJGmoL2okV3p7xxfO9daEfCKFJZU3qdCFl8=
+  x-amz-request-id: 09AAZNYR90S8XHBK
+  Date: Wed, 29 Dec 2021 19:55:01 GMT
+  ETag: "ab9b7b2c58d3a481e172aea95b1e87a0"
+  Accept-Ranges: bytes
+  Server: AmazonS3
+  Last-Modified: Tue, 28 Dec 2021 17:45:48 GMT
+  Content-Type: application/json
+  Content-Length: 603
+}).
+2021-12-29 07:55:01 PM[Private.InternalDiagnostics.System.Net.Http-ClientSendCompleted] (StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: System.Net.Http.HttpConnectionResponseContent, Headers:
+{
+  x-amz-id-2: 0sEStvj0A6UnMilOeAWSmLIEdLsnfPxN0wOAVYzPwJGmoL2okV3p7xxfO9daEfCKFJZU3qdCFl8=
+  x-amz-request-id: 09AAZNYR90S8XHBK
+  Date: Wed, 29 Dec 2021 19:55:01 GMT
+  ETag: "ab9b7b2c58d3a481e172aea95b1e87a0"
+  Accept-Ranges: bytes
+  Server: AmazonS3
+  Last-Modified: Tue, 28 Dec 2021 17:45:48 GMT
+  Content-Type: application/json
+  Content-Length: 603
+}, 6630602, 19203062, 39564799).
+2021-12-29 07:55:01 PM[System.Net.Http-RequestStop] ().
+2021-12-29 07:55:01 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 6630602, Read, Received 603 bytes.).
+2021-12-29 07:55:01 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 0, ReturnConnection, Stored connection in pool.).
+2021-12-29 07:55:01 PM,38.4622,,,,0.0134,0.0222,40.7705,0.0541
+2021-12-29 07:55:06 PM[System.Net.Http-RequestStart] (https, jangirg-s3-perf-test.s3.us-west-2.amazonaws.com, 443, /test.json, 1, 1, 0).
+2021-12-29 07:55:06 PM[Private.InternalDiagnostics.System.Net.Http-HeadersInvalidValue] (Authorization, AWS4-HMAC-SHA256 Credential=AKIA2SRUSSNWLYTMAP4W/20211229/us-west-2/s3/aws4_request, SignedHeaders=host;user-agent;x-amz-content-sha256;x-amz-date, Signature=21a601061728e8c513c08a1702836ca0ab2be28aeccda41bce9b475c25f7ef98).
+2021-12-29 07:55:06 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 0, GetOrReserveHttp11ConnectionAsync, Found usable connection in pool.).
+2021-12-29 07:55:06 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 22935716, SendAsyncCore, Sending request: Method: GET, RequestUri: 'https://jangirg-s3-perf-test.s3.us-west-2.amazonaws.com/test.json', Version: 1.1, Content: <null>, Headers:
+{
+  User-Agent: aws-sdk-dotnet-coreclr/3.7.7.5
+  User-Agent: aws-sdk-dotnet-core/3.7.5.8
+  User-Agent: .NET_Core/5.0.13
+  User-Agent: OS/Microsoft_Windows_10.0.19044
+  User-Agent: ClientAsync
+  amz-sdk-invocation-id: b06d6143-4005-46a8-b271-97ccf46a1b30
+  amz-sdk-request: attempt=1; max=5
+  Host: jangirg-s3-perf-test.s3.us-west-2.amazonaws.com
+  X-Amz-Date: 20211229T195506Z
+  X-Amz-Content-SHA256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+  Authorization: AWS4-HMAC-SHA256 Credential=AKIA2SRUSSNWLYTMAP4W/20211229/us-west-2/s3/aws4_request, SignedHeaders=host;user-agent;x-amz-content-sha256;x-amz-date, Signature=21a601061728e8c513c08a1702836ca0ab2be28aeccda41bce9b475c25f7ef98
+  traceparent: 00-aca4d55aa4670a4f8195c9adbb9ee18f-4903a0b3b1fca74e-00
+}).
+2021-12-29 07:55:06 PM[System.Net.Http-RequestHeadersStart] ().
+2021-12-29 07:55:06 PM[System.Net.Http-RequestHeadersStop] ().
+2021-12-29 07:55:06 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 22935716, WriteToStreamAsync, Writing 738 bytes.).
+2021-12-29 07:55:06 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 22935716, SendAsyncCore, Received 363 bytes.).
+2021-12-29 07:55:06 PM[Private.InternalDiagnostics.System.Net.Http-Associate] (HttpResponseMessage#56536056, RequestMessage, HttpResponseMessage#56536056, HttpRequestMessage#22935716).
+2021-12-29 07:55:06 PM[Private.InternalDiagnostics.System.Net.Http-Info] (HttpConnectionResponseContent#4115257, .ctor, ).
+2021-12-29 07:55:06 PM[Private.InternalDiagnostics.System.Net.Http-Associate] (HttpResponseMessage#56536056, Content, HttpResponseMessage#56536056, HttpConnectionResponseContent#4115257).
+2021-12-29 07:55:06 PM[System.Net.Http-ResponseHeadersStart] ().
+2021-12-29 07:55:06 PM[System.Net.Http-ResponseHeadersStop] ().
+2021-12-29 07:55:06 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 22935716, SendAsyncCore, Request is fully sent.).
+2021-12-29 07:55:06 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 22935716, SendAsyncCore, Received response: StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: System.Net.Http.HttpConnectionResponseContent, Headers:
+{
+  x-amz-id-2: I0C08ovv+7XR6gsbc/4gOLZUu+Pue1DqL9vlC57TyVLFr6bNXCep3+dZ8+/VL2QBW60aUgG6k3o=
+  x-amz-request-id: VSDAHQS34VX7T9AR
+  Date: Wed, 29 Dec 2021 19:55:07 GMT
+  ETag: "ab9b7b2c58d3a481e172aea95b1e87a0"
+  Accept-Ranges: bytes
+  Server: AmazonS3
+  Last-Modified: Tue, 28 Dec 2021 17:45:48 GMT
+  Content-Type: application/json
+  Content-Length: 603
+}).
+2021-12-29 07:55:06 PM[Private.InternalDiagnostics.System.Net.Http-ClientSendCompleted] (StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: System.Net.Http.HttpConnectionResponseContent, Headers:
+{
+  x-amz-id-2: I0C08ovv+7XR6gsbc/4gOLZUu+Pue1DqL9vlC57TyVLFr6bNXCep3+dZ8+/VL2QBW60aUgG6k3o=
+  x-amz-request-id: VSDAHQS34VX7T9AR
+  Date: Wed, 29 Dec 2021 19:55:07 GMT
+  ETag: "ab9b7b2c58d3a481e172aea95b1e87a0"
+  Accept-Ranges: bytes
+  Server: AmazonS3
+  Last-Modified: Tue, 28 Dec 2021 17:45:48 GMT
+  Content-Type: application/json
+  Content-Length: 603
+}, 22935716, 56536056, 39564799).
+2021-12-29 07:55:06 PM[System.Net.Http-RequestStop] ().
+2021-12-29 07:55:06 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 22935716, Read, Received 603 bytes.).
+2021-12-29 07:55:06 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 0, ReturnConnection, Stored connection in pool.).
+2021-12-29 07:55:06 PM,32.827,,,,0.0135,0.0197,33.8616,0.034
+2021-12-29 07:55:12 PM[System.Net.Http-RequestStart] (https, jangirg-s3-perf-test.s3.us-west-2.amazonaws.com, 443, /test.json, 1, 1, 0).
+2021-12-29 07:55:12 PM[Private.InternalDiagnostics.System.Net.Http-HeadersInvalidValue] (Authorization, AWS4-HMAC-SHA256 Credential=AKIA2SRUSSNWLYTMAP4W/20211229/us-west-2/s3/aws4_request, SignedHeaders=host;user-agent;x-amz-content-sha256;x-amz-date, Signature=f1a27b3040ff1fb8649c143cd0b3e1d6a4a3e071b21709587a4ec35044bd3fea).
+2021-12-29 07:55:12 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 0, GetOrReserveHttp11ConnectionAsync, Found usable connection in pool.).
+2021-12-29 07:55:12 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 39386387, SendAsyncCore, Sending request: Method: GET, RequestUri: 'https://jangirg-s3-perf-test.s3.us-west-2.amazonaws.com/test.json', Version: 1.1, Content: <null>, Headers:
+{
+  User-Agent: aws-sdk-dotnet-coreclr/3.7.7.5
+  User-Agent: aws-sdk-dotnet-core/3.7.5.8
+  User-Agent: .NET_Core/5.0.13
+  User-Agent: OS/Microsoft_Windows_10.0.19044
+  User-Agent: ClientAsync
+  amz-sdk-invocation-id: d0430abc-1670-466f-aaf6-892f3e66d9ab
+  amz-sdk-request: attempt=1; max=5
+  Host: jangirg-s3-perf-test.s3.us-west-2.amazonaws.com
+  X-Amz-Date: 20211229T195512Z
+  X-Amz-Content-SHA256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+  Authorization: AWS4-HMAC-SHA256 Credential=AKIA2SRUSSNWLYTMAP4W/20211229/us-west-2/s3/aws4_request, SignedHeaders=host;user-agent;x-amz-content-sha256;x-amz-date, Signature=f1a27b3040ff1fb8649c143cd0b3e1d6a4a3e071b21709587a4ec35044bd3fea
+  traceparent: 00-b518e44f4e552d499ecc268672ad4546-de95851ce72b164c-00
+}).
+2021-12-29 07:55:12 PM[System.Net.Http-RequestHeadersStart] ().
+2021-12-29 07:55:12 PM[System.Net.Http-RequestHeadersStop] ().
+2021-12-29 07:55:12 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 39386387, WriteToStreamAsync, Writing 738 bytes.).
+2021-12-29 07:55:12 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 39386387, SendAsyncCore, Received 363 bytes.).
+2021-12-29 07:55:12 PM[Private.InternalDiagnostics.System.Net.Http-Associate] (HttpResponseMessage#35772575, RequestMessage, HttpResponseMessage#35772575, HttpRequestMessage#39386387).
+2021-12-29 07:55:12 PM[Private.InternalDiagnostics.System.Net.Http-Info] (HttpConnectionResponseContent#21899154, .ctor, ).
+2021-12-29 07:55:12 PM[Private.InternalDiagnostics.System.Net.Http-Associate] (HttpResponseMessage#35772575, Content, HttpResponseMessage#35772575, HttpConnectionResponseContent#21899154).
+2021-12-29 07:55:12 PM[System.Net.Http-ResponseHeadersStart] ().
+2021-12-29 07:55:12 PM[System.Net.Http-ResponseHeadersStop] ().
+2021-12-29 07:55:12 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 39386387, SendAsyncCore, Request is fully sent.).
+2021-12-29 07:55:12 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 39386387, SendAsyncCore, Received response: StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: System.Net.Http.HttpConnectionResponseContent, Headers:
+{
+  x-amz-id-2: 9+dVr7ZsZAbJlPwM27O8Kk2VdtPI909+lgElMqchIk4hUHoJUd/9auVXRBk1dU7mQ8hiunuwM7o=
+  x-amz-request-id: PWZ6Q35W9Y78EMR3
+  Date: Wed, 29 Dec 2021 19:55:13 GMT
+  ETag: "ab9b7b2c58d3a481e172aea95b1e87a0"
+  Accept-Ranges: bytes
+  Server: AmazonS3
+  Last-Modified: Tue, 28 Dec 2021 17:45:48 GMT
+  Content-Type: application/json
+  Content-Length: 603
+}).
+2021-12-29 07:55:12 PM[Private.InternalDiagnostics.System.Net.Http-ClientSendCompleted] (StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: System.Net.Http.HttpConnectionResponseContent, Headers:
+{
+  x-amz-id-2: 9+dVr7ZsZAbJlPwM27O8Kk2VdtPI909+lgElMqchIk4hUHoJUd/9auVXRBk1dU7mQ8hiunuwM7o=
+  x-amz-request-id: PWZ6Q35W9Y78EMR3
+  Date: Wed, 29 Dec 2021 19:55:13 GMT
+  ETag: "ab9b7b2c58d3a481e172aea95b1e87a0"
+  Accept-Ranges: bytes
+  Server: AmazonS3
+  Last-Modified: Tue, 28 Dec 2021 17:45:48 GMT
+  Content-Type: application/json
+  Content-Length: 603
+}, 39386387, 35772575, 39564799).
+2021-12-29 07:55:12 PM[System.Net.Http-RequestStop] ().
+2021-12-29 07:55:12 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 39386387, Read, Received 603 bytes.).
+2021-12-29 07:55:12 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 0, ReturnConnection, Stored connection in pool.).
+2021-12-29 07:55:12 PM,35.5547,,,,0.0131,0.0195,36.415,0.0375
+2021-12-29 07:55:18 PM[System.Net.Http-RequestStart] (https, jangirg-s3-perf-test.s3.us-west-2.amazonaws.com, 443, /test.json, 1, 1, 0).
+2021-12-29 07:55:18 PM[Private.InternalDiagnostics.System.Net.Http-HeadersInvalidValue] (Authorization, AWS4-HMAC-SHA256 Credential=AKIA2SRUSSNWLYTMAP4W/20211229/us-west-2/s3/aws4_request, SignedHeaders=host;user-agent;x-amz-content-sha256;x-amz-date, Signature=70b1d439637980e4fcc2c6d2d88e2d5147a089b34692bb15952df4cd0a8ddae5).
+2021-12-29 07:55:18 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 0, GetOrReserveHttp11ConnectionAsync, Found usable connection in pool.).
+2021-12-29 07:55:18 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 50959901, SendAsyncCore, Sending request: Method: GET, RequestUri: 'https://jangirg-s3-perf-test.s3.us-west-2.amazonaws.com/test.json', Version: 1.1, Content: <null>, Headers:
+{
+  User-Agent: aws-sdk-dotnet-coreclr/3.7.7.5
+  User-Agent: aws-sdk-dotnet-core/3.7.5.8
+  User-Agent: .NET_Core/5.0.13
+  User-Agent: OS/Microsoft_Windows_10.0.19044
+  User-Agent: ClientAsync
+  amz-sdk-invocation-id: 13beb911-f467-4991-a39a-f1c33f4ddd2a
+  amz-sdk-request: attempt=1; max=5
+  Host: jangirg-s3-perf-test.s3.us-west-2.amazonaws.com
+  X-Amz-Date: 20211229T195518Z
+  X-Amz-Content-SHA256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+  Authorization: AWS4-HMAC-SHA256 Credential=AKIA2SRUSSNWLYTMAP4W/20211229/us-west-2/s3/aws4_request, SignedHeaders=host;user-agent;x-amz-content-sha256;x-amz-date, Signature=70b1d439637980e4fcc2c6d2d88e2d5147a089b34692bb15952df4cd0a8ddae5
+  traceparent: 00-5ceb5402c120ab428360306dc739e79d-8b001747c57bd241-00
+}).
+2021-12-29 07:55:18 PM[System.Net.Http-RequestHeadersStart] ().
+2021-12-29 07:55:18 PM[System.Net.Http-RequestHeadersStop] ().
+2021-12-29 07:55:18 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 50959901, WriteToStreamAsync, Writing 738 bytes.).
+2021-12-29 07:55:18 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 50959901, SendAsyncCore, Received 382 bytes.).
+2021-12-29 07:55:18 PM[Private.InternalDiagnostics.System.Net.Http-Associate] (HttpResponseMessage#10607956, RequestMessage, HttpResponseMessage#10607956, HttpRequestMessage#50959901).
+2021-12-29 07:55:18 PM[Private.InternalDiagnostics.System.Net.Http-Info] (HttpConnectionResponseContent#63872317, .ctor, ).
+2021-12-29 07:55:18 PM[Private.InternalDiagnostics.System.Net.Http-Associate] (HttpResponseMessage#10607956, Content, HttpResponseMessage#10607956, HttpConnectionResponseContent#63872317).
+2021-12-29 07:55:18 PM[System.Net.Http-ResponseHeadersStart] ().
+2021-12-29 07:55:18 PM[System.Net.Http-ResponseHeadersStop] ().
+2021-12-29 07:55:18 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 50959901, SendAsyncCore, Request is fully sent.).
+2021-12-29 07:55:18 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 50959901, SendAsyncCore, Received response: StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: System.Net.Http.HttpConnectionResponseContent, Headers:
+{
+  x-amz-id-2: doThr2DaWM3kamHzB2jFUrorFqIwxfexV5nZFmDmrlz249QL7l3KEe6dg2EvAolGp6+exVPFiS4=
+  x-amz-request-id: SRQGW69HQRQF44PH
+  Date: Wed, 29 Dec 2021 19:55:19 GMT
+  ETag: "ab9b7b2c58d3a481e172aea95b1e87a0"
+  Accept-Ranges: bytes
+  Server: AmazonS3
+  Connection: close
+  Last-Modified: Tue, 28 Dec 2021 17:45:48 GMT
+  Content-Type: application/json
+  Content-Length: 603
+}).
+2021-12-29 07:55:18 PM[Private.InternalDiagnostics.System.Net.Http-ClientSendCompleted] (StatusCode: 200, ReasonPhrase: 'OK', Version: 1.1, Content: System.Net.Http.HttpConnectionResponseContent, Headers:
+{
+  x-amz-id-2: doThr2DaWM3kamHzB2jFUrorFqIwxfexV5nZFmDmrlz249QL7l3KEe6dg2EvAolGp6+exVPFiS4=
+  x-amz-request-id: SRQGW69HQRQF44PH
+  Date: Wed, 29 Dec 2021 19:55:19 GMT
+  ETag: "ab9b7b2c58d3a481e172aea95b1e87a0"
+  Accept-Ranges: bytes
+  Server: AmazonS3
+  Connection: close
+  Last-Modified: Tue, 28 Dec 2021 17:45:48 GMT
+  Content-Type: application/json
+  Content-Length: 603
+}, 50959901, 10607956, 39564799).
+2021-12-29 07:55:18 PM[System.Net.Http-RequestStop] ().
+2021-12-29 07:55:18 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 50959901, Read, Received 603 bytes.).
+2021-12-29 07:55:18 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 0, ReturnConnectionToPool, Connection will not be reused.).
+2021-12-29 07:55:18 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 20726372, 0, Dispose, Connection closing.).
+2021-12-29 07:55:18 PM[System.Net.Http-ConnectionClosed] (1, 1).
+2021-12-29 07:55:18 PM[Private.InternalDiagnostics.System.Net.Http-HandlerMessage] (40198173, 0, 0, DecrementConnectionCount, ).
+2021-12-29 07:55:18 PM,44.6793,,,,0.0134,0.0192,45.9347,1.0822
+
+(2021-12-29 07:55:18 PM - 2021-12-29 07:51:22 PM) = 3 minutes, and 56 seconds
