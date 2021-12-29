@@ -10,11 +10,13 @@ namespace S3PerfTest
         static HttpClient httpClient = null;
         static CustomHttpClientFactory()
         {
-            var socketsHandler = new SocketsHttpHandler();
+            var socketsHandler = new SocketsHttpHandler
+            {
+                PooledConnectionIdleTimeout = Timeout.InfiniteTimeSpan,
+                PooledConnectionLifetime = Timeout.InfiniteTimeSpan,
+            };
             httpClient = new HttpClient(socketsHandler);
             httpClient.DefaultRequestHeaders.ConnectionClose = false;
-            httpClient.DefaultRequestHeaders.Connection.Add("Keep-Alive");
-            httpClient.DefaultRequestHeaders.Add("Keep-Alive", "timeout=10, max=1000");
         }
 
         public override HttpClient CreateHttpClient(IClientConfig clientConfig)
