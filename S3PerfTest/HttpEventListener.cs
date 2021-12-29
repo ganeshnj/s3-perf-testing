@@ -75,13 +75,11 @@ namespace S3PerfTest
                     break;
             }
 
-            //string text = $"[{eventData.EventSource.Name}-{eventData.EventName}]{(eventData.Payload != null ? $" ({string.Join(", ", eventData.Payload)})." : "")}";
-            //Log?.Texts.Add(text);
-
-            //ConsoleColor origForeground = Console.ForegroundColor;
-            //Console.ForegroundColor = ConsoleColor.DarkYellow;
-            //Console.WriteLine(text);
-            //Console.ForegroundColor = origForeground;
+            string text = $"[{eventData.EventSource.Name}-{eventData.EventName}]{(eventData.Payload != null ? $" ({string.Join(", ", eventData.Payload)})." : "")}";
+            if (eventData.EventSource.Name.Contains("System.Net.Http"))
+            {
+                Log?.Texts.Add(text);
+            }
         }
     }
 }

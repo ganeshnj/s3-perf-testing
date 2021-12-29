@@ -33,15 +33,15 @@ namespace S3PerfTest
                     });
 
                     log.SdkRequestEnd = DateTime.UtcNow;
-                    //log.ResponseReadStart = DateTime.UtcNow;
+                    log.ResponseReadStart = DateTime.UtcNow;
 
-                    //using (var reader = new StreamReader(obj.ResponseStream))
-                    //{
-                    //    var time = DateTime.UtcNow;
-                    //    reader.ReadToEnd();
-                    //    var elapsed = DateTime.UtcNow - time;
-                    //}
-                    //log.ResponseReadEnd = DateTime.UtcNow;
+                    using (var reader = new StreamReader(obj.ResponseStream))
+                    {
+                        var time = DateTime.UtcNow;
+                        reader.ReadToEnd();
+                        var elapsed = DateTime.UtcNow - time;
+                    }
+                    log.ResponseReadEnd = DateTime.UtcNow;
                     logs.Add(log);
                 }
                 await File.AppendAllLinesAsync(path, new [] {log.ToString()});

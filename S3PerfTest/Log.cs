@@ -45,8 +45,8 @@ namespace S3PerfTest
         public override string ToString()
         {
             var now = DateTime.UtcNow;
-            return $"{now.ToString("yyyy-MM-dd hh:mm:ss tt")},{Request},{Resolution},{Connect},{Handshake},{RequestHeaders},{ResponseHeaders},{SdkRequest},{ResponseRead}";
-            //return $"{string.Join(Environment.NewLine, Texts)}{Environment.NewLine}{now.ToString("yyyy-MM-dd hh:mm:ss tt")},{Request},{Resolution},{Connect},{Handshake},{RequestHeaders},{ResponseHeaders},{SdkRequest},{ResponseRead}";
+            //return $"{now.ToString("yyyy-MM-dd hh:mm:ss tt")},{Request},{Resolution},{Connect},{Handshake},{RequestHeaders},{ResponseHeaders},{SdkRequest},{ResponseRead}";
+            return $"{string.Join(Environment.NewLine, Texts)}{Environment.NewLine}{now.ToString("yyyy-MM-dd hh:mm:ss tt")},{Request},{Resolution},{Connect},{Handshake},{RequestHeaders},{ResponseHeaders},{SdkRequest},{ResponseRead}";
         }
 
         public static string Header = "Time,Request,Resolution,Connect,Handshake,RequestHeaders,ResponseHeaders,SdkRequest,ResponseRead";
