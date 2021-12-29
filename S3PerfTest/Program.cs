@@ -45,6 +45,7 @@ namespace S3PerfTest
                     logs.Add(log);
                 }
                 await File.AppendAllLinesAsync(path, new [] {log.ToString()});
+                await Task.Delay(TimeSpan.FromSeconds(5.8));
             }
         }
     }
