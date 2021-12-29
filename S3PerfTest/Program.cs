@@ -12,7 +12,9 @@ namespace S3PerfTest
     {
         static async Task Main(string[] args)
         {
-            var client = new AmazonS3Client();
+            var config = new AmazonS3Config();
+            config.HttpClientFactory = new CustomHttpClientFactory();
+            var client = new AmazonS3Client(config);
             var logs = new List<Log>();
 
             var path = Path.Combine("..", "..", "..", "Results", $"{DateTime.UtcNow.ToString("yyyy-MM-dd-THH-mm-ss")}.csv");
@@ -46,7 +48,7 @@ namespace S3PerfTest
                 }
                 await File.AppendAllLinesAsync(path, new[] { log.ToString() });
 
-                await Task.Delay(TimeSpan.FromSeconds(5));
+                //await Task.Delay(TimeSpan.FromSeconds(7));
             }
         }
     }

@@ -75,12 +75,12 @@ namespace S3PerfTest
                     break;
             }
 
-            //var now = DateTime.UtcNow;
-            //string text = $"{now.ToString("yyyy-MM-dd hh:mm:ss tt")}[{eventData.EventSource.Name}-{eventData.EventName}]{(eventData.Payload != null ? $" ({string.Join(", ", eventData.Payload)})." : "")}";
-            //if (eventData.EventSource.Name.Contains("System.Net.Http"))
-            //{
-            //    Log?.Texts.Add(text);
-            //}
+            var now = DateTime.UtcNow;
+            string text = $"{now.ToString("yyyy-MM-dd hh:mm:ss tt")}[{eventData.EventSource.Name}-{eventData.EventName}]{(eventData.Payload != null ? $" ({string.Join(", ", eventData.Payload)})." : "")}";
+            if (eventData.EventSource.Name.Contains("System.Net.Http"))
+            {
+                Log?.Texts.Add(text);
+            }
         }
     }
 }

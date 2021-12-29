@@ -10,19 +10,11 @@ namespace S3PerfTest
         static HttpClient httpClient = null;
         static CustomHttpClientFactory()
         {
-            var socketsHandler = new SocketsHttpHandler
-            {
-                KeepAlivePingPolicy = HttpKeepAlivePingPolicy.Always,
-                KeepAlivePingDelay = TimeSpan.FromSeconds(2),
-                KeepAlivePingTimeout = TimeSpan.FromSeconds(2),
-                MaxConnectionsPerServer = int.MaxValue,
-                PooledConnectionIdleTimeout = Timeout.InfiniteTimeSpan,
-                PooledConnectionLifetime = Timeout.InfiniteTimeSpan,
-            };
+            var socketsHandler = new SocketsHttpHandler();
             httpClient = new HttpClient(socketsHandler);
             httpClient.DefaultRequestHeaders.ConnectionClose = false;
-            //httpClient.DefaultRequestHeaders.Connection.Add("Keep-Alive");
-            //httpClient.DefaultRequestHeaders.Add("Keep-Alive", "timeout=1, max=1000");
+            httpClient.DefaultRequestHeaders.Connection.Add("Keep-Alive");
+            httpClient.DefaultRequestHeaders.Add("Keep-Alive", "timeout=10, max=1000");
         }
 
         public override HttpClient CreateHttpClient(IClientConfig clientConfig)
