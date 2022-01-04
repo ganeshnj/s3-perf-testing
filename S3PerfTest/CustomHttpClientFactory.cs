@@ -14,7 +14,7 @@ namespace S3PerfTest
             {
                 KeepAlivePingPolicy = HttpKeepAlivePingPolicy.Always,
                 KeepAlivePingDelay = TimeSpan.FromSeconds(2),
-                KeepAlivePingTimeout = TimeSpan.FromSeconds(2)
+                KeepAlivePingTimeout = TimeSpan.FromSeconds(6)
             };
             httpClient = new HttpClient(socketsHandler);
             httpClient.DefaultRequestHeaders.ConnectionClose = false;
