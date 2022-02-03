@@ -2,8 +2,10 @@
 using Amazon.S3.Model;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
+using System.Net.Http;
 using System.Threading.Tasks;
 
 namespace S3PerfTest
@@ -20,27 +22,37 @@ namespace S3PerfTest
             var path = Path.Combine("..", "..", "..", "Results", $"{DateTime.UtcNow.ToString("yyyy-MM-dd-THH-mm-ss")}.csv");
             await File.AppendAllLinesAsync(path, new[] { Log.Header });
 
+            var httpClient = new HttpClient();
+
 
             for (int i = 0; i < int.MaxValue; i++)
             {
                 var log = new Log();
                 using (var listener = new ConsoleEventListener(log))
                 {
-                    log.SdkRequestStart = DateTime.UtcNow;
+                    log.SignStart = DateTime.UtcNow;
 
-                    var obj = await client.GetObjectAsync(new GetObjectRequest
+                    var url = client.GetPreSignedURL(new GetPreSignedUrlRequest
                     {
                         BucketName = "jangirg-s3-perf-test",
-                        Key = "test.json"
+                        Key = "test.json",
+                        Expires = DateTime.UtcNow.AddHours(1)
                     });
 
-                    log.SdkRequestEnd = DateTime.UtcNow;
+                    log.SignStop = DateTime.UtcNow;
+
+                    log.GetStart = DateTime.UtcNow;
+                    var response = await httpClient.GetAsync(url);
+                    log.GetStop = DateTime.UtcNow;
+
+                    Debug.Assert(response.StatusCode == System.Net.HttpStatusCode.OK);
+
                     log.ResponseReadStart = DateTime.UtcNow;
 
-                    using (var reader = new StreamReader(obj.ResponseStream))
+                    using (var reader = new StreamReader(response.Content.ReadAsStream()))
                     {
                         var time = DateTime.UtcNow;
-                        reader.ReadToEnd();
+                        var content = reader.ReadToEnd();
                         var elapsed = DateTime.UtcNow - time;
                     }
                     log.ResponseReadEnd = DateTime.UtcNow;
